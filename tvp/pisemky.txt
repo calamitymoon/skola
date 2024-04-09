@@ -1,0 +1,118 @@
+|-------------------------------------------------------------------------------------------|
+|					PRVNI PISEMKA					    |
+|-------------------------------------------------------------------------------------------|
+
+
+MOTIVACE VZNIKU PC		clovek dela chyby, stoj ne
+
+ROZDILY CISC/RISC			cisc	|	risc	
+				-------------------------------------
+				drahy		|		levny
+				hodne instrukci	|	100 instrukci
+				kratsi zdroj	|	  delsi zdroj
+				slozitejsi	|	   jednodussi
+				
+28 -> TROJKOVE SOUSTAVY		(1*3^3) + (0*3^2) + (0*3^1) + (1*3^0) = 1001
+
+ROZDIL ANALOG / DIGITAL		A: vsechny jednoty, spojity
+				D: pouze nektere jednoty, diskretni
+
+ADC?				provede spojity signal na posloupnost vzorku
+				=> vzorkovani
+
+ROZLISENI DIGITALNIHO VZORKU	udavame v bitech; pocet kvant je Z^i, kde i je rozlozeni
+				-> napajeni 5V s 8-bit rozlisenim = 2^8 hladin
+				-> minimalni rozdil v napajecich hladinach -> 5/2^8 = 5/256 = 0.01953125 
+
+ALIASING			zkresleni signalu pri rekonstrukci (po nedodrzeni vzorkovaci teorem)
+				-> vzorkovana frekvence je alespon 2x nizsi nez vzorkovaci 
+
+REKONSTRUKCE DIGITAL->ANALOG	pomoci PWM a filtru prvniho radu jako dolni propusti
+				-> pouziju DSP procesor
+
+CO JE PWM? JAK FUNGUJE?		-|----|----|-
+				 |    |    |	v danem uroku je frekvence vykazovat pri ktere napeti
+				 |    |    |	podle casu, kdy se vyskytovala logicka 1 a logicka 0
+				 |    |    |
+				-|----|----|-
+
+UCINIK				duty cycle - pomer doby, po kterou je zatez nebo obvod zapnuty,
+				k dobe, po kterou je zatez nebo obvod vypnuty
+
+|-------------------------------------------------------------------------------------------|
+|					DRUHA PISEMKA					    |
+|-------------------------------------------------------------------------------------------|
+
+
+ZAPORNA CISLA V BIN		8-bit sirka slova 
+
+ZLOMKY V BIN			-|----|----|----|----|----|----|----|----|-
+				 |    |    |	|    |    |    |    |    |	
+				-|----|----|----|----|----|----|----|----|-
+				<------------------------------>
+					2^6			<-------->
+								    2^2
+				1) 0*1/2+0*1/4
+				2) 0*1/2+1*1/4
+				3) 1*1/2+0*1/4
+				4) 1*1/2+1*1/4
+
+SCITANI V BIN			1 1 0 1
+				0 0 1 1
+				-------
+			      1 0 0 0 0
+
+DELENI 2
+
+PROC JE HARVARD LEVNEJSI	
+
+ROZDIL HARDVARD A VON NEUMANN	Harvard = SRAM + FLASH
+				Von neumann = SRAM
+
+SIRKA PASMA			rozdil mezi nejvyssi a nejnizsi frekvenci, co se da prenaset
+
+CASOVY MULTIPLEXOR		Multiplexor = soucastka; vstupy, vystupy
+				Spolecnej kanal je sdilenej na zaklade
+
+FREKVENCI MULTIPLEXOR		Urcita sirka pasma nez bych potreboval na jeden kanal
+				Vezmu vsechny uzivatele
+				Dam kazdymu jinou frekvenci a dam je k sobe
+				Chytnu antenu a zacnu demodelovat pasmo
+				Pustim to zpet prijemci
+
+CO JE VZOREK			Cislo
+
+
+|-------------------------------------------------------------------------------------------|
+|					TRETI PISEMKA					    |
+|-------------------------------------------------------------------------------------------|
+
+
+CO JE ALU			aritmenticka logicka jednotka
+
+CO JE PIPELINE REGISTR		zachytava vstupy a vystupy, castecny vysledky vsech fazi; jak instrukce putuje pres pipeline
+
+JAKA JE MINIMALNI DELKA		3 casti; operacni znak (100 registru, 7 bitu), cilovy registr (32 registru, 5 bitu), zdrojovy registr (32 registru, 5 bitu)
+(POCET BITU) PIPELINE REGISTRU	
+
+CO JE OPERACNI ZNAK INSTRUKCE	urcuje, jestli se jedna o instrukci [ARIT/LOG nebo PAMET nebo SKOK] a jaka instrukce to je
+
+CO JE "CILOVY" REGISTR		je registr, do ktereho se ulozi vysledek operace
+				/// add r16, r17 ;cilovy registr je r16 ///
+
+JAK LZE DEFINOVAT		1) spotreba ve wattech
+VYKON PROCESORU			2) MIPS - miliony instrukci za sekundu
+
+PROC SE PRESLO NA VYROBU	MIPS se da zvednout => pretaktovanim -> vice proudu; chladit..
+				cim vic jader, tim vetsi MIPS
+
+CO MA DEKODER			lze pouzit jako HW ARBITER
+SPOLECNEHO S ARBITR		
+
+
+|-------------------------------------------------------------------------------------------|
+|					CTVRTA PISEMKA					    |
+|-------------------------------------------------------------------------------------------|
+
+
+-

@@ -115,4 +115,25 @@ SPOLECNEHO S ARBITR
 |-------------------------------------------------------------------------------------------|
 
 
--
+PROGRAMATORSKY MODEL		vsechny prvky maji vlastni adresu a da se s nimi manipulovat
+PROCESORU			
+
+PAMET CACHE			nejrychlejsi pamet
+
+OPERACNI PAMET			vetsinou externi pametovy cip
+
+PRERUSENI			zpusob jak periferie vyzada obsluhu jadra a venuje se potom periferii
+
+OBSLUHA PRERUSENI		je podprogram, ktery se vykona jadrem, kdyz periferie pozada o obsluhu
+
+TABULKA VEKTORU			je dana vyrobcem a udava, ktere periferie muzou zadat o obsluhu
+PRERUSENI			
+
+INSTRUKCE reti			na konci obsluhy; navrat z preruseni
+
+CITAC				akumulator
+
+ROUND ROBIN			zpusob jak sdilet procesor pridelovanim casovych slotu
+
+STATICKA A DYNAMICKA		staticka => klopny obvod  \ na ulozeni 1 nebo 0
+PAMETOVA BUNKA			dynamicka => kondenzator  / (jednoho bitu)

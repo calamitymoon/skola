@@ -1013,3 +1013,27 @@ slovo, citove zabarvene, ale muze ublizit:
 - autorem oznacen za **,,satiricky a groteskni"**
 - pokus o idealni horor
 - 17 exemplaru
+
+### Karel Polacek
+*roman* => ***Muzi v ofsajdu***
+- humoristicky roman
+- psychologie a vasnivost klubovych fanousku
+*roman* => ***Hostinec U Kamenneho stolu***
+- usmevna proza o venkovskych laznich a hostech
+- za okupace vydal pod jmenem malire Vlastimila Rady
+- i film z roku 1948
+*roman* => ***Okresni mesto***
+*roman* => ***Hrdinove tahnou do boje***
+*roman* => ***Podzemni mesto***
+*roman* => ***Vyprodano***
+- ==> romanova **pentalogie** (5. dil nenalezen)
+- obraz rodneho Rychnova nad Kneznou pred 1. sv. v.
+- typicke **figurky** -> vojak, zebrak, obchodnik, mestska honorace; postavy predstavuji urcity spolecensky typ, zadna neni ustredni
+- kritika strnuleho **prostredi** -> prazdnota, nuda, banalita, malichernosti, pycha, dusevni lhostejnost a malost
+- charakterizacni funkce **jazyka** -> stereotypni opakovani slov, frazi, formuli -> komika s tragikou
+*roman* => ***Bylo nas pet***
+- humoristicky roman
+- vydan posmrtne
+- svet malomesta videny ocima ditete
+- situacni a slovni komika
+

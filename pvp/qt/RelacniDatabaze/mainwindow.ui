@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTableView" name="tableView"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSoubor">
+    <property name="title">
+     <string>Soubor</string>
+    </property>
+    <addaction name="actionVytvorit"/>
+    <addaction name="actionOtevrit"/>
+    <addaction name="separator"/>
+    <addaction name="actionKonec"/>
+   </widget>
+   <widget class="QMenu" name="menuMo_nosti">
+    <property name="title">
+     <string>Možnosti</string>
+    </property>
+    <addaction name="actionPridatDodavatele"/>
+    <addaction name="actionPridatFakturu"/>
+   </widget>
+   <addaction name="menuSoubor"/>
+   <addaction name="menuMo_nosti"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionVytvorit">
+   <property name="text">
+    <string>Vytvořit</string>
+   </property>
+   <property name="toolTip">
+    <string>Vytvořit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOtevrit">
+   <property name="text">
+    <string>Otevřít</string>
+   </property>
+   <property name="toolTip">
+    <string>Otevřít</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionPridatFakturu">
+   <property name="text">
+    <string>Přidat Fakturu</string>
+   </property>
+   <property name="shortcut">
+    <string>+</string>
+   </property>
+  </action>
+  <action name="actionPridatDodavatele">
+   <property name="text">
+    <string>Přidat Dodavatele</string>
+   </property>
+   <property name="toolTip">
+    <string>Přidat Dodavatele</string>
+   </property>
+   <property name="shortcut">
+    <string>Ě</string>
+   </property>
+  </action>
+  <action name="actionKonec">
+   <property name="text">
+    <string>Konec</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

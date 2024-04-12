@@ -358,7 +358,7 @@
 - **pad, cislo, rod**
 - prisudek se shoduje s podmetem v *osobe, cisle a rodce*
 #### Rizenost
-- predmet je v *pade*, ktery vyzaduje sloveso nebo pridavne jmeno, ktere Pt rozvyji
+- predmet je v *pade*, ktery vyzaduje sloveso nebo pridavne jmeno, ktere Pt rozviji
 #### Primykani
 = slaba zavislost
 - **prislovecne urceni** -> ridici clen nevyzaduje doplneni v jednom urcitem tvaru
@@ -408,4 +408,35 @@
 **slovesa sponova**: byt, byvat, stat se, stavat se
 -- -
 
-### 
+# Rozvijeji vetne cleny
+### Predmet (Pt)
+- rozviji **sloveso** nebo **pridavne jmeno**
+- vyjadruje osobu, zvire nebo vec, ktere slovesny dej zasahuje nebo kterych se tyka
+> Slovesa predmetova => vyzaduji doplneni predmetem (zaslouzit se o neco, darovat nekomu neco)
+>
+> Slovesa bezpredmetova => na nich predmet zaviset nemuze (spat, sedet, lezet, jet)
+
+- - - 
+1) otci
+2) neho
+3) cvicit
+4) dum
+5) svobode, okupanty
+- - -
+### Vedlejsi veta predmetna
+- vyjadruje predmet vety ridici -> hlavni
+- byva uvozena spojkami
+- - -
+vypraveli nam, *co zazili o letnich prazdninach*
+=> vypraveli nam o jejich zazitcich z letnich prazdnin
+v mistnich novinach jsme si precetli, *ze se v obci budou opravovat vsechny chodniky*
+=> v mistnich novinach jsme si precetli o opravach chodniků naší obcí
+uz jsi Markete rekl, *ze budeme psat pisemnou praci z matematiky*?
+=> uz jsi Markete rekl o budouci pisemne praci z matematiky
+- - -
+### Prislovecne urceni (PU)
+- rozviji sloveso, pridavne jmeno nebo prislovce
+- vztah **primykani = slaba zavislost** = tvar PU neni ridicim clenem urcen, lze jej menit (domluvime se telefonicky / po telefonu / telefonem)
+- vyjadruje blizsi okolnost deje: **misto, cas, zpusob, miru (kvantitu), pricinu, ucel, pripustku a podminku**
+
+l

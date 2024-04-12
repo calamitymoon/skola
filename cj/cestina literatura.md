@@ -1037,3 +1037,22 @@ slovo, citove zabarvene, ale muze ublizit:
 - svet malomesta videny ocima ditete
 - situacni a slovni komika
 
+### Eduard Bass
+- 1888-1946
+- vlastnim jmenem Eduard Schmitt
+- **prozaik, humorista, dramatik, novinar, kabaretni umelec**
+- zpevak, conferencier, textar v literarnim kabaretu **Cervena sedma**
+- publicisticka cinnost v **Lidovych novinach** -> fejetony, reportaze, sloupky, soudnicky, *rozhlasky* (versovane shrnuti udalosti za uplynuleho dne)
+*proza* => ***Klapzubova jedenactka***
+- **proza pro deti**
+- z fotbaloveho prostredi
+- fotbalove muzstvo 11 synu ceskeho chalupnika se proslavilo po svete -> ziskalo svet poctivosti a duvtipem
+- humorne zamysleni nad etikou a profionalitou sportu
+*roman* => ***Cirkus Humberto***
+- z cirkusoveho prostredi
+- osudy 3 generaci
+- oslava cloveka, jeho tvurcich schopnosti, pile, podnikavosti
+- hlavni postava **Vasek Karas**
+- *zamer*: **duvera v ceskeho cloveka**, jeho uspesnost i v cizine -> povzbuzeni ceskeho naroda
+*proza* => ***Lide z maringotek***
+

@@ -1,0 +1,7 @@
+Dear Jindřich,
+I hope you will find this letter interesting! I'm thrilled to hear that you're interested in Czech cuisine. Our culinary tradition is quite unique and offers a variety of delicious dishes that I'm sure you'll find intriguing.
+Czech cuisine is known for its hearty and comforting meals, often featuring meat, potatoes, and dumplings. One of the most iconic dishes is "svíčková na smetaně," which consists of marinated beef sirloin served with a creamy vegetable sauce, cranberry sauce, and a dollop of whipped cream.
+Personally, I adore the rich flavors and hearty portions of Czech cuisine, especially during the colder months. However, I must admit that some dishes can be quite heavy, so they're not always suitable for everyday dining.
+Another delightful Czech dish that I enjoy is "česnečka," which is a traditional garlic soup made with potatoes, garlic, and often served with fried bread and grated cheese. It's simple yet incredibly flavorful, perfect for warming up on chilly evenings.
+Could you share some of your favorite dishes or traditional recipes? I've always been intrigued by the diversity of British food culture and would love to hear your perspective.
+Regards, Dominik.

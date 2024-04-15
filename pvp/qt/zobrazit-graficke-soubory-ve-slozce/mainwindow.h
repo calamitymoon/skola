@@ -22,8 +22,11 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override;
 
+    void onItemClicked(const QModelIndex &index);
 private slots:
     void on_pbTlacitko_clicked();
+
+    void on_lvList_clicked(const QModelIndex &index);
 
 private:
     Ui::MainWindow *ui;

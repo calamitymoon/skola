@@ -137,3 +137,33 @@ ROUND ROBIN			zpusob jak sdilet procesor pridelovanim casovych slotu
 
 STATICKA A DYNAMICKA		staticka => klopny obvod  \ na ulozeni 1 nebo 0
 PAMETOVA BUNKA			dynamicka => kondenzator  / (jednoho bitu)
+
+
+|-------------------------------------------------------------------------------------------|
+|					 PATA PISEMKA					    |
+|-------------------------------------------------------------------------------------------|
+
+
+SUM				nahodny signal
+
+UTLUM				snizeni amplitudy signalu (nezapomente RNS)
+
+VADY ADC PREVODNIKU		3 druhy zkresleni
+
+
+5 VLASTNOSTI USB SBERNICE	asynchronost; 4 druhy paket; diferencialni sbernice; 500mA; +,-,D+,D+-
+
+CO JE PIPELINE			metoda castecneho rozpracovani instrukci, kdyz je vykladan procesor
+
+POROVNANI HDD A SSD			hdd	|     ssd	
+				----------------------------------
+				nizsi cena	|	rychlejsi
+				kapacita	|	cena
+
+PROC JE HARVARD ARCHITEKTURA	SRAM => (tranzistorovy, takze) drahy
+LEVNEJSI NEZ VON NEUMANN	Flash => levny
+
+PROC VICEJADROVE MCU		vyssi MIPS; vyssi propustnost procesoru (=> pretaktovanim / vice jader)
+				pretaktovat => vice proudu + oscilator
+
+JEDNOCIP			jadro; periferie (volitelna podle aplikace)

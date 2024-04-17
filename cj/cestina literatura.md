@@ -1055,4 +1055,46 @@ slovo, citove zabarvene, ale muze ublizit:
 - hlavni postava **Vasek Karas**
 - *zamer*: **duvera v ceskeho cloveka**, jeho uspesnost i v cizine -> povzbuzeni ceskeho naroda
 *proza* => ***Lide z maringotek***
+- 10 ruznych pribehu => dekameron
+- kompozice: ramcova (ramec jsou ti lide z maringotek, kteri si vypravi jeden pribeh kazdy vecer (kazda povidka ma vlastni pribeh) )
+
+### Karel Capek
+- \*9.1.1880 Male Svatonovice
+- otec lekar, starsi sourozenci Helena a Josef
+- detstvi v Úpici v Podkrkonosi
+- studium na FF UK: estetika, dejiny vytvarneho umeni, anglicistika, germanistika, bohemistika, filozofie
+- -> *"Pragmatismus cili Filozofie praktickeho zivota"* = PhDr.
+- **prozaik, dramatik, publicista, prekladatel z francouzstiny, kritik, filozof**
+- pusobil jako domaci ucitel
+- redaktorem **Lidovych novin**
+- dramaturg a reziser v Mestskem divadle na Kralovskych Vinohradech (1921-1923)
+- 1922 -> predstaven prezidentu **T. G. Masarykovi** -> pratele; 3 svazky: **Hovory s T.G.M.*
+- v Capkove vile se schazeji tzv. *patecnici*
+- zalozil **Penklub a stal se jeho 1. predsedou**
+- 1938 -> podili se na organizaci svetoveho kongresu Penklubu v Praze
+- opakovane (7x) **navrhovan na Nobelovu cenu za literaturu**
+- 25.12.1938 umira v Praze na zapal plic, pohrben na Vysehrade
+- osobity styl zalozeny na perfektnim zvladnuti cestiny; srozumitelne vyjadrovani, smysl pro humor; bezprostredni vypovedi, konkretnost, dialogicnost, **sklon k hovorovosti**; plynula mluva
+- *zaliba v cestovani*
+	- **Italske listy, Anglicke listy, Vylet do Spanel, Obrazky z Holandska, Cesta na sever** (= dojmy z cest, reportazni texty, uvahy, basnicke liceni; vtipnost, originalita, jazykova hravost)
+- *prace na zahrade*
+	- **Zahradnikuv rok**
+- *vztah ke zviratum*
+	- **Z nazoru kocky**
+- *tvorba pro deti*
+	- **Dasenka cili Zivot stenete** (= laska k fotografovani a ke zviratum; vlastni ilustrace)
+	- **Devatero pohadek** (svet pohadek neni nadprirozeny, prolina se se skutecnosti; mistrovstvi slova (hromadena synonym, souradnost, prirozena plynulost mluvy) )
+- spoluatorstvi s bratrem Josefem
+	- **Zarive hlubiny**, **Krkonosova zahrada**, **Lasky hra osudna**, **Ze zivota hmyzu**
+
+*povidky* => ***Bozi muka***, ***Trapne povidky***
+- povidkove soubory, *filozoficke detektivky*
+- vliv valky, otazky svobody cloveka, smyslu zivota, pravdivosti, poznani
+- motivy tajemstvi a zahad
+*povidka* => ***Povidky z jedne kapsy***, ***Povidky z druhe kapsy***
+- *soubory povidek s detektivni zapletkou*
+- temata z cerne kroniky
+- zdanlive neresitelne zahady jsou logicky vysvetleny, ale nenaznaceno, na ci strane je zlo (filozofie relativismu)
+- zivy hovorovy styl, srozumitelnost, zamereni na detail
+- pribehy propojeny postavou **komisare Mejzlika** ci vypravece
 

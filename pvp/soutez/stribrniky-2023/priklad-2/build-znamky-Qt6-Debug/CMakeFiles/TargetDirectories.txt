@@ -1,0 +1,9 @@
+/home/d/Desktop/soutez/priklad-2/build-znamky-Qt6-Debug/CMakeFiles/znamky.dir
+/home/d/Desktop/soutez/priklad-2/build-znamky-Qt6-Debug/CMakeFiles/edit_cache.dir
+/home/d/Desktop/soutez/priklad-2/build-znamky-Qt6-Debug/CMakeFiles/rebuild_cache.dir
+/home/d/Desktop/soutez/priklad-2/build-znamky-Qt6-Debug/CMakeFiles/list_install_components.dir
+/home/d/Desktop/soutez/priklad-2/build-znamky-Qt6-Debug/CMakeFiles/install.dir
+/home/d/Desktop/soutez/priklad-2/build-znamky-Qt6-Debug/CMakeFiles/install/local.dir
+/home/d/Desktop/soutez/priklad-2/build-znamky-Qt6-Debug/CMakeFiles/install/strip.dir
+/home/d/Desktop/soutez/priklad-2/build-znamky-Qt6-Debug/CMakeFiles/znamky_autogen_timestamp_deps.dir
+/home/d/Desktop/soutez/priklad-2/build-znamky-Qt6-Debug/CMakeFiles/znamky_autogen.dir

@@ -1,0 +1,17 @@
+# ninja log v5
+2	523	1713428113054818620	znamky_autogen/timestamp	df716a72d4afe33d
+2	523	1713428113054818620	znamky_autogen/mocs_compilation.cpp	df716a72d4afe33d
+2	523	1713428113054818620	/home/d/Desktop/soutez/priklad-2/build-znamky-Qt6-Debug/znamky_autogen/timestamp	df716a72d4afe33d
+2	523	1713428113054818620	/home/d/Desktop/soutez/priklad-2/build-znamky-Qt6-Debug/znamky_autogen/mocs_compilation.cpp	df716a72d4afe33d
+526	2979	1713428115518906580	CMakeFiles/znamky.dir/main.cpp.o	5216757c074c6794
+523	3214	1713428115754915006	CMakeFiles/znamky.dir/znamky_autogen/mocs_compilation.cpp.o	5b653c4b91f9d8e2
+534	3339	1713428115878919433	CMakeFiles/znamky.dir/personaldialog.cpp.o	d1d35977ddc4bbe
+526	4613	1713428117154964990	CMakeFiles/znamky.dir/mainwindow.cpp.o	23395e3b0cc84125
+4613	4977	1713428117514977844	znamky	8335dec7d39d69ae
+5	30	1713437587081736682	znamky_autogen/timestamp	df716a72d4afe33d
+5	30	1713437587081736682	znamky_autogen/mocs_compilation.cpp	df716a72d4afe33d
+5	30	1713437587081736682	/home/d/Desktop/soutez/priklad-2/build-znamky-Qt6-Debug/znamky_autogen/timestamp	df716a72d4afe33d
+5	30	1713437587081736682	/home/d/Desktop/soutez/priklad-2/build-znamky-Qt6-Debug/znamky_autogen/mocs_compilation.cpp	df716a72d4afe33d
+32	2670	1713437589721766595	CMakeFiles/znamky.dir/personaldialog.cpp.o	d1d35977ddc4bbe
+31	3693	1713437590745778198	CMakeFiles/znamky.dir/mainwindow.cpp.o	23395e3b0cc84125
+3693	4297	1713437591345784998	znamky	8335dec7d39d69ae

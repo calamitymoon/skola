@@ -1085,7 +1085,7 @@ slovo, citove zabarvene, ale muze ublizit:
 	- **Dasenka cili Zivot stenete** (= laska k fotografovani a ke zviratum; vlastni ilustrace)
 	- **Devatero pohadek** (svet pohadek neni nadprirozeny, prolina se se skutecnosti; mistrovstvi slova (hromadena synonym, souradnost, prirozena plynulost mluvy) )
 - spoluatorstvi s bratrem Josefem
-	- **Zarive hlubiny**, **Krkonosova zahrada**, **Lasky hra osudna**, **Ze zivota hmyzu**
+	- **Zarive hlubiny**, **Krakonosova zahrada**, **Lasky hra osudna**, **Ze zivota hmyzu**
 
 *povidky* => ***Bozi muka***, ***Trapne povidky***
 - povidkove soubory, *filozoficke detektivky*
@@ -1097,4 +1097,51 @@ slovo, citove zabarvene, ale muze ublizit:
 - zdanlive neresitelne zahady jsou logicky vysvetleny, ale nenaznaceno, na ci strane je zlo (filozofie relativismu)
 - zivy hovorovy styl, srozumitelnost, zamereni na detail
 - pribehy propojeny postavou **komisare Mejzlika** ci vypravece
-
+*roman* => ***Tovarna na absolutno***
+- utopicky roman
+- varovani pred zneuzitim velkych ideji proti lidem
+- inzenyr Marek vynalezne karburator, ktery spaluje jakoukoliv latku, vyrabi energii a uvolnuje absolutno (Boha); absolutno zaplavi svet a zpusobuje valky, nepokoje a hospodarskou krizi
+- *kritika nabozenskeho fanatismu*
+*roman* => ***Krakatit***
+- utopicky roman s prvky sci-fi o nalezu a nebezpecne traskaviny = ohrozeni lidstva a sveta
+- hlavni postava -> inzenyr Prokop
+- myslenka **odpovednosti vedce**
+- prolinani realnych, snovych a fantasknich prvku
+*roman* => ***Hordubal***
+- *Neotika* => nauka o poznani a moznostech poznani
+- tragedie podkarpatskeho horala po navratu z Ameriky, kde vydelaval penize --> nevera zeny Polany, zavrazden
+- **troji pohled:** Hordubaluv, cetniku, vypovedi svedku
+- **usili dobrat se pravdy**: pripad nedoresen (ruznorodost, relativnost)
+*roman* => ***Povetron***
+- neznamy muz, letec, po havarii umira nepoznan
+- **tri mozne vyklady**: rekonstrukce jeho zivota podle vlastni fantazie osetrujici jeptisky, jasnovidce a basnika
+*roman* => ***Obycejny zivot***
+- autobiografie
+*alegorie* => ***Valka s Mloky***
+- vyuzivali mloky k lovu perel
+- satiricke alegorie, politicka antiutopie
+- kritika zistnosti, sveta penez, varovani pred **nebezpecnim fasismu a rasismu**
+- karikatura obycejneho "stadniho" cloveka, snadno manipulatovatelneho a zneuzitelneho k cemukoliv
+- vyuziti novinovych zprav, rozhovoru, anket => **novinarska forma reportaze**
+*drama* => ***Loupeznik***
+- *konverzacni lyricka komedie*
+- oslava mladi
+- vysmech mestakum
+*fantasticko-utopicka hra* => ***R.U.R***
+- *podtitul: Rossum's Universal Robots*
+- o umelych lidech, schopnych nahradit cloveka
+- vzpoura robotu = zanik lidstva, krome stavitele Alquista
+- marne se snazi obnovit zniceny recept na vyroby robotu
+- slovo **robot** => neologismus *Josefa Capka*
+*utopicka komedie* => ***Vec Makropulos***
+- tema dlouhovekosti, zivota bez hranic
+*drama* => ***Bila nemoc***
+- z 2. pol 30. let 20. stoleti
+- **varovani pred fasismem a nebezpecim davove manipulace**
+- konflikt jedince (humanista Dr. Galen) a drzitelu moci, strujcu valky (diktator Marsal, baron Krug) => konflikt idealu pacifismu a demokracie x diktatura
+*aaa* => ******
+- 
+*aaa* => ***bbb***
+- 
+*aaa* => ***bbb***
+- 

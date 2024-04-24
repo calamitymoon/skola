@@ -41,6 +41,13 @@ void MainWindow::on_actionOtevrit_triggered()
     }
 }
 
+
+void MainWindow::on_actionUlozit_triggered()
+{
+    return;
+}
+
+
 void MainWindow::zobrazitObrazek(const QPixmap &pixmap)
 {
     if (!obrazekDialog) {
@@ -53,4 +60,15 @@ void MainWindow::zobrazitObrazek(const QPixmap &pixmap)
 
     obrazekLabel->setPixmap(pixmap);
     obrazekDialog->show();
+}
+
+void MainWindow::on_actionOtocit_o_90_stupnu_triggered()
+{
+    return;
+}
+
+
+void MainWindow::on_actionOtocit_o_minus_90_stupnu_triggered()
+{
+    return;
 }

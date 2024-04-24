@@ -23,6 +23,12 @@ public:
 private slots:
     void on_actionOtevrit_triggered();
 
+    void on_actionOtocit_o_90_stupnu_triggered();
+
+    void on_actionOtocit_o_minus_90_stupnu_triggered();
+
+    void on_actionUlozit_triggered();
+
 private:
     Ui::MainWindow *ui;
     void zobrazitObrazek(const QPixmap &pixmap);

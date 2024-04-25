@@ -439,4 +439,22 @@ uz jsi Markete rekl, *ze budeme psat pisemnou praci z matematiky*?
 - vztah **primykani = slaba zavislost** = tvar PU neni ridicim clenem urcen, lze jej menit (domluvime se telefonicky / po telefonu / telefonem)
 - vyjadruje blizsi okolnost deje: **misto, cas, zpusob, miru (kvantitu), pricinu, ucel, pripustku a podminku**
 
-l
+### Doplnek
+- rozviji **sloveso** (zpravidla v prisudku) a zaroven jmeno (v podmetu nebo predmetu)
+- vyjadruje vlastnost, kterou ma jmeno za deje nebo kterou dejem ziskava
+- *priklad*: Devcata tancovala ***bosa***. Jmenovali ho ***ministrem***.
+- vzdy doplnek: ***rad***, ***sam***
+- byva vyjadrem pridavnym jmenem (casto ve jmennem tvaru), podstatnym jmenem, jmenem se spojkou jako, infinitivem, nekdy i cislovkou nebo zajmem
+##### Doplnek shodny
+- se shoduje se jmenem, k nemuz se vztahuje, *priklad*: Vratili jsme se ***unaveni***. (my vsichni)
+##### Doplnek neshodny
+- je v jinem pade nez jmeno, ke kteremu se vztahuje (nejcasteji v 7. pade), *priklad*: Kvitek nazvali ***materidouskou***
+
+- - - 
+- utvorte vety s temito slovesy a uzijte v nich doplnek:
+Kocka *rychle* utikala od psu.
+Pripadal jsem si *jako idiot*.
+V cyklistice ho hodnitili *jako nejlepsiho*.
+Zvolili si ho *jako vudce*.
+Vcera jsem ho videl *utikat* o stosest.
+- - -

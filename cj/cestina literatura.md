@@ -1139,9 +1139,44 @@ slovo, citove zabarvene, ale muze ublizit:
 - z 2. pol 30. let 20. stoleti
 - **varovani pred fasismem a nebezpecim davove manipulace**
 - konflikt jedince (humanista Dr. Galen) a drzitelu moci, strujcu valky (diktator Marsal, baron Krug) => konflikt idealu pacifismu a demokracie x diktatura
-*aaa* => ******
-- 
-*aaa* => ***bbb***
-- 
-*aaa* => ***bbb***
-- 
+
+
+- - -
+# Ceska literatura 1. pol. 20. stol.
+- - -
+
+### Vladislav Vancura
+- prozaik, dramatik, scenarista a filmovy reziser, vytvarny a divadelni kritik
+- 1. predseda umeleckeho spolku **Devetsil**
+- predstavitel levice (z KSC vyloucen)
+- povolanim **lekar**
+- za protifasistickeho postoje a cinnost v odboji **za heydrichiady popraven**
+- ovlivnen **modernimi umeleckymi smeri -> avantgardni proza**
+- **experimentovani s jazykem a stylem** -> silna lyrizace, basnicke metafory, hyperboly, prolinani casu, temat; promyslena a pevna kompozice
+- **sklon ke kniznosti**
+- **originalni vetna stavba**
+*roman* => ***Pekar Jan Marhoul***
+- socialni roman s mnohoznacnym vyznamem
+- tragicky osud dobreho cloveka, poctiveho benesovskeho pekare, ktery se ridi krestanskymi zasadami
+- **vliv proletarskeho umeni**
+- **baladicke ladeni**
+*roman* => ***Pole orna a valecna***
+- reakce na 1. sv. valku
+- **expresionisticke ladeni** -> nesmyslne besneni, chaos, paradoxni osudy
+- nesouvisly dej -> sceny z fronty i zazemi
+- **inspirace poetismem**, polytematickym pasmem
+- miseni **ruznych vrstev jazyka**
+*novela* => ***Rozmarne leto***
+- **humoristicka novela**
+- idylicky poklidny stereotyp lazenskeho mestecka Krokovych Varu je narusen prijezdem **kouzelnika Arnostka** a jeho krasne chranenky, **provazolezkyne Anny**
+- zklidneni a vystrizliveni nastava po odjezdu komediantu
+- *parodie malomesta* s pretvarkou, pasivitkou a omezenosti
+*kniha* => ***Marketa Lazarova***
+- *dulezita role vypravece*: **vstupuje do deje, komentuje jednani postav, schvaluje i odsuzuje**
+
+- *dalsi dila*
+	- povidky: **Luk kralovny Dorotky**
+	- romany: **Utek do Budina**; **Konec starych casu** ad.
+	- **Obrazky z dejin naroda ceskeho** -> nedokoncene dilo; zamer zpracovat vyznamne okamziky z ceskych dejin
+	- dramata: **Jezero Ukereve**; **Josefina**
+	

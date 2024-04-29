@@ -1,74 +1,89 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
 #include <QFileDialog>
-#include <QMessageBox>
-#include <QPixmap>
+#include <QGraphicsPixmapItem>
+#include <QMouseEvent>
 #include <QImageReader>
+#include <QDesktopServices>
+#include <QMessageBox>
+#include <QFileInfo>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);
+    scene = new QGraphicsScene(this);
+    view = new QGraphicsView(scene, this);
+    setCentralWidget(view);
+
+    contextMenu = new QMenu(this);
+    detailsAction = new QAction(tr("Detaily"), this);
+    openAction = new QAction(tr("Otevřít"), this);
+    contextMenu->addAction(detailsAction);
+    contextMenu->addAction(openAction);
+
+    connect(detailsAction, &QAction::triggered, this, &MainWindow::showImageDetails);
+    connect(openAction, &QAction::triggered, this, &MainWindow::openImage);
+
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Vyberte složku"));
+    currentDir = QDir(dir);
+    QStringList filters;
+    filters << "*.jpg" << "*.png" << "*.jpeg";
+    QFileInfoList list = currentDir.entryInfoList(filters, QDir::Files);
+    int y = 0;
+    foreach(QFileInfo fileInfo, list) {
+        QImageReader reader(fileInfo.absoluteFilePath());
+        QImage image = reader.read();
+        if (!image.isNull()) {
+            QGraphicsPixmapItem *item = new QGraphicsPixmapItem(QPixmap::fromImage(image).scaled(250, 250));
+            item->setPos(0, y);
+            scene->addItem(item);
+            y += 250;
+        }
+    }
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;
 }
 
-
-void MainWindow::on_actionOtevrit_triggered()
+void MainWindow::showImageDetails()
 {
-    QString nazevSouboru = QFileDialog::getOpenFileName(this,
-                                                    tr("Otevřít obrázek"),
-                                                    "",
-                                                    tr("Image Files (*.png *.jpg *.jpeg)"));
-    if (!nazevSouboru.isEmpty()) {
-        QImageReader reader(nazevSouboru);
-        if (!reader.canRead()) {
-            QMessageBox::warning(this, tr("Chybička"), tr("Nelze načíst soubor"));
-            return;
+    QFileInfo fileInfo(currentFile);
+    QImageReader reader(fileInfo.absoluteFilePath());
+    QImage image = reader.read();
+    QString details = QString("Název souboru: %1\nVelikost: %2x%3\nPřípona: %4\nVelikost souboru: %5 bytes")
+                          .arg(fileInfo.fileName())
+                          .arg(image.width())
+                          .arg(image.height())
+                          .arg(fileInfo.suffix())
+                          .arg(fileInfo.size());
+    QMessageBox::information(this, tr("Detaily obrázku"), details);
+}
+
+void MainWindow::openImage()
+{
+    QDesktopServices::openUrl(QUrl::fromLocalFile(currentFile));
+}
+
+void MainWindow::contextMenuEvent(QContextMenuEvent *event)
+{
+    if (!currentFile.isEmpty()) {
+        QFileInfo fileInfo(currentFile);
+        QImageReader reader(fileInfo.absoluteFilePath());
+        QImage image = reader.read();
+
+        if (!image.isNull()) {
+            QString details = QString("Název souboru: %1\nVelikost: %2x%3\nPřípona: %4\nVelikost souboru: %5 bytes")
+                                  .arg(fileInfo.fileName())
+                                  .arg(image.width())
+                                  .arg(image.height())
+                                  .arg(fileInfo.suffix())
+                                  .arg(fileInfo.size());
+
+            QMessageBox::information(this, tr("Detaily obrázku"), details);
+        } else {
+            QMessageBox::warning(this, tr("Chyba"), tr("Nepodařilo se načíst obrázek."));
         }
-
-        QPixmap pixmap(nazevSouboru);
-        if (pixmap.isNull()) {
-            QMessageBox::warning(this, tr("Chybička"), tr("Nelze zobrazit obrázek"));
-            return;
-        }
-
-        zobrazitObrazek(pixmap);
+    } else {
+        QMessageBox::warning(this, tr("Chyba"), tr("Neplatný název souboru."));
     }
-}
-
-
-void MainWindow::on_actionUlozit_triggered()
-{
-    return;
-}
-
-
-void MainWindow::zobrazitObrazek(const QPixmap &pixmap)
-{
-    if (!obrazekDialog) {
-        obrazekDialog = new QDialog(this);
-        QVBoxLayout *layout = new QVBoxLayout(obrazekDialog);
-        obrazekLabel = new QLabel;
-        layout->addWidget(obrazekLabel);
-        obrazekDialog->setLayout(layout);
-    }
-
-    obrazekLabel->setPixmap(pixmap);
-    obrazekDialog->show();
-}
-
-void MainWindow::on_actionOtocit_o_90_stupnu_triggered()
-{
-    return;
-}
-
-
-void MainWindow::on_actionOtocit_o_minus_90_stupnu_triggered()
-{
-    return;
 }

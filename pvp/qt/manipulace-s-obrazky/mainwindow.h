@@ -2,15 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include <QDir>
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QGraphicsPixmapItem>
+#include <QMenu>
 #include <QAction>
-#include <QDialog>
-#include <QLabel>
-#include <QVBoxLayout>
-
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
@@ -20,19 +17,23 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+protected:
+    void contextMenuEvent(QContextMenuEvent *event) override;
+
 private slots:
-    void on_actionOtevrit_triggered();
-
-    void on_actionOtocit_o_90_stupnu_triggered();
-
-    void on_actionOtocit_o_minus_90_stupnu_triggered();
-
-    void on_actionUlozit_triggered();
+    void showImageDetails();
+    void openImage();
 
 private:
-    Ui::MainWindow *ui;
-    void zobrazitObrazek(const QPixmap &pixmap);
-    QDialog *obrazekDialog = nullptr;
-    QLabel *obrazekLabel = nullptr;
+    QImage image;
+    QDir currentDir;
+    QGraphicsScene *scene;
+    QGraphicsView *view;
+    QMenu *contextMenu;
+    QAction *detailsAction;
+    QAction *openAction;
+    QString currentFile;
 };
+
 #endif // MAINWINDOW_H
+

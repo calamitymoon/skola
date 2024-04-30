@@ -1,9 +1,0 @@
-/home/d/Desktop/skola/pvp/qt/.builds/%{Asciify:Desktop/CMakeFiles/manipulace-s-obrazky.dir
-/home/d/Desktop/skola/pvp/qt/.builds/%{Asciify:Desktop/CMakeFiles/edit_cache.dir
-/home/d/Desktop/skola/pvp/qt/.builds/%{Asciify:Desktop/CMakeFiles/rebuild_cache.dir
-/home/d/Desktop/skola/pvp/qt/.builds/%{Asciify:Desktop/CMakeFiles/list_install_components.dir
-/home/d/Desktop/skola/pvp/qt/.builds/%{Asciify:Desktop/CMakeFiles/install.dir
-/home/d/Desktop/skola/pvp/qt/.builds/%{Asciify:Desktop/CMakeFiles/install/local.dir
-/home/d/Desktop/skola/pvp/qt/.builds/%{Asciify:Desktop/CMakeFiles/install/strip.dir
-/home/d/Desktop/skola/pvp/qt/.builds/%{Asciify:Desktop/CMakeFiles/manipulace-s-obrazky_autogen_timestamp_deps.dir
-/home/d/Desktop/skola/pvp/qt/.builds/%{Asciify:Desktop/CMakeFiles/manipulace-s-obrazky_autogen.dir

@@ -1179,4 +1179,74 @@ slovo, citove zabarvene, ale muze ublizit:
 	- romany: **Utek do Budina**; **Konec starych casu** ad.
 	- **Obrazky z dejin naroda ceskeho** -> nedokoncene dilo; zamer zpracovat vyznamne okamziky z ceskych dejin
 	- dramata: **Jezero Ukereve**; **Josefina**
- 
+- - -
+
+# KATOLICKY PROUD, RURALISMUS
+
+
+### Jakub Deml
+- 1878-1961
+- basnik, prozaik, publicista, prekladatel
+- katolicky knez (po neshodach s nadrizenymi zbaven sluzby)
+- **vliv spiritualismu, expresionismu i surrealismu**
+*proza* => ***Moji pratele***
+- lyrizovana proza
+- rozhovory s rostlinami
+- neznost, pokora, oslava lasky a prirody
+*dilo* => ***Zapomenute svetlo***
+- vypoved o vlastnim zoufalstvi
+
+### Jaroslav Durych
+- prozaik, basnik, dramatik, publicista
+- vojensky lekar
+- **historicka imaginativni proza, obvod k baroku**
+- kontrasnost (ironie x cistlivost, svetlo x tma, proklesti x odpusteni, krasa x osklivost)
+*Vetsi valdstejnska trilogie* => ***Bloudeni***
+- spiritualizace historie
+- tema dloudeni => cesta ke katolictvi
+- 2 dejove linie -> obdobi baroka a milostny pribeh ceskeho emigranta
+- dejovy ramec => poprava slechticu na Staromestskem namesti a smrt Albrechta z Valdstejna
+*Mensi valdstejnska trilogie* => ***Rekviem***
+- 3 povidky s tematikou osudu Albrechta z Valdstejna
+
+### Jan Cep
+- prozaik, prekladatel, esejista
+- povidky z vesnickeho prostredi
+
+## Ruraliste a tradicni Venkovska proza
+- **dominantni vztah k pude** => jistota zakotvenost
+- **venkovsky zivot = zaruka mravnosti a cistoty** x zhoubny vliv mesta a technicke civilizace
+- obraz **tezkeho udelu venkovanu**
+- **mytizace selstvi** => vyznam tradice, rodiny, vazby s prirodou a krestanstvi
+- *Josef Knap*; *Frantisek Krelina*
+
+- - -
+
+# SOCIALNI PROZA A SOCIALISTICKY REALISMUS
+
+
+- levicove orientovani spisovatele
+- vliv marxisticke filozofie
+- navaznost na tradici kritickeho realismu
+
+### Ivan Olbracht
+- 1882-1952
+- vlastnim jmenem **Kamil Zeman**
+- **prozaik, publicista**
+- 1920 v Rusku => *reportaze* ***Obrazy ze soudobeho Ruska***
+- za cinnost v KSC veznen => *roman* ***Zamrizovane zrcadlo***
+*3 prozy* => ***O zlych samotarich***
+- o vydedencich
+*roman* => ***Zalar nejtemnejsi***
+- psychologicky roman o chorobne zarlivosti a sobectvi slepce
+*roman* => ***Podivne pratelstvi herce Jesenia***
+- psychologicky roman
+*roman* => ***Anna proletarka***
+- ideologicky agitacni proza v duuchu **socialistickeho realismu**
+- tematika revolucniho boje delniceho hnuti
+*reportaze* => ***Zeme beze jmena***; ***Hory a staleti***
+	*3 povidky* => ***Golet v udoli***
+	- ze zivota ortodoxnich Zidu ve vesnici Polana:
+	= *Zazrak s Julcou*, *Udalost v mikve*, *O smutnych ocich Hany Karadzicove*
+*roman* => ***Nikola Suhaj loupeznik***
+- **baladicky** roman z konce 1. svetove valky; vesnice **Kolcava**

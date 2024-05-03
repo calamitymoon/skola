@@ -1179,4 +1179,4 @@ slovo, citove zabarvene, ale muze ublizit:
 	- romany: **Utek do Budina**; **Konec starych casu** ad.
 	- **Obrazky z dejin naroda ceskeho** -> nedokoncene dilo; zamer zpracovat vyznamne okamziky z ceskych dejin
 	- dramata: **Jezero Ukereve**; **Josefina**
-	
+ 

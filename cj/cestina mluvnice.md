@@ -440,7 +440,7 @@ uz jsi Markete rekl, *ze budeme psat pisemnou praci z matematiky*?
 - vyjadruje blizsi okolnost deje: **misto, cas, zpusob, miru (kvantitu), pricinu, ucel, pripustku a podminku**
 
 ### Doplnek
-- rozviji **sloveso** (zpravidla v prisudku) a zaroven jmeno (v podmetu nebo predmetu)
+- rozviji **sloveso** (zpravidla v prisudku) a zaroven **jmeno** (v podmetu nebo predmetu)
 - vyjadruje vlastnost, kterou ma jmeno za deje nebo kterou dejem ziskava
 - *priklad*: Devcata tancovala ***bosa***. Jmenovali ho ***ministrem***.
 - vzdy doplnek: ***rad***, ***sam***
@@ -458,3 +458,15 @@ V cyklistice ho hodnitili *jako nejlepsiho*.
 Zvolili si ho *jako vudce*.
 Vcera jsem ho videl *utikat* o stosest.
 - - -
+
+## Pomery
+- ***Slucovaci*** (a,i,ani)
+- ***Stupnovaci*** (be, dokonce, dokonce i, nejen - ale i, nejen - nybrz i)
+- ***Odporovaci*** (ale, avsak, nybrz, lec, zato, apod..)
+- ***Vylucovaci*** (nebo, anebo, ci, bud - nebo, bud - anebo; *vztah vylucovaci oslabeny -> obe moznosti => carku nepiseme*)
+- ***Dusledkovy*** (proto, a proto, a tedy, tudiz, a tudiz)
+
+### Pristavek
+- **pojmenovavaji jeden jev dvema, nekdy i vice zpusoby**; *priklad: Oceanografie, veda o mori, vyuziva vyzkumu more poznatky z ruznych vednich oboru*
+- cleny v pristavkovem vztahu *oddelujeme z obou stran carkami*
+

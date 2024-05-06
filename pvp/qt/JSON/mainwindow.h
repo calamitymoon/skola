@@ -25,6 +25,8 @@ public:
 private slots:
     void on_pbNacti_clicked();
 
+    void on_pbOdeslat_clicked();
+
 private:
     Ui::MainWindow *ui;
     void spracovaniPoPozadavku(QNetworkReply *reply);

@@ -17,7 +17,7 @@ void MainWindow::on_pbNacti_clicked()
 {
     QNetworkAccessManager *manager = new QNetworkAccessManager(this);
     connect(manager, &QNetworkAccessManager::finished, this, &MainWindow::spracovaniPoPozadavku);
-    manager->get(QNetworkRequest(QUrl(ui->leUrl->text())));
+    manager->get(QNetworkRequest(QUrl(ui->leUrlNacist->text())));
 }
 
 void MainWindow::spracovaniPoPozadavku(QNetworkReply *reply)
@@ -41,5 +41,15 @@ void MainWindow::spracovaniPoPozadavku(QNetworkReply *reply)
         }
     }
 
+}
+
+
+void MainWindow::on_pbOdeslat_clicked()
+{
+    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+    QNetworkRequest request(ui->leUrlPoslat->text());
+    request.setHeader(QNetworkRequest::ContentTypeHeader,"application/json");
+    QJsonQbject json;
+    json.insert();
 }
 

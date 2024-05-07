@@ -49,7 +49,7 @@ void MainWindow::on_pbOdeslat_clicked()
     QNetworkAccessManager *manager = new QNetworkAccessManager(this);
     QNetworkRequest request(ui->leUrlPoslat->text());
     request.setHeader(QNetworkRequest::ContentTypeHeader,"application/json");
-    QJsonQbject json;
-    json.insert();
+    // QJsonObject json;
+    // json.insert();
 }
 

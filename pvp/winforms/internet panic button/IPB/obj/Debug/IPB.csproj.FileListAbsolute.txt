@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\internet panic button\IPB\bin\Debug\IPB.exe.config
+C:\Users\Administrator\Desktop\internet panic button\IPB\bin\Debug\IPB.exe
+C:\Users\Administrator\Desktop\internet panic button\IPB\bin\Debug\IPB.pdb
+C:\Users\Administrator\Desktop\internet panic button\IPB\obj\Debug\IPB.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\internet panic button\IPB\obj\Debug\IPB.Form1.resources
+C:\Users\Administrator\Desktop\internet panic button\IPB\obj\Debug\IPB.Properties.Resources.resources
+C:\Users\Administrator\Desktop\internet panic button\IPB\obj\Debug\IPB.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\internet panic button\IPB\obj\Debug\IPB.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\internet panic button\IPB\obj\Debug\IPB.exe
+C:\Users\Administrator\Desktop\internet panic button\IPB\obj\Debug\IPB.pdb

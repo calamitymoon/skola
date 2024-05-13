@@ -1239,10 +1239,12 @@ slovo, citove zabarvene, ale muze ublizit:
 - o vydedencich
 *roman* => ***Zalar nejtemnejsi***
 - psychologicky roman o chorobne zarlivosti a sobectvi slepce
+- ztratil zrak
 *roman* => ***Podivne pratelstvi herce Jesenia***
 - psychologicky roman
 *roman* => ***Anna proletarka***
-- ideologicky agitacni proza v duuchu **socialistickeho realismu**
+- ideologicky agitacni proza v duchu **socialistickeho realismu**
+- proletark => delnik
 - tematika revolucniho boje delniceho hnuti
 *reportaze* => ***Zeme beze jmena***; ***Hory a staleti***
 	*3 povidky* => ***Golet v udoli***
@@ -1250,3 +1252,13 @@ slovo, citove zabarvene, ale muze ublizit:
 	= *Zazrak s Julcou*, *Udalost v mikve*, *O smutnych ocich Hany Karadzicove*
 *roman* => ***Nikola Suhaj loupeznik***
 - **baladicky** roman z konce 1. svetove valky; vesnice **Kolcava**
+- vesnice Kolcava
+- prolinani epicke a lyricke roviny; psychologie postav
+- basnicky jazyk
+- baladicky roman
+
+*pro deti*:
+- ***Biblicke pribehy***
+- ***Ze starych letopisu ceskych***
+- ***O mudrci Bidpajovi a jeho zviratkach - indicke bajky***
+- ***Dobyvatel***

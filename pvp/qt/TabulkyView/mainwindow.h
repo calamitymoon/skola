@@ -5,6 +5,7 @@
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlRelationalTableModel>
 #include <QtSql/QSqlQuery>
+#include <QtSql/QSqlError>
 #include <QMessageBox>
 #include "dialogpridat.h"
 

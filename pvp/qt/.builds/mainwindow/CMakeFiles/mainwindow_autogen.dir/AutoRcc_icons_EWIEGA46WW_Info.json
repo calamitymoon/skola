@@ -1,0 +1,29 @@
+{
+	"BUILD_DIR" : "/home/d/Desktop/skola/pvp/qt/.builds/mainwindow/mainwindow_autogen",
+	"CMAKE_BINARY_DIR" : "/home/d/Desktop/skola/pvp/qt/.builds/mainwindow",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/d/Desktop/skola/pvp/qt/.builds/mainwindow",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/d/Desktop/skola/pvp/qt/mainwindow",
+	"CMAKE_SOURCE_DIR" : "/home/d/Desktop/skola/pvp/qt/mainwindow",
+	"GENERATOR" : "Unix Makefiles",
+	"INCLUDE_DIR" : "/home/d/Desktop/skola/pvp/qt/.builds/mainwindow/mainwindow_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/d/Desktop/skola/pvp/qt/mainwindow/icons/new.png",
+		"/home/d/Desktop/skola/pvp/qt/mainwindow/icons/save.png",
+		"/home/d/Desktop/skola/pvp/qt/mainwindow/icons/open.png",
+		"/home/d/Desktop/skola/pvp/qt/mainwindow/icons/eclipse.png",
+		"/home/d/Desktop/skola/pvp/qt/mainwindow/icons/line.png",
+		"/home/d/Desktop/skola/pvp/qt/mainwindow/icons/close.png",
+		"/home/d/Desktop/skola/pvp/qt/mainwindow/icons/rectangle.png"
+	],
+	"LOCK_FILE" : "/home/d/Desktop/skola/pvp/qt/.builds/mainwindow/CMakeFiles/mainwindow_autogen.dir/AutoRcc_icons_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "icons" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_icons.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt6/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/d/Desktop/skola/pvp/qt/.builds/mainwindow/CMakeFiles/mainwindow_autogen.dir/AutoRcc_icons_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/d/Desktop/skola/pvp/qt/mainwindow/icons.qrc",
+	"VERBOSITY" : 0
+}

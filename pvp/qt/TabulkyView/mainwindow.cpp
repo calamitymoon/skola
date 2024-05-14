@@ -69,27 +69,27 @@ void MainWindow::on_actionOtevrit_triggered()
     model->select();
 }
 
-//void MainWindow::on_leVyhledavac_textChanged(const QString &argument)
-//{
-//    if (!databaze.isOpen()) {
-//        QMessageBox::critical(this, "Chyba", "Databazi se nepodarilo otevrit.");
-//        return;
-//    }
+void MainWindow::on_leVyhledavac_textChanged(const QString &argument)
+{
+   if (!databaze.isOpen()) {
+       QMessageBox::critical(this, "Chyba", "Databazi se nepodarilo otevrit.");
+       return;
+   }
 
-//    QString queryString = "SELECT * FROM lidi WHERE jmeno LIKE '%" + argument + "%' OR heslo LIKE '%" + argument + "%'";
-//    QSqlQueryModel *model = new QSqlQueryModel(this);
-//    model->setQuery(queryString);
+   QString queryString = "SELECT * FROM lidi WHERE jmeno LIKE '%" + argument + "%' OR heslo LIKE '%" + argument + "%'";
+   QSqlQueryModel *model = new QSqlQueryModel(this);
+   model->setQuery(queryString);
 
-//    if (model->lastError().isValid()) {
-//        QMessageBox::critical(this, "Chyba", model->lastError().text());
-//        delete model;
-//        return;
-//    }
+   if (model->lastError().isValid()) {
+       QMessageBox::critical(this, "Chyba", model->lastError().text());
+       delete model;
+       return;
+   }
 
-//    ui->tableView->setModel(model);
-//}
+   ui->tableView->setModel(model);
+}
 
-//void MainWindow::on_leVyhledavac_textChanged(const QString &argument)
-//{
-//    return argument;
-//}
+void MainWindow::on_actionKonec_triggered()
+{
+    close();
+}

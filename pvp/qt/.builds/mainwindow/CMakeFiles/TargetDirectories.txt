@@ -1,0 +1,9 @@
+/home/d/Desktop/skola/pvp/qt/.builds/mainwindow/CMakeFiles/mainwindow.dir
+/home/d/Desktop/skola/pvp/qt/.builds/mainwindow/CMakeFiles/edit_cache.dir
+/home/d/Desktop/skola/pvp/qt/.builds/mainwindow/CMakeFiles/rebuild_cache.dir
+/home/d/Desktop/skola/pvp/qt/.builds/mainwindow/CMakeFiles/list_install_components.dir
+/home/d/Desktop/skola/pvp/qt/.builds/mainwindow/CMakeFiles/install.dir
+/home/d/Desktop/skola/pvp/qt/.builds/mainwindow/CMakeFiles/install/local.dir
+/home/d/Desktop/skola/pvp/qt/.builds/mainwindow/CMakeFiles/install/strip.dir
+/home/d/Desktop/skola/pvp/qt/.builds/mainwindow/CMakeFiles/mainwindow_autogen_timestamp_deps.dir
+/home/d/Desktop/skola/pvp/qt/.builds/mainwindow/CMakeFiles/mainwindow_autogen.dir

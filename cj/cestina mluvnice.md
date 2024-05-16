@@ -470,3 +470,58 @@ Vcera jsem ho videl *utikat* o stosest.
 - **pojmenovavaji jeden jev dvema, nekdy i vice zpusoby**; *priklad: Oceanografie, veda o mori, vyuziva vyzkumu more poznatky z ruznych vednich oboru*
 - cleny v pristavkovem vztahu *oddelujeme z obou stran carkami*
 
+- - - 
+
+## Zvlastnosti vetne stavby
+
+### Osloveni
+- obvykle tvar 5. padu
+- muze stat na zacatku vety, uprostred vety, nebo na jejim konci => **oddelujeme carkami**
+- *priklad: Vitam te, Adame, mezi nami.*
+
+### Citoslovce
+- obvykle neni VČ => **oddelujeme carkou**
+- *priklad: Halo, je tam nekdo?*
+- pokud zastupuje slovesny prisudek => VČ, neoddelujeme carkou
+- *priklad: Najednou pes hop do postele.*
+
+### Osamostatneny vetny clen
+- vetna cleny, ktere jsou z vety vysunuty a *stoji za vetou*, neni na ne odkazano zadnym zajmenem, nebo prislovcem
+- jsou typicke pro mluveny projev
+- v psanem projevu **oddeleny koncovym znamenkem**
+
+### Vsuvka
+- veta nebo slovni vyrazy, ktere s danou vetou nejak obsahove souvisi (nejcasteji jde o poznamku k obsahu teto vety), nezavisi na zadnem jejim VČ => **oddelujeme carkami**
+- *priklad: Nejradeji jsem jezdil, **jak uz jsem rekl**, k babicce do Hlubose.*
+
+### Elipsa
+- **vypustka** => *nevyjadreni casti vety*, kterou je vsak mozno jednoznacne doplnit, protoze vyplyva z kontextu nebo ze situace
+- umoznuje strucne vyjadrovani bez zbytecneho opakovani slov
+- *priklad: Nekdo ma rad vdolky, jiny zase holky.*
+
+- - - 
+
+## Nepravidelnosti a nedostatky ve stavbe vety
+
+### ANAKOLUT
+=> vyboceni z vetna konstrukce
+=> *priklad: Nas karel, kdyz se ucil, vsechno mu vadilo.*
+=> *(**spravne by to bylo:**) Nasemu Karlovi vse vadilo, kdyz se ucil*
+
+### ZEUGMA
+=> sprezeni vazeb
+=> *priklad: Cela rodina obdivovala a fandila Sparte. Informace se podavaji pred a po prednasce.*
+=> *(**spravne by to bylo:**) Cela rodina obdivovala Spartu a fandila ji. Informace se podavaji pred prednaskou nebo po ni*
+
+### KONTAMINACE
+=> smesovani vazeb
+=> *priklad: Proti nedostatkum v chovani lidi je treba celit vychovou.*
+
+### ATRAKCE
+=> skladebna spodobe
+=> *priklad: Neni dobre cloveku byt samotnemu*
+=> *(**spravne by to bylo:**) Neni dobre cloveku byt samotny*
+
+### APOZIOPEZE
+=> nedokoncena vypoved
+=> *priklad: Jdi pryc, nebo te... Copak nevidis, co ja tady vsechno-?*

@@ -1,3 +1,10 @@
+;#include "../templateM16.inc"
+
+;=======================;
+;        OBSLUHA        ;
+;=======================;
+
+
 ;***********************************
 ;	lab example number one
 ;***********************************
@@ -42,6 +49,7 @@
 
 ;******* Reset ********
 ;********************************** Unused interrupt vectors ***************************************************
+
 EXT_INT0:
 EXT_INT1:
 TIM2_COM:
@@ -50,7 +58,7 @@ TIM1_CAP:
 TIM1_COMA:
 TIM1_COMB:
 TIM1_OVF:
-TIM0_OVF: 
+;TIM0_OVF: 
 SPI_STC:
 UART_DRE:
 UART_TXC:
@@ -63,12 +71,11 @@ EXT_INT2:
 TIM0_COM:
 SPM_RDY:	reti
 
-
 ;************************************************
 		
 		.ORG	0x0030
 Reset:		
-	
+		rjmp TIM0_OVF
 		clr	ZeroReg
 		ldi	TmpReg, low(RAMEND)	; Stack Ptr
 		out	SPL, TmpReg
@@ -83,4 +90,41 @@ Reset:
 ;***************************************
 
 
+;-- SUBPROGRAMS FOR TIMER OVERFLOW --;
+toggle:
+	sbis portA,2
+	rjmp OFF
+	cbi portA,2
 
+ret
+
+OFF:
+	sbi portA,2
+
+ret
+;-- SUBPROGRAMS FOR TIMER OVERFLOW --;
+
+
+;-- TIMER OVERFLOW OVERRIDE --;
+TIM0_OVF:
+		ldi TmpReg,0xFF
+		out portA,TmpReg
+
+	rjmp loop
+
+	loop:
+		rcall toggle	
+
+	rjmp loop
+
+reti
+;--	TIMER OVERFLOW OVERRIDE	--;
+
+;====================;
+;        MAIN        ;
+;====================;
+
+
+Main:
+
+rjmp Main

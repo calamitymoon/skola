@@ -1250,9 +1250,9 @@ slovo, citove zabarvene, ale muze ublizit:
 	*3 povidky* => ***Golet v udoli***
 	- ze zivota ortodoxnich Zidu ve vesnici Polana:
 	= *Zazrak s Julcou*, *Udalost v mikve*, *O smutnych ocich Hany Karadzicove*
-*roman* => ***Nikola Suhaj loupeznik***
+*roman* => ***Nikola Šuhaj loupeznik***
 - **baladicky** roman z konce 1. svetove valky; vesnice **Kolcava**
-- vesnice Kolcava
+- vesnice Kolcav
 - prolinani epicke a lyricke roviny; psychologie postav
 - basnicky jazyk
 - baladicky roman
@@ -1262,3 +1262,51 @@ slovo, citove zabarvene, ale muze ublizit:
 - ***Ze starych letopisu ceskych***
 - ***O mudrci Bidpajovi a jeho zviratkach - indicke bajky***
 - ***Dobyvatel***
+
+### Marie Majerova
+- 1882-1967
+- prozaicka, publicistka
+- predstavitelka socialistickeho realismu
+- zivila se jako sluzebna, pak jako pisarka
+*roman* => ***Panenstvi***
+- tragicky pribeh venkovske divky, ktera hleda lepsi zivot ve meste a obbetuje se pro milovaneho muze
+*roman* => ***Robinsonka***
+- divci roman
+*romanova kronika* => ***Sirena***
+*novela* => ***Havirska balada***
+- volne pokcraovani Sireny
+- dejove sevrena novela o osudu rodiny Hudcu, obraz hornicke bidy
+
+### Marie Pujmanova
+- 1898-1958
+- prozaicka, basnirka, literarni kriticka
+- horliva zastankyne komunistickeho rezimu
+*povidka* => ***Predtucha***
+- povidka se symbolickym vyznamem (atmosfera okupace); nejistota dospivani
+*dilo* => ***Lide na krizovatce***
+- **1. dil romanove trilogie**
+*dilo* => ***Hra s ohnem***
+- **2. dil romanove trilogie**
+*dilo* => ***Zivot po smrti***
+- **3. dil romanove trilogie**
+
+### Karel Novy
+- 1890-1980
+- prozaik, novinar
+*trilogie* => ***Zelezny kruh***
+- rodne Besenovsko; socialni tema -> zapas chalupniku, kameniku, cihlaru s bezohlednosti majitelu konopistskeho panstvi
+*dilo* => ***Sarajevsky atentat***
+- historie vzniku 1. svetove valky
+
+- - - 
+
+# PSYCHOLOGICKA PROZA
+##### - zamereni na analyzu nitra cloveka, jeho prozitky zachycene detailne
+##### - vliv Freudovy psychoanalyzy
+
+### Jaroslav Havlicek
+- 1896-1943
+- prozaik (romany, povidky, novely)
+- **zajem o postavy rozvracene, patologicky postizene**
+*roman* => ***Petrolejove lampy***
+- roman o tragickem manzelstvi citlive, existencne zajistene, ale nehezky divky Stepanky Kilianove s cynickym, zadluzenym bratrancem Pavlem Malinou, alkoholikem trpici sifilidou, kvuli ktere zesili

@@ -80,7 +80,13 @@ public:
 #if QT_CONFIG(tooltip)
         actionOtevrit->setToolTip(QCoreApplication::translate("MainWindow", "Otev\305\231\303\255t tabulku", nullptr));
 #endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(shortcut)
+        actionOtevrit->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+O", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionNejvetsiNejmensiPrumer->setText(QCoreApplication::translate("MainWindow", "Statistika", nullptr));
+#if QT_CONFIG(shortcut)
+        actionNejvetsiNejmensiPrumer->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+S", nullptr));
+#endif // QT_CONFIG(shortcut)
         menuOtevrit->setTitle(QCoreApplication::translate("MainWindow", "Mo\305\276nosti", nullptr));
     } // retranslateUi
 

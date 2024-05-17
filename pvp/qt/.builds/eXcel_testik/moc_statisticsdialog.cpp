@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../../../eXcel_testik/statisticsdialog.h"
+#include "../../../../../excel/statisticsdialog.h"
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'statisticsdialog.h' doesn't include <QObject>."

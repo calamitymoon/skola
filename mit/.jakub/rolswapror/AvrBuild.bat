@@ -1,2 +1,0 @@
-@ECHO OFF
-"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\Users\student\Documents\pecha\rolswapror\labels.tmp" -fI -W+ie -C V2E -o "C:\Users\student\Documents\pecha\rolswapror\rolswapror.hex" -d "C:\Users\student\Documents\pecha\rolswapror\rolswapror.obj" -e "C:\Users\student\Documents\pecha\rolswapror\rolswapror.eep" -m "C:\Users\student\Documents\pecha\rolswapror\rolswapror.map" "C:\Users\student\Documents\pecha\rolswapror\rolswapror.asm"

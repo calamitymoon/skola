@@ -1,2 +1,0 @@
-@ECHO OFF
-"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\Users\Student\Documents\pecha\segmentovka\labels.tmp" -fI -W+ie -C V2E -o "C:\Users\Student\Documents\pecha\segmentovka\segmentovka.hex" -d "C:\Users\Student\Documents\pecha\segmentovka\segmentovka.obj" -e "C:\Users\Student\Documents\pecha\segmentovka\segmentovka.eep" -m "C:\Users\Student\Documents\pecha\segmentovka\segmentovka.map" "C:\Users\Student\Documents\pecha\segmentovka\segmentovka.asm"

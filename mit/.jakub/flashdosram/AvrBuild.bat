@@ -1,2 +1,0 @@
-@ECHO OFF
-"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\Users\Student\Documents\pecha\flashdosram\labels.tmp" -fI -W+ie -C V2E -o "C:\Users\Student\Documents\pecha\flashdosram\flashdosram.hex" -d "C:\Users\Student\Documents\pecha\flashdosram\flashdosram.obj" -e "C:\Users\Student\Documents\pecha\flashdosram\flashdosram.eep" -m "C:\Users\Student\Documents\pecha\flashdosram\flashdosram.map" "C:\Users\Student\Documents\pecha\flashdosram\flashdosram.asm"

@@ -1310,3 +1310,83 @@ slovo, citove zabarvene, ale muze ublizit:
 - **zajem o postavy rozvracene, patologicky postizene**
 *roman* => ***Petrolejove lampy***
 - roman o tragickem manzelstvi citlive, existencne zajistene, ale nehezky divky Stepanky Kilianove s cynickym, zadluzenym bratrancem Pavlem Malinou, alkoholikem trpici sifilidou, kvuli ktere zesili
+
+### Egon Hostovsky
+- 1908-1973
+- **spisovatel, novinar, diplomat**
+- vetsina del vznikla v exilu (za 2. svetove valky a po roce 1948), zvl. v USA
+- zidovsky puvod
+- **existencialismus**
+*roman* => ***Zhar***
+- hrdina 15-ti lety kluk, ktery sve problemy s divkou resi psanim palicskych dopisu, ktere vsak nekdo zneuzije k opravdovemu zharstvi
+- drama rodiny vypravene ze zorneho uhlu mladeho chlapce, ktery se matce priznava
+- jedna z mala autorovych proz, ktera konci dobre
+*roman* => ***Pripad profesora Kornera***
+- gymnazialni profesor proziva krizi
+*roman* => ***Cizinec hleda byt***
+- cesky lekar odjizdi do USA, aby dokoncil vedeckou praci
+- je stale vtahovan do problemu svych hostitelu
+*roman* => ***Nezvestny***
+- hrdinou spion, ktery nemuze nikomu verit
+
+### Jarmila Glazarova
+- 1901-1977
+- vlastnim jmenem Podivinska
+- **prozaicka, publicistka**
+- po valce pusobila jako kulturni atase
+*roman* => ***Roky v kruzu***
+- prvotina, autobiograficke rysy
+*roman* => ***Vlci jama***
+- roman o zarlivosti
+- souziti starnouci despoticke zeny Klary a jejiho mladsiho manzela
+*roman* => ***Advent***
+- baladicka proza z prostredi Beskyd
+- tragicky pribeh svobodne matky Frantisky a jejiho syna Metuda
+
+### Vaclav Rezac
+- vlastnim jmenem Vaclav Vonavka
+- prozaik, za okupace autor psychologickych romanu
+*roman* => ***Vetrna setba***
+- prvotina, autobiograficke rysy
+*roman* => ***Slepa ulicka***
+- o mlade generaci vyrustajici za 1. svetove valky
+*roman* => ***Svedek***
+- starec -> slaboh resi osobni problemy sirenim zla
+*roman* => ***Rozhrani***
+- roman o vzniku romanu
+- ucitel, zacinajici spisovatel
+*roman* => ***Cerne Svetlo***
+
+- - -
+
+# DRAMA
+
+## Oficialni divadlo
+- tzv. **kamenna divadla s klasickym repertoarem**, napr. *Narodni divadlo, Mestske divadlo na Vinohradech*
+- ***reziseri***: Jaroslav Kvapil, Karel Hugo Hilar
+- ***dramatici***: F. Sramek, K. Capek, V. Vancura, V. Nezval, F. Langer, V. Dyk
+- ***herci:*** Vaclav Vydra, Eduard Kohout, Zdenek Stepanek, Frantisek Smolik, Sasa Rasilov, Hugo Haas, Ladislav Pesek, Ruzena Naskova, Hana Kvapilova, Eva Vrchlicka, Olga Scheinpflugova
+- ***typy her***: naladove hry, psychologicka dramata, historicke drama, expresionismus
+
+## Neoficialni divadlo
+- **lidove zabavni divadlo, kabarety, santany**
+
+=> ***Cervena sedma***
+- prazsky kabaretni soubor
+- skladatel pisni **Jiri Cerveny**; **Eduard Bass** -> konferencier, textar
+=> ***Revolucni scena***
+- **Emil Arthur Longen**
+
+## Avantgardni divadlo
+- vliv **poetismu** a **dadaismu**
+- inspirace mestskou lidovou zabavou + evropskym divadelnictvim
+- divadlo tvurci --> spjeti se zivotem, s divaky
+- **autorsky typ** divadla --> ***Osvobozene divadlo*** (V + W + J)
+- **rezisersky typ** divadla --> (bez moznosti improvizace) ***D 34***
+
+## Osvobozene divadlo
+- vzniklo v roce 1925, oficialne 1926
+- *autorsky typ divadla; ovlivneno **futurismem** a **dadaismem**
+- snaha odpoutat se od vsech divadelnich konvenci -> **oslabeni deje**, **pasma komedialnich scen** nebo **scenicke basne**, **forbiny**
+- ***reziseri:*** Jiri Frejka, Jindrich Honzl
+- autorska a herecka dvojice: **Jiri Voskovec** (*Wachsmann*) a **Jan Werich**; jazzovy komponista a klavirista **Jaroslav Jezek**

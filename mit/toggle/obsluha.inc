@@ -66,11 +66,25 @@ Reset:
 ;	pridano mnou
 ;	------------
 
-		ldi TmpReg, (0<<CS02)|(0<<CS01)|(1<<CS00) ; clock select 
+
+.macro set_prescaling %value%
+
+
+.endmacro
+
+
+; **********************************************************************
+
+
+	;		 NO PRESCALING
+		set_prescaling 
+		ldi TmpReg, (0<<CS02)|(0<<CS01)|(1<<CS00) ; clock select
 		out TCCR0, TmpReg
+
+	;		ENABLE LOCAL INTERRUPTION
 		ldi TmpReg, (1<<TOIE0)	; timer 0 overflow flag
 		out TIMSK,TmpReg		; set the flag
-		out TCNT0, ZeroReg		; clear the value in the ounter
+		out TCNT0, ZeroReg		; clear the value in the counter
 
 ;	------------
 ;	pridano mnou
@@ -131,9 +145,6 @@ ret
 
 ;-- TIMER OVERFLOW OVERRIDE --;
 TIM0_OVF:
-		ldi TmpReg,0xFF
-		out portA,TmpReg
-
 		rcall toggle
 
 reti

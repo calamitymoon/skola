@@ -370,9 +370,6 @@
 
 ---
 - Nas Pavel vcera dostal od svych kamaradu z Pribrami blahoprejne esemesky k 17. narozeninam
-
-![[Pasted image 20240307122050.png]]
-
 ---
 
 ### Zakladni vetne cleny
@@ -395,7 +392,7 @@
 	- tvoren urcitym tvarem jednoho slovesa
 - **slovesny slozeny**
 	- tvoren urcitym tvarem zpusoboveho (*moci, smet, musit, mit, chtit*) nebo fazoveho slovesa (*zacit, zacinat, zustat, zustavat, prestat, prestavat*) a infinitivu slovesa vyznamoveho
-	- slovesny prisudek muzeme nekdy nahradit **citoslovcem**
+	- slovesny *prisudek* muzeme nekdy nahradit **citoslovcem**
 2) jmenny 
 - **jmenny se sponou**
 	- tvoren podstatnym nebo pridavnym jmenem (nekdy tez zajmenem nebo prislovcem) a urcitym tvarem sponoveho slovesa
@@ -465,11 +462,7 @@ Vcera jsem ho videl *utikat* o stosest.
 - ***Odporovaci*** (ale, avsak, nybrz, lec, zato, apod..)
 - ***Vylucovaci*** (nebo, anebo, ci, bud - nebo, bud - anebo; *vztah vylucovaci oslabeny -> obe moznosti => carku nepiseme*)
 - ***Dusledkovy*** (proto, a proto, a tedy, tudiz, a tudiz)
-
-### Pristavek
-- **pojmenovavaji jeden jev dvema, nekdy i vice zpusoby**; *priklad: Oceanografie, veda o mori, vyuziva vyzkumu more poznatky z ruznych vednich oboru*
-- cleny v pristavkovem vztahu *oddelujeme z obou stran carkami*
-
+ 
 - - - 
 
 ## Zvlastnosti vetne stavby
@@ -499,6 +492,11 @@ Vcera jsem ho videl *utikat* o stosest.
 - umoznuje strucne vyjadrovani bez zbytecneho opakovani slov
 - *priklad: Nekdo ma rad vdolky, jiny zase holky.*
 
+### Pristavek
+- **pojmenovavaji jeden jev dvema, nekdy i vice zpusoby**; *priklad: Oceanografie, veda o mori, vyuziva vyzkumu more poznatky z ruznych vednich oboru*
+- cleny v pristavkovem vztahu *oddelujeme z obou stran carkami*
+
+
 - - - 
 
 ## Nepravidelnosti a nedostatky ve stavbe vety
@@ -525,3 +523,21 @@ Vcera jsem ho videl *utikat* o stosest.
 ### APOZIOPEZE
 => nedokoncena vypoved
 => *priklad: Jdi pryc, nebo te... Copak nevidis, co ja tady vsechno-?*
+
+- - -
+
+## Souveti
+- rozdeleni:
+  1) ***podradne*** => 1 VH a alespon 1 VV
+  2) ***souradne*** => alespon 2 VH + zadna, nebo libovolny pocet VV
+
+### Vyznamovy pomer mezi vetami hlavnimi
+- **pomer slucovaci** - VH vyjadruhi sounalezitost
+	- spojovaci vyrazy: *a, i, ani, pritom, rovnez, tez, (a) pak, (a) potom, (a) nakonec, ...*
+- **pomer odporovaci**
+- **pomer vylucovaci**
+- **pomer pricinny (duvodovy) a vysvetlovaci**
+	- spojovaci vyrazy: *nebot, vzdyt, totiz, vsak take*
+	- druha veta uvadi pricinu (duvod) a proto, co se tvrdi v prvni vete; v pomeru vysvetlovacim druha veta vyjadruje to, co je nutne k pochopeni obsahu prvni vety
+- **pomer dusledkovy**
+	- spojovaci vyrazy: *proto, tedy, tudiz, a proto, a tedy, a tak, a tudiz*

@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.42  Z:\home\d\Desktop\skola\mit\toggle\toggle.asm Tue Jun 11 11:18:50 2024
+AVRASM ver. 2.1.42  C:\users\d\Desktop\skola\mit\toggle\toggle.asm Mon Jun 17 09:08:51 2024
 
 
 EQU  SIGNATURE_000 0000001e
@@ -632,14 +632,14 @@ CSEG TWI          0000004a
 CSEG EXT_INT2     0000004a
 CSEG TIM0_COM     0000004a
 CSEG SPM_RDY      0000004a
-CSEG Main         0000005f
+CSEG Main         0000005d
 CSEG toggle       0000004b
 CSEG OFF          0000004f
 DEF  PDelReg      r20
 DEF  PDelReg0     r21
 DEF  PDelReg1     r22
 DEF  PDelReg2     r23
-CSEG Delay1m      00000055
-CSEG Delay1m0     00000056
-CSEG Delay1m1     00000057
-CSEG Delay1m2     00000058
+CSEG Delay1m      00000053
+CSEG Delay1m0     00000054
+CSEG Delay1m1     00000055
+CSEG Delay1m2     00000056

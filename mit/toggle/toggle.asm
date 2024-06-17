@@ -8,7 +8,4 @@
 
 
 Main:
-	com Cnt0
-	out portA,Cnt0
-	com Cnt0
 	rjmp Main

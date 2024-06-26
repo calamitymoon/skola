@@ -62,24 +62,13 @@ Reset:
 		out	MCUCSR, TmpReg		; this has to be done with 
 		out	MCUCSR, TmpReg		; two instructions
 
+
 ;	------------
 ;	pridano mnou
 ;	------------
 
-
-.macro set_prescaling %value%
-
-
-.endmacro
-
-
-; **********************************************************************
-
-
 	;		 NO PRESCALING
-		set_prescaling 
-		ldi TmpReg, (0<<CS02)|(0<<CS01)|(1<<CS00) ; clock select
-		out TCCR0, TmpReg
+		setup_timer prescaler_8, 12
 
 	;		ENABLE LOCAL INTERRUPTION
 		ldi TmpReg, (1<<TOIE0)	; timer 0 overflow flag
@@ -89,6 +78,7 @@ Reset:
 ;	------------
 ;	pridano mnou
 ;	------------
+
 
 		ldi	TmpReg, 0xFF
 		out DDRA, TmpReg		; port A will display the key code

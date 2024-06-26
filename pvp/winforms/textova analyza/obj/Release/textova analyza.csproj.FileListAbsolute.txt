@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\textova analyza\bin\Release\textova analyza.exe.config
+C:\Users\Administrator\Desktop\textova analyza\bin\Release\textova analyza.exe
+C:\Users\Administrator\Desktop\textova analyza\bin\Release\textova analyza.pdb
+C:\Users\Administrator\Desktop\textova analyza\obj\Release\textova analyza.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\textova analyza\obj\Release\textova_analyza.Form1.resources
+C:\Users\Administrator\Desktop\textova analyza\obj\Release\textova_analyza.Properties.Resources.resources
+C:\Users\Administrator\Desktop\textova analyza\obj\Release\textova analyza.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\textova analyza\obj\Release\textova analyza.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\textova analyza\obj\Release\textova analyza.exe
+C:\Users\Administrator\Desktop\textova analyza\obj\Release\textova analyza.pdb

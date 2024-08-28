@@ -53,7 +53,7 @@ fn main() {
 
     //  jestli je pocet argumentu vetsi nez 1:
     if args.len() != 2 {
-        eprintln!("usage:\n- spellcheck <file>");
+        eprintln!("usage:\n- cli-spellchecker.exe <file>");
         return;
     }
 

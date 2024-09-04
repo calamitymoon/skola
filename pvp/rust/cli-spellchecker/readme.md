@@ -15,9 +15,9 @@ A simple command-line tool to check spelling in a text file against a list of En
 ### Installation
 
 1. install the dependencies and build the project:
-    ```sh
-    cargo build
-	```
+```sh
+cargo build
+```
 
 ### Usage
 

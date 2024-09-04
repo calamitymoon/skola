@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<head>
+    <title>HTML - základní tagy</title>
+    <!-- meta informace -->
+    <meta charset="utf-8">
+    <meta name="description" content="Popis stránky">
+    <meta name="keywords" content="klíčová slova">
+    <meta name="author" content="Autor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylizovani -->
+    <style>
+        .cara {
+            width: 80%;
+            border-top: 2px solid black;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nadpisy -->
+    <h1>nadpis</h1>
+    <h2>hlavni sekce</h2>
+    <h3>podsekce</h3>
+    <h4>podpodsekce</h4>
+    <h5>mensi nadpis</h5>
+    <h6>nejmensi nadpis</h6>
+
+
+    <div class="cara"></div>
+    <!-- table -->
+    <p>odstavec</p>
+
+
+    <div class="cara"></div>
+    <!-- odkaz -->
+    <a href="http://www.seznam.cz">odkaz (presmerovani na seznam)</a>
+
+
+    <div class="cara"></div>
+    <!-- obrazek -->
+    <img src="obrazek.jpg" alt="popis obrazku">
+
+
+    <div class="cara"></div>
+    <!-- neserazeny seznam -->
+    <ul>
+        <li>seznam</li>
+        <li>seznam</li>
+        <li>seznam</li>
+    </ul>
+
+
+    <div class="cara"></div>
+    <!-- serazeny seznam -->
+    <ol>
+        <li>seznam</li>
+        <li>seznam</li>
+        <li>seznam</li>
+    </ol>
+
+
+    <div class="cara"></div>
+    <!-- stul -->
+    <table>
+        <tr>
+            <th>hlavicka</th>
+            <th>hlavicka</th>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+    </table>
+
+
+    <div class="cara"></div>
+    <!-- formular -->
+    <form action="priklad.php" method="post">
+        <label for="jmeno">jmeno:</label>
+        <input type="text" id="jmeno" name="jmeno"><br><br>
+        <label for="email">email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="zprava">zprava:</label><br>
+        <textarea id="zprava" name="zprava"></textarea><br><br>
+        <input type="submit" value="Odeslat">
+    </form>
+
+
+    <!-- komentar -->
+    <!-- toto je komentar -->
+
+
+    <div class="cara"></div>
+    <!-- skript (a jeho vyuziti) -->
+    <script>
+        //alert("cau!");
+    </script>
+    <button onclick="alert('cau!')">tlacitko</button>
+</body>
+
+</html>

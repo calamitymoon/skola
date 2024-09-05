@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background: white;
+    padding: 20px;
+    /* stín */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* zaoblené konce */
+    border-radius: 20px;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #05479d;
+    font-weight: 700;
+}
+
+.uvitani {
+    text-align: center;
+    margin-bottom: 30px;
+    /* *** https://www.wix.com/studio/blog/font-size *** */
+    font-size: 1.25rem;
+}
+
+nav {
+    /* zmiňoval jste ho, tak proč ho nevyužít */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    /* i když se okno prohlížeče zúží, tak stejně bude místo mezi tlačítky */
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    /* horizontální vycentrování */
+    text-align: center;
+    /* vertikální vycentrování */
+    align-content: center;
+    color: rgb(255, 255, 255);
+    background-color: #1f93f8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    /* nastaví přechod pro barvu v pozadí u tlačítka na 0.3 sekundy */
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #1365ae;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+footer p {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,7 @@
+#pop-up {
+    z-index: 4;
+    background-color: rgba(128, 128, 128, 0.532);
+    border-radius: 20px;
+    border: 2px solid rgb(161, 161, 161);
+    text-align: center;
+}

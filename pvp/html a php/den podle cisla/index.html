@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>den v tydnu pomoci cisel</title>
+</head>
+
+<body>
+    <h1>napis cislo 1-7</h1>
+    <input type="number" id="inputDni" min="1" max="7">
+    <button onclick="jakejToJeDen()">jakej to je den</button>
+    <p id="vysledek"></p>
+
+    <script>
+        function jakejToJeDen() {
+            const dayNumber = parseInt(document.getElementById('inputDni').value);
+            let nazevDne;
+
+            switch (dayNumber) {
+                case 1:
+                    nazevDne = "pondeli";
+                    break;
+                case 2:
+                    nazevDne = "utery";
+                    break;
+                case 3:
+                    nazevDne = "streda";
+                    break;
+                case 4:
+                    nazevDne = "ctvrtek";
+                    break;
+                case 5:
+                    nazevDne = "patek";
+                    break;
+                case 6:
+                    nazevDne = "sobota";
+                    break;
+                case 7:
+                    nazevDne = "nedele";
+                    break;
+                default:
+                    nazevDne = "cislo neni mezi 1-7.";
+            }
+
+            document.getElementById('vysledek').innerText = nazevDne;
+        }
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>

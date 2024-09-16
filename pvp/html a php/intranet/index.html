@@ -16,35 +16,72 @@
     <!-- Intranet icon created by Muhammad_Usman - Flaticon -->
     <link rel="icon" type="png" href="https://cdn-icons-png.flaticon.com/512/8434/8434496.png">
     <link rel="stylesheet" href="assets/style.css">
+    <!--
+    <script>
+        function myFunction() {
+            var element = document.querySelector(".container");
+            element.classList.toggle("dark-mode");
+            var element2 = document.querySelector(".karta");
+            element2.classList.toggle("dark-mode");
+            var element2 = document.querySelector("footer");
+            element2.classList.toggle("dark-mode");
+        }
+    </script>
+    -->
 </head>
 
 <body>
     <div class="container">
+        <!-- tlačítko pro přepnutí dark mode -->
+        <!-- <button onclick="myFunction()">test</button> -->
         <!-- nadpis -->
         <header>
-            <h1>Intranet Interní Společnosti</h1>
+            <h1>Intranet interní společnosti</h1>
         </header>
 
         <!-- uvítání -->
         <div class="uvitani">
-            <p>Vítejte na intranetové stránce naší společnosti. Zde najdete důležité informace a odkazy na interní systémy.
+            <p>Vítejte na intranetové stránce společnosti Amfex. Zde najdete důležité informace a odkazy na interní systémy.
             </p>
         </div>
 
         <!-- navigační linky -->
-        <nav>
-            <a href="#informacni-system">Informační Systém</a>
-            <a href="#dokumentace">Dokumentace</a>
-            <a href="#zakaznicky-portal">Zákaznický Portál</a>
-            <a href="#technicka-podpora">Technická Podpora</a>
-        </nav>
+        <div class="container-pro-karty">
+            <div class="karta">
+                <h2>Docházkový systém</h2>
+                <a title="Pro sledování pracovní doby" href="#dochazkovy-system">Otevřít</a>
+            </div>
+            <div class="karta">
+                <h2>Správa dokumentů</h2>
+                <a title="Interní dokumentace, firemní směrnice" href="#sprava-dokumentu">Otevřít</a>
+            </div>
+            <div class="karta">
+                <h2>HR systém</h2>
+                <a title="Přístup k mzdovým listům, žádostem o dovolenou" href="#hr-system">Otevřít</a>
+            </div>
+            <div class="karta">
+                <h2>Zákaznický portál</h2>
+                <a title="Přesměrování na portál pro zákazníky" href="#zakaznicky-portal">Otevřít</a>
+            </div>
+            <div class="karta">
+                <h2>Školení</h2>
+                <a title="Přístup k interním školením" href="#skoleni">Otevřít</a>
+            </div>
+            <div class="karta">
+                <h2>Vzdělání a rozvoj</h2>
+                <a title="Zdroje pro vzdělávání a rozvoj" href="#rozvoj">Otevřít</a>
+            </div>
+            <div class="karta">
+                <h2>Technická podpora</h2>
+                <a title="Technická podpora pro zaměstnance" href="#technicka-podpora">Otevřít</a>
+            </div>
+        </div>
 
         <!-- zápatí -->
         <footer>
-            <p>&copy; 2024 Interní společnost. Všechna práva vyhrazena.</p>
-            <p>Kontaktujte <a href="#zakaznicky-portal">IT oddělení</a> pro podporu.</p>
+            <p>Pokud jste nenašli, co hledáte, kontaktujte <a class="helpdesk" title="Helpdesk, IT podpora " href="#it-oddeleni ">IT oddělení</a>.</p>
+            <p>&copy; 2024 Interní společnost Amfex. Všechna práva vyhrazena.</p>
         </footer>
-    </div>
 </body>
 
 </html>

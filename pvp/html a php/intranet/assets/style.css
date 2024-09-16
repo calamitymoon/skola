@@ -21,7 +21,7 @@ body {
     background: white;
     padding: 20px;
     /* stín */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.291);
     /* zaoblené konce */
     border-radius: 20px;
 }
@@ -44,42 +44,91 @@ header h1 {
     font-size: 1.25rem;
 }
 
-nav {
-    /* zmiňoval jste ho, tak proč ho nevyužít */
+
+/* slouzi jako obal pro karty */
+
+.container-pro-karty {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
-    /* i když se okno prohlížeče zúží, tak stejně bude místo mezi tlačítky */
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
 }
 
-nav a {
-    text-decoration: none;
-    /* horizontální vycentrování */
+.karta {
+    background: #f5f5f5;
+    border-radius: 8px;
+    /* stin pro karty */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
     text-align: center;
-    /* vertikální vycentrování */
-    align-content: center;
-    color: rgb(255, 255, 255);
-    background-color: #1f93f8;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    /* nastaví přechod pro barvu v pozadí u tlačítka na 0.3 sekundy */
-    transition: background-color 0.3s ease;
+    padding: 20px;
+    /* 3 karty v radku */
+    width: calc(33.333% - 20px);
 }
 
-nav a:hover {
-    background-color: #1365ae;
+.karta h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #05479d;
+}
+
+.karta a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    /* display: block dela z odkazu blok, aby se dal nastavit padding */
+    display: block;
+    margin-top: 10px;
+}
+
+.karta a:hover {
+    color: #007bff;
     cursor: pointer;
+}
+
+
+/* na mensich obrazovkach zobrazit karty pod sebou */
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+        /* pro 2 karty v radku na male obrazovce */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 20px);
+        /* pro 1 kartu v radku na velmi male obrazovce */
+    }
 }
 
 footer {
     text-align: center;
+    /* margin-top pouzit misto padding-top, aby se neposunul obsah dolu */
     margin-top: 40px;
     font-size: 0.9rem;
-    color: #777;
+    color: #1f1f1f;
 }
 
 footer p {
     margin-bottom: 5px;
 }
+
+.helpdesk {
+    text-decoration: underline dotted;
+    color: #000c3c;
+}
+
+
+/*
+.dark-mode {
+    background: #2d2d2d;
+    color: white;
+}
+
+.karta .dark-mode {
+    background: #2d2d2d;
+    color: white;
+} */

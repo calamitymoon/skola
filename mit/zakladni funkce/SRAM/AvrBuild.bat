@@ -1,2 +1,0 @@
-@ECHO OFF
-"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\Users\admin\Documents\DominikJuza\SRAM\labels.tmp" -fI -W+ie -C V2E -o "C:\Users\admin\Documents\DominikJuza\SRAM\SRAM.hex" -d "C:\Users\admin\Documents\DominikJuza\SRAM\SRAM.obj" -e "C:\Users\admin\Documents\DominikJuza\SRAM\SRAM.eep" -m "C:\Users\admin\Documents\DominikJuza\SRAM\SRAM.map" "C:\Users\admin\Documents\DominikJuza\SRAM\SRAM.asm"

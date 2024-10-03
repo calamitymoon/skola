@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th>Jméno</th>
+            <th>Příjmení</th>
+            <th>Email</th>
+            <th>Akce</th>
+    </thead>
+    <tbody>
+        <repeat group="{{@users}}" value="{{@user}}">
+            <tr>
+                <td>{{@user.jmeno}}</td>
+                <td>{{@user.prijmeni}}</td>
+                <td>{{@user.email}}</td>
+                <td>
+                    <a href="/nevim">Upravit</a>
+                    <a href="/nevim">Smazat</a>
+                </td>
+            </tr>
+        </repeat>
+    </tbody>
+</table>

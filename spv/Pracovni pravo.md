@@ -48,7 +48,7 @@
 
 - - -
 
-***OTaZKY***
+***OTÁZKY***
 
 1. Jak vznika pracovni pomer?
 2. Co musi povinne obsahovat pracovni smlouva, jak musi byt uzavrena?

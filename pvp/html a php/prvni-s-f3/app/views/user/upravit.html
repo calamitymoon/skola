@@ -1,0 +1,12 @@
+<form class="login-form" method="post">
+    <label for="jmeno" class="form-label">Jméno</label>
+    <input type="text" class="form-control" name="jmeno" id="jmeno" value="{{@user.jmeno}}">
+    <br>
+    <label for="prijmeni" class="form-label">Příjmení</label>
+    <input type="text" class="form-control" name="prijmeni" id="prijmeni" value="{{@user.prijmeni}}">
+    <br>
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" name="email" id="email" value="{{@user.email}}">
+    <br>
+    <input type="submit" class="btn btn-primary" value="Přihlásit">
+</form>

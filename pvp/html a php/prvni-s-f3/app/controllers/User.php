@@ -6,7 +6,7 @@ class User
 {
     public function getAddUser(\Base $base)
     {
-        $base->set('title', 'Add User');
+        $base->set('title', 'Pridat uzivatele');
         $base->set('content', '/user/pridat.html');
         echo \Template::instance()->render('index.html');
     }
@@ -30,7 +30,7 @@ class User
 
     public function getLogin(\Base $base)
     {
-        $base->set('title', 'Login');
+        $base->set('title', 'Prihlaseni');
         $base->set('content', '/user/login.html');
         echo \Template::instance()->render('index.html');
     }
@@ -51,12 +51,14 @@ class User
 
     public function getOdhlasit(\Base $base)
     {
+        $base->set('title', 'Odhlaseni');
         $base->clear('SESSION.id');
         $base->reroute('/pokus');
     }
 
     public function getSmazat(\Base $base)
     {
+        $base->set('title', 'Smazat uzivatele');
         $id = $base->get('GET.id');
         $user = new \models\User();
         $user->load($id);
@@ -64,23 +66,23 @@ class User
         $base->reroute('/pokus');
     }
 
-    public function postUpravit(\Base $base)
+    public function getUpravit(\Base $base)
     {
         $uzivatel = new \models\User();
         $uz = $uzivatel->findone($base->get('PARAMS.id'));
-        $uz->copyFrom('POST');
-        $uz->save();
-        $base->reroute('/user/list');
-    }
-
-    public function getUpravit(\Base $base)
-    {
-        $user = new \models\User();
-        $uz = $user->findone($base->get('PARAMS.id'));
-        $base->set('user', $uz);
+        $base->set('uzivatel', $uz);
         $base->set('title', 'Upravit uzivatele');
         $base->set('content', '/user/upravit.html');
         echo \Template::instance()->render('index.html');
+    }
+
+    public function postUpravit(\Base $base)
+    {
+        $uzivatel = new \models\User();
+        $uzivatel->load($base->get('PARAMS.id'));
+        $uzivatel->copyFrom('POST');
+        $uzivatel->save();
+        $base->reroute('/user/list');
     }
 
 }

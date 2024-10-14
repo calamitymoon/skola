@@ -10,12 +10,15 @@ from pathlib import Path
 import xarray as xr
 import sys
 
+# Ensure the output encoding is set to UTF-8
 sys.stdout.reconfigure(encoding='utf-8')
 
+# Define the base path for the .nc files
 base_path = Path('nc_soubory/')
 files = sorted(list(base_path.glob('*.nc')))
-files = files[2478:2578]
+files = files[2558:2578]  # Select specific files
 
+# Load the data from the .nc files
 data = xr.open_mfdataset(files, combine='nested', concat_dim='id_measurement')
 
 data.load()
@@ -24,7 +27,8 @@ all_Z = []
 all_T = []
 all_raw_TS = []
 
-for i in range(data.dims['id_measurement']):
+# Loop through each measurement and collect Z, T, and raw_TS
+for i in range(data.dims['id_measurement']):  # Loop through each measurement
     data_point = data.isel(id_measurement=i)
     Z = data_point.Z.data
     all_Z.append(Z)
@@ -33,17 +37,18 @@ for i in range(data.dims['id_measurement']):
     
     raw_TS = data_point.raw_TS
     tmp = [raw_TS.sel(poly_ch_id=2).values, raw_TS.sel(poly_ch_id=3).values, raw_TS.sel(poly_ch_id=4).values]
-    all_raw_TS.append(np.concatenate(tmp))
+    all_raw_TS.append(np.concatenate(tmp))  # Concatenate channel data
 
+# Prepare input data X by stacking Z, T, and raw_TS
 X = np.column_stack((all_Z, all_T, all_raw_TS))
 
+# Handle NaN values in the input data
 X2 = X.copy()
-
-# nahrazovani NaN hodnot
 for i in range(X2.shape[1]):
     column = X2[:, i]
     nan_indices = np.where(np.isnan(column))[0]
     
+    # Iterate over each NaN and replace with nearest valid value
     for nan_idx in nan_indices:
         prev_valid = np.nan
         next_valid = np.nan
@@ -69,14 +74,18 @@ for i in range(X2.shape[1]):
             column[nan_idx] = next_valid
         X[:, i] = column        
 
+# Assign the cleaned column data back to X
 X = X2
 
+# Normalize the data
 scaler = StandardScaler()
 X = scaler.fit_transform(X)
 X.reshape(-1, 1)
 
-y = data.Te.data[:len(all_Z)]
+# The target variable (Te) is still required as output (labels)
+y = data.Te.data[:len(all_Z)]  # Te corresponds to Z and has the same number of entries
 
+# Handle NaN values in y
 def handle_nan_values(array):
     for i in range(array.shape[0]):
         if np.isnan(array[i]):
@@ -103,12 +112,13 @@ def handle_nan_values(array):
             elif not np.isnan(next_valid):
                 array[i] = next_valid
 
+# Handle NaN values in y
 handle_nan_values(y)
 
+# Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-print(X_train.shape[1])
-
+# Define the neural network model with Dropout
 model = Sequential([
     Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
     Dense(64, activation='relu'),
@@ -116,12 +126,13 @@ model = Sequential([
     Dense(1)
 ])
 
+# Compile the model
 model.compile(optimizer='adamw', loss='mse', metrics=['mae'])
 
+# Train the model
 history = model.fit(X_train, y_train, epochs=30, batch_size=16, validation_split=0.3, verbose=1)
 
-model.save('./trained_model.keras')
-
+# Plot the loss function over epochs
 plt.figure(figsize=(8, 6))
 plt.plot(history.history['loss'], label='Tréninková ztráta')
 plt.plot(history.history['val_loss'], label='Validační ztráta')

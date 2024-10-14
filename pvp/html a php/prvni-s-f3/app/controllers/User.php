@@ -68,9 +68,8 @@ class User
 
     public function getUpravit(\Base $base)
     {
-        $uzivatel = new \models\User();
-        $uz = $uzivatel->findone($base->get('PARAMS.id'));
-        $base->set('uzivatel', $uz);
+        $user = new \models\User();
+        $base->set('user', $user->findone($base->get('PARAMS.id')));
         $base->set('title', 'Upravit uzivatele');
         $base->set('content', '/user/upravit.html');
         echo \Template::instance()->render('index.html');
@@ -78,10 +77,10 @@ class User
 
     public function postUpravit(\Base $base)
     {
-        $uzivatel = new \models\User();
-        $uzivatel->load($base->get('PARAMS.id'));
-        $uzivatel->copyFrom('POST');
-        $uzivatel->save();
+        $user = new \models\User();
+        $user->load($base->get('PARAMS.id'));
+        $user->copyFrom('POST');
+        $user->save();
         $base->reroute('/user/list');
     }
 

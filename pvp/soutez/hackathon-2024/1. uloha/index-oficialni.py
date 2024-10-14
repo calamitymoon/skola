@@ -3,12 +3,15 @@ import matplotlib.pyplot as plt
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import Adam
+from tensorflow import keras
+from tensorflow.keras import saving
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error
 from pathlib import Path
 import xarray as xr
 import sys
+import pandas as pd
 
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -17,7 +20,6 @@ files = sorted(list(base_path.glob('*.nc')))
 files = files[2478:2578]
 
 data = xr.open_mfdataset(files, combine='nested', concat_dim='id_measurement')
-
 data.load()
 
 all_Z = []
@@ -38,8 +40,6 @@ for i in range(data.dims['id_measurement']):
 X = np.column_stack((all_Z, all_T, all_raw_TS))
 
 X2 = X.copy()
-
-# nahrazovani NaN hodnot
 for i in range(X2.shape[1]):
     column = X2[:, i]
     nan_indices = np.where(np.isnan(column))[0]
@@ -58,16 +58,21 @@ for i in range(X2.shape[1]):
                 next_valid = column[j]
                 break
         
-        if not np.isnan(prev_valid) and not np.isnan(next_valid):
-            if nan_idx - j < j - nan_idx:
+            if not np.isnan(prev_valid) and not np.isnan(next_valid):
+                if nan_idx - j < j - nan_idx:
+                    column[nan_idx] = prev_valid
+                else:
+                    column[nan_idx] = next_valid
+            elif not np.isnan(prev_valid):
                 column[nan_idx] = prev_valid
-            else:
+            elif not np.isnan(next_valid):
                 column[nan_idx] = next_valid
-        elif not np.isnan(prev_valid):
-            column[nan_idx] = prev_valid
-        elif not np.isnan(next_valid):
-            column[nan_idx] = next_valid
-        X[:, i] = column        
+            else:
+                column_mean = np.nanmean(column)
+                if np.isnan(column_mean):
+                    raise ValueError(f"Cannot find valid value to replace NaN at index {nan_idx}")
+                column[nan_idx] = column_mean
+        X[:, i] = column
 
 X = X2
 
@@ -102,31 +107,26 @@ def handle_nan_values(array):
                 array[i] = prev_valid
             elif not np.isnan(next_valid):
                 array[i] = next_valid
+            else:
+                array_mean = np.nanmean(array)
+                if np.isnan(array_mean):
+                    raise ValueError(f"Cannot find valid value to replace NaN at index {i}")
+                array[i] = array_mean
 
 handle_nan_values(y)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-print(X_train.shape[1])
+model = keras.saving.load_model("trained_model.keras")
 
-model = Sequential([
-    Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
-    Dense(64, activation='relu'),
-    Dense(32, activation='relu'),
-    Dense(1)
-])
+y_pred = model.predict(X_test)
+mse = mean_squared_error(y_test, y_pred)
+print(f'Střední kvadratická chyba: {mse}')
 
-model.compile(optimizer='adamw', loss='mse', metrics=['mae'])
-
-history = model.fit(X_train, y_train, epochs=30, batch_size=16, validation_split=0.3, verbose=1)
-
-model.save('./trained_model.keras')
-
-plt.figure(figsize=(8, 6))
-plt.plot(history.history['loss'], label='Tréninková ztráta')
-plt.plot(history.history['val_loss'], label='Validační ztráta')
-plt.title("Ztrátová funkce v jednotlivých epochách")
-plt.xlabel("Počet epoch")
-plt.ylabel("Ztráta (MSE)")
+plt.figure(figsize=(10, 6))
+plt.scatter(y_test, y_pred, color='red', label='Skutečné vs. predikce')
+plt.xlabel('Reálná Te [eV]')
+plt.ylabel('Predikovaná Te [eV]')
+plt.title('')
 plt.legend()
 plt.show()

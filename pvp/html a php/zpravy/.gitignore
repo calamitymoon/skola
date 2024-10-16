@@ -1,3 +1,6 @@
-vendor
+vendor/
+tmp/
+
 composer.lock
 composer.phar
+config/db.ini

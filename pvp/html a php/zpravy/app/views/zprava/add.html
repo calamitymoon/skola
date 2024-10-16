@@ -1,0 +1,20 @@
+<form method="post">
+    <label for="od">Od:</label>
+    <select name="id_from" id="od" class="form-control" required>
+        <repeat group="{{@uzivatele}}" value="{{@uzivatel}}">
+            <option value="{{@uzivatel.id}}">{{@uzivatel.nick}}</option>
+        </repeat>
+    </select>
+    <br>
+    <label for="komu">Pro:</label>
+    <select name="id_to" id="komu" class="form-control" required>
+        <repeat group="{{@uzivatele}}" value="{{@uzivatel}}">
+            <option value="{{@uzivatel.id}}">{{@uzivatel.nick}}</option>
+        </repeat>
+    </select>
+    <br>
+    <label for="text">Zpráva:</label>
+    <textarea class="form-control" name="text" id="text" required></textarea>
+    <br>
+    <input type="submit" class="btn btn-primary" value="Odeslat">
+</form>

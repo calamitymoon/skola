@@ -1,0 +1,17 @@
+{
+    "name": "dominik/zpravy",
+    "description": "projekt ze skoly",
+    "type": "project",
+    "minimum-stability": "alpha",
+    "license": "MIT",
+    "authors": [{
+        "name": "9hb",
+        "email": "domcalegit@seznam.cz",
+        "role": "developer",
+        "homepage": "https://amfex.xyz/"
+    }],
+    "require": {
+        "bcosca/fatfree": ">=3.8.2",
+        "ikkez/f3-cortex": ">=1.7.7"
+    }
+}

@@ -6,18 +6,38 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="/zpravy/install/uzivatele">Inicializovat uživatele</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Databáze
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/zpravy/install/uzivatele">Resetovat uživatele</a></li>
+                        <li><a class="dropdown-item" href="/zpravy/install/zpravy">Resetovat zprávy</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="/zpravy/install/zpravy">Inicializovat zprávy</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Zprávy
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/zpravy/message/add">Poslat</a></li>
+                        <li><a class="dropdown-item" href="/zpravy/message/list">Zobrazit</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="/zpravy/message/add">Poslat zprávu</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Uživatelé
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/zpravy/user/add">Registrovat</a></li>
+                        <li><a class="dropdown-item" href="/zpravy/user/login">Přihlásit</a></li>
+                        <li><a class="dropdown-item" href="/zpravy/user/list">Zobrazit</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="/zpravy/user/add">Registrace</a>
-                </li>
+
             </ul>
         </div>
     </div>

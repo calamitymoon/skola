@@ -18,4 +18,13 @@ class Uzivatel
         $uzivatel->save();
         $base->reroute('/');
     }
+
+    public function getList(\Base $base)
+    {
+        $base->set('title', 'Seznam uzivatelu');
+        $users = new \models\Uzivatel(); // vyrobit model uzivatelu
+        $base->set('users', $users->find());
+        $base->set('content', '/uzivatel/list.html');
+        echo \Template::instance()->render('index.html');
+    }
 }

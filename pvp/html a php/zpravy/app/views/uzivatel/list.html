@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Přezdívka</th>
+            <th>Jméno</th>
+            <th>Příjmení</th>
+            <th>Email</th>
+            <th>Akce</th>
+    </thead>
+    <tbody>
+        <repeat group="{{@users}}" value="{{@user}}">
+            <tr>
+                <td>{{@user.id}}</td>
+                <td>{{@user.nick}}</td>
+                <td>{{@user.jmeno}}</td>
+                <td>{{@user.prijmeni}}</td>
+                <td>{{@user.email}}</td>
+                <td>
+                    <a href="/prvni-s-f3/user/upravit/{{@user.id}}">Upravit</a>
+                    <a href="/prvni-s-f3/user/smazat/{{@user.id}}">Smazat</a>
+                </td>
+            </tr>
+        </repeat>
+    </tbody>
+</table>

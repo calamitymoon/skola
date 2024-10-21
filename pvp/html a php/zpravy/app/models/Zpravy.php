@@ -9,7 +9,7 @@ class Zpravy extends \DB\Cortex
 
     protected $fieldConf = [
         'text' => [
-            'type' => 'VARCHAR128',
+            'type' => 'TEXT',
             'required' => true,
             'nullable' => false,
             'index' => true

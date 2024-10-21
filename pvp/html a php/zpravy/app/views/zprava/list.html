@@ -1,0 +1,19 @@
+<repeat group="{{@zpravy}}" value="{{@zprava}}">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between">
+            <strong>{{@zprava.id_from.jmeno}}</strong>
+            <check if="{{@zprava.precteno == 0}}">
+                <true>
+                    <a href="/zpravy/precteno/{{@zprava.id}}"><i class="bi bi-envelope"></i></a>
+                </true>
+                <false>
+                    <i class="bi bi-envelope-open"></i>
+                </false>
+            </check>
+        </div>
+        <div class="card-body">
+            {{@zprava.text}}
+        </div>
+    </div>
+    <br>
+</repeat>

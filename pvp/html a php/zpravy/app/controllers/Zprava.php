@@ -16,9 +16,9 @@ class Zprava
     {
         $zprava = new \models\Zpravy();
         $zprava->copyfrom($base->get('POST'));
-        // $zprava->id_from = $base->get('SESSION.id');
+        $zprava->id_from = $base->get('SESSION.uid');
         $zprava->save();
-        $base->reroute('/');
+        $base->reroute('/message/list');
     }
 
     public function getList(\Base $base)
@@ -39,25 +39,4 @@ class Zprava
         $zprava->save();
         $base->reroute('/message/list');
     }
-
-    public function getLogin(\Base $base)
-    {
-        $base->set('title', 'Login');
-        $base->set('content', '/uzivatel/login.html');
-        echo \Template::instance()->render('index.html');
-    }
-
-    public function postLogin(\Base $base)
-    {
-        $uzivatel = new \models\Uzivatel();
-        $uzivatel = $uzivatel->findone(["email=? AND heslo=?", $base->get('POST.email'), $base->get('POST.heslo')]);
-        
-        if ($uzivatel->id) {
-            $base->set('SESSION.id', $uzivatel->id);
-            $base->reroute('/');
-        } else {
-            $base->reroute('/login');
-        }
-    }
-
 }

@@ -1,19 +1,43 @@
-<repeat group="{{@zpravy}}" value="{{@zprava}}">
-    <div class="card">
-        <div class="card-header d-flex justify-content-between">
-            <strong>{{@zprava.id_from.jmeno}}</strong>
-            <check if="{{@zprava.precteno == 0}}">
+<check if="{{@zpravy}}">
+    <true>
+        <repeat group="{{@zpravy}}" value="{{@zprava}}">
+            <check if="{{@zprava}}">
                 <true>
-                    <a href="/zpravy/precteno/{{@zprava.id}}"><i class="bi bi-envelope"></i></a>
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                            <check if="{{@zprava.id_from}}">
+                                <true>
+                                    <span>
+                                        <strong>{{@zprava.id_from.nick}}</strong> 
+                                        <sub>{{@zprava.id_from.jmeno}} {{@zprava.id_from.prijmeni}}</sub>
+                                    </span>
+                                </true>
+                                <false>
+                                    <span><strong>[!] <u>Neznamy odesilatel</u> [!]</strong></span>
+                                </false>
+                            </check>
+                            <check if="{{@zprava.precteno == 0}}">
+                                <true>
+                                    <a href="/zpravy/precteno/{{@zprava.id}}"><i class="bi bi-envelope"></i></a>
+                                </true>
+                                <false>
+                                    <i class="bi bi-envelope-open"></i>
+                                </false>
+                            </check>
+                        </div>
+                        <div class="card-body">
+                            {{@zprava.text}}
+                        </div>
+                    </div>
+                    <br>
                 </true>
                 <false>
-                    <i class="bi bi-envelope-open"></i>
+                    <div>Zadne dostupne zpravy.</div>
                 </false>
             </check>
-        </div>
-        <div class="card-body">
-            {{@zprava.text}}
-        </div>
-    </div>
-    <br>
-</repeat>
+        </repeat>
+    </true>
+    <false>
+        <p>Zadne dostupne zpravy.</p>
+    </false>
+</check>

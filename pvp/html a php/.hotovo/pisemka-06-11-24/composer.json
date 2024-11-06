@@ -1,0 +1,16 @@
+{
+    "name": "9hb/zavodime-s-vodikovym-autem",
+    "description": "Závodíme s vodíkovým autem",
+    "type": "project",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [{
+        "name": "Dominik Jůza",
+        "email": "juza.dominik@prumkadc.cz",
+        "homepage": "https://amfex.xyz/"
+    }],
+    "require": {
+        "bcosca/fatfree": ">=3.8.2",
+        "ikkez/f3-cortex": ">=1.7.7"
+    }
+}

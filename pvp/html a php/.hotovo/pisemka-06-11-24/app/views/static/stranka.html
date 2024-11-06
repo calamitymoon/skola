@@ -1,0 +1,13 @@
+<body>
+    <div class="content">
+        <repeat group="{{@stranka}}" value="{{@hodnota}}">
+            <tr>
+                <img src="{{@hodnota.obrazek}}" alt="Obrazek">
+                <h1>{{@hodnota.nadpis}}</h1>
+                <h2>{{@hodnota.popis}}</h2>
+            </tr>
+        </repeat>
+        <div class="black-bar">
+            <span id="current-time"></span>
+        </div>
+    </div>

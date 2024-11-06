@@ -1,0 +1,14 @@
+<include href="head.html" />
+
+<main class="container">
+    <check if="{{isset(@content)}}">
+        <true>
+            <include href="{{@content}}" />
+        </true>
+        <false>
+            <h1>Chyba [falsi pri loadovani contentu].</h1>
+        </false>
+    </check>
+</main>
+
+<include href="footer.html" />

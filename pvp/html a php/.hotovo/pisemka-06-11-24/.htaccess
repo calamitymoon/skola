@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Existing rules
+RewriteRule ^(app|dict|ns|tmp)\/|\.ini$ - [R=404]
+
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php [L,QSA]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+
+# New rule for assets folder
+RewriteCond %{REQUEST_URI} ^/assets/
+RewriteRule ^assets/(.*)$ /assets/$1 [L]
+
+AddType text/css .css

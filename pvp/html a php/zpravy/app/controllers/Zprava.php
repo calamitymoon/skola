@@ -2,7 +2,7 @@
 
 namespace controllers;
 
-class Zprava
+class Zprava extends AbstractController
 {
     public function getAdd(\Base $base)
     {
@@ -25,7 +25,7 @@ class Zprava
     {
         $base->set('title', 'Zpravy');
         $zprava = new \models\Zpravy();
-        $base->set('zpravy', $zprava->find());
+        $base->set('zpravy', $zprava->find(['id_to=?'],$base->get('SESSION.uid')));
         $base->set('content', '/zprava/list.html');
         echo \Template::instance()->render('index.html');
     }

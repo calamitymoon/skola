@@ -3,16 +3,33 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-#define SCREEN_WIDTH 128
-#define SCREEN_HEIGHT 64
+#define SCREEN_WIDTH 128 // OLED display width, in pixels
+#define SCREEN_HEIGHT 64 // OLED display height, in pixels
 
-#define OLED_MOSI   9
-#define OLED_CLK   10
-#define OLED_DC    11
-#define OLED_CS    12
-#define OLED_RESET 13
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT,
-  OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
+#define OLED_DC     8
+#define OLED_CS     10
+#define OLED_RESET  9
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &SPI, OLED_DC, OLED_RESET, OLED_CS);
+
+#define LOGO_HEIGHT   16
+#define LOGO_WIDTH    16
+static const unsigned char PROGMEM logo_bmp[] =
+{ B00000000, B11000000,
+  B00000001, B11000000,
+  B00000001, B11000000,
+  B00000011, B11100000,
+  B11110011, B11100000,
+  B11111110, B11111000,
+  B01111110, B11111111,
+  B00110011, B10011111,
+  B00011111, B11111100,
+  B00001101, B01110000,
+  B00011011, B10100000,
+  B00111111, B11100000,
+  B00111111, B11110000,
+  B01111100, B11110000,
+  B01110000, B01110000,
+  B00000000, B00110000 };
 
 static const int digit_array[16][7] = {
   {1, 1, 1, 1, 1, 1, 0},  // 0
@@ -40,21 +57,11 @@ void setup() {
 }
 
 void loop() {
-  // for (int cnt = 0; cnt < 4095; cnt++) {
-  //   display.clearDisplay();   // Clear the buffer.
-  //   render_digits(0, 0, 18, cnt, WHITE);
-  //   display.display();
-  // }
-}
-
-void printtext(void){
-  display.clearDisplay();
-  display.setTextSize(1.5); 
-  display.setTextColor(SSD1306_WHITE);
-  display.setCursor(0, 0);
-  display.println("EEWORLDONLINE");
-  display.display();
-  delay(2000);
+  for (int cnt = 0; cnt < 4095; cnt++) {
+    display.clearDisplay();
+    render_digits(0, 0, 18, cnt, WHITE);
+    display.display();
+  }
 }
 
 void render_digits(uint8_t pos_x, uint8_t pos_y, uint8_t spacing_x, uint16_t digit, uint8_t color) {

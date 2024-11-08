@@ -45,6 +45,13 @@
 	- prace maleho rozsahu
 	- nepravidelnost
 	- prilezitostny charakter
+	- rozdeleni:
+		- DPP
+			- do 300 hodin za rok
+		- DPČ
+			- do 20 hodin tydne (prumerne)
+
+- 
 
 - - -
 
@@ -85,3 +92,65 @@
 14. Zamestnavatel nesmi dat zamestnanci vypoved v obdobi materske ci rodicovske dovolene, nebo pokud je zamestnanec nemocny
 15. Dohoda o provedeni prace se uzavira na prace do 300 hodin za kalendarni rok, dohoda o pracovni cinnosti maximalne na 20 hodin tydne
 16. Tydenni doba prace cini maximalne 40 hodin, u zkracenych uvazku muze byt nizsi
+
+- - - 
+
+### ZAKLADNI POVINNOSTI ZAMESTNANCU
+- pracovat smedomite a radne
+- plne vyuzivat pracovni dobu a pracovni prostredky
+
+- POVINNOSTI VEDOUCICH ZAMESTNANCU
+	- organizovat, ridit, ale i kontrolovat
+	- vytvaret priznive pracovni podminky
+	- spravedlive odmenovat praci
+	- pecovat o zvysovani odborne urovne podrizenych zamestnancu
+
+- POVINNOSTI ZAMESTNANCU STATNICH ORGANU A ORGANIZACI
+	- jednat a rozhodovat nestranne
+	- zachovavat mlcenlivost o skutecnostech, o nichz se dozvedeli pri vykonu sveho zamestnani
+	- neprijimat dary nebo jine vyhody v souvislosti s vykonem
+
+- PRACOVNI DOBA
+	- doba, v niz je **zamestnanec povinen pracovat pro zamestnavatele**
+	- podle zakona nejdele **40 hodin tydne**
+	- muze byt rozvrzena rovnomerne, ale i nerovnomerne (12tky treba)
+	- *Prace prescas*
+		- je prace konana na prikaz zamestnavatele nebo s jeho souhlasem nad stanovenou tydenni pracovni dobu
+
+- DOVOLENA
+	- zakladni delka je **4 tydny**
+	- prisluzi **zamestnanci v pracovnim pomeru za kalendarni rok**, jestlize v nem odpracoval alespon 60 dnu
+	- behem dovolene se pobira prumerna mzda
+	- **za cast roku** obdrzi zamestnanec **pomernou cast** dovolene
+	- existuje take **dodatkova dovolena**
+
+- DOVOLENA NA ZOTAVENOU
+	- princip dovolene za odpracovane dny
+	- za kazdych 21 odpracovanych dnu je narok na 1/12 rocni dovolene
+
+	- **dobu cerpani dovolene urcuje vzdycky zamestnavatel**
+	- den nastupu na dovolenou ma zamestnanci oznamit alespon **14 dni predem**
+	- neni-li mozne vycerpat celou dovolenou v prislusnem roce, musi byt **zbyvajici cast dovolene** poskytnuta zamestnanci **do konce pristiho kalendarniho roku**
+	- zamestnavatel muze zamestnance **ze zavaznych provoznich duvodu z dovolene odvolat**, ale hradi mu naklady, ktere mu tim vzniknou
+
+- ODMENOVANI PRACE
+	- za vykonanou praci => **mzda**
+	- odmeny rozpoctovych a prispevkovych organizaci a statnich organizaci => **platy**
+	- **slozky mzdy (platu)** jsou casti, z nichz se celkove sklada -> zakladni (tarifni) mzda, priplatky, mimoradne odmeny atd..
+		
+		![[Pasted image 202408112024.jpg]]
+
+- NAHRADA MZDY PRI PREKAZKACH V PRACI
+	- *na strane zamestnance*
+		- dulezite osobni prekazky (napr. vlastni svatba, umrti v rodine, narozeni ditete manzelce)
+	- *na strane zamestnavatele*
+		- prostoje zavinene zamestnavatelem
+		- jine zavazne provozni prekazky
+	- v tectho pripadech **ma zamestnanec narok na nahradu mzdy**
+
+- - -
+
+### Trh prace
+- CO ZAMESTNAVATELE POZADUJI	![[IMG_20241108_112620.jpg]]
+
+- 

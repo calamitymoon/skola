@@ -1,0 +1,42 @@
+<check if="{{ isset(@SESSION.jmeno) && @SESSION.jmeno != '' }}">
+    <true>
+        <!-- User is logged in -->
+        <div class="container mt-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">
+                    <h2>Tvé údaje</h2>
+                </div>
+                <div class="card-body text-center">
+                    <p class="card-title text-center">Avatar</p>
+                    <check if="{{ @SESSION.avatar != ''}}">
+                        <true>
+                            <img src="{{@SESSION.avatar}}" alt="avatar" class="rounded-circle mb-3" width="128" height="128">
+                        </true>
+                        <false>
+                            <img src="/zpravy/assets/avatars/zakladni-avatar.png" alt="avatar" class="rounded-circle mb-3" width="128" height="128">
+                        </false>
+                    </check>
+                    <p class="card-text"><strong>Přezdívka:</strong> {{@SESSION.nick}}</p>
+                    <p class="card-text"><strong>Jméno:</strong> {{@SESSION.jmeno}}</p>
+                    <p class="card-text"><strong>Příjmení:</strong> {{@SESSION.prijmeni}}</p>
+                    <p class="card-text"><strong>E-mail:</strong> {{@SESSION.email}}</p>
+                    <check if="{{ isset(@SESSION.nick) && @SESSION.nick == 'admin'}}">
+                        <true>
+                            <p class="card-text"><strong>Role:</strong> Admin</p>
+                        </true>
+                        <false>
+                            <p class="card-text"><strong>Role:</strong> Uživatel</p>
+                        </false>
+                    </check>
+                </div>
+            </div>
+        </div>
+    </true>
+    <false>
+        <!-- User is not logged in -->
+        <?php
+            header("Location: /");
+            exit;
+        ?>
+    </false>
+</check>

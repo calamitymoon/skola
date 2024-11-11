@@ -1,0 +1,33 @@
+<div class="container">
+    <form action="/zpravy/user/avatar" method="POST" enctype="multipart/form-data">
+        <h1 style="display: flex; justify-content: center; align-items: center;">Avatar</h1>
+        <center>
+            <check if="{{ @SESSION.avatar != ''}}">
+                <true>
+                    <img src="{{@SESSION.avatar}}" alt="avatar" class="rounded-circle mb-3" width="128" height="128">
+                </true>
+                <false>
+                    <img src="/zpravy/assets/avatars/zakladni-avatar.png" alt="avatar" class="rounded-circle mb-3" width="128" height="128">
+                </false>
+        </center>
+        </check>
+        <div class="form-group upload-container" style="display: flex; justify-content: center; align-items: center; margin-top: 35px; margin-bottom: 25px;">
+            <div class="upload-wrapper" style="display: flex; flex-direction: column; align-items: center;">
+                <label for="avatar">Vybrat obrázek</label>
+                <input type="file" class="form-control-file" id="avatar" name="avatar" accept=".png" required>
+            </div>
+        </div>
+        <center>
+            <button type="submit" class="btn btn-primary">Nahrát</button>
+        </center>
+        <check if="{{ @SESSION.avatar != ''}}">
+            <true>
+                <div class="form-group upload-container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 5px;">
+                    <a href="/zpravy/user/avatar/remove">Smazat aktuálního avatara</a>
+                </div>
+            </true>
+            <false>
+            </false>
+        </check>
+    </form>
+</div>

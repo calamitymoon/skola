@@ -25,7 +25,7 @@ class Zprava extends AbstractController
     {
         $base->set('title', 'Zpravy');
         $zprava = new \models\Zpravy();
-        $base->set('zpravy', $zprava->find(['id_to=?'],$base->get('SESSION.uid')));
+        $base->set('zpravy', $zprava->find(['id_to=?'], [$base->get('SESSION.uid')]));
         $base->set('content', '/zprava/list.html');
         echo \Template::instance()->render('index.html');
     }

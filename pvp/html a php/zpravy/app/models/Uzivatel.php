@@ -8,6 +8,11 @@ class Uzivatel extends \DB\Cortex
     protected $table = 'uzivatel';
 
     protected $fieldConf = [
+        'avatar' => [
+            'type' => 'VARCHAR256',
+            'required' => true,
+            'nullable' => true
+        ],
         'nick' => [
             'type' => 'VARCHAR128',
             'required' => true,
@@ -36,7 +41,6 @@ class Uzivatel extends \DB\Cortex
         ],
         'zpravy' => [
             'has-many' => ['models\Zpravy', 'id_from'],
-            
         ]
     ];
 }

@@ -16,6 +16,12 @@ class Install
         \Base::instance()->reroute('/'); // přesměrování na hlavní stránku
     }
 
+    public function setup_soubory() {
+        \models\Soubor::setdown(); // drop table pokud existuje
+        \models\Soubor::setup(); // vytvoření tabulky
+        \Base::instance()->reroute('/'); // přesměrování na hlavní stránku
+    }
+
     public function index(\Base $base)
     {
         $f3 = \Base::instance();
@@ -30,4 +36,4 @@ class Install
         
         $f3->run();
     }
-}
+} 

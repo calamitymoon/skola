@@ -8,17 +8,16 @@ class Zpravy extends \DB\Cortex
     protected $table = 'zpravy';
 
     protected $fieldConf = [
-        'text' => [
-            'type' => 'TEXT',
-            'required' => true,
-            'nullable' => false,
-            'index' => true
-        ],
         'id_from' => [
             'belongs-to-one' => 'models\Uzivatel',
         ],
         'id_to' => [
             'belongs-to-one' => 'models\Uzivatel',
+        ],
+        'text' => [
+            'type' => 'TEXT',
+            'required' => true,
+            'nullable' => false
         ],
         'precteno' => [
             'type' => 'BOOLEAN',

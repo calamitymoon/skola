@@ -1,0 +1,6 @@
+homonyma	=> stejny slova, jiny vyznam (kolej=ubytovna;kolej=koleje)
+antonyma	=> opacny vyznam
+metafora	=> jazyk v bote -> pripomina jazyk v puse
+menonymie	=> Skodovka -> Emil Skoda (zakladatel Skodovky)
+synekdocha	=>
+druhy slov	=> slovo má: sloveso (vlastni), zajmeno (moje); slovo jí: sloveso, zajmeno

@@ -1,0 +1,29 @@
+vypracuj moji maturitní otázku s názvem "Návrh vloženého systému"
+chci, abys do psal bodovitě a psal primárně informace a opravdu se soustředil na smysl a informační hodnotu slov, které budeš psát. Je to na školní předmět s názvem Technické vybavení počítače
+
+vyvaruj se psaní "jedno slovo/sousloví: další informace"
+
+pod otázky k vypracování (odděleny od sebe čárkou):
+
+požadavky vloženého systému,
+vývoj vloženého systému,
+prototypování vloženého systému,
+rušení ve vloženém systému,
+hazardy vloženého systému,
+napájení vloženého systému,
+tištěný spoj vloženého systému,
+technologie výroby vloženého systému,
+elektronické zásady vloženého systému,
+rozmístění součástek vloženého systému,
+součástková základna vloženého systému,
+technologie SMD vloženého systému,
+ostatní technologie vloženého systému (uveď příklady),
+nároky na CPU ve vloženém systému,
+části zpětnovazebního systému (vloženého systému),
+funkce částí zpětnovazebního systému (vloženého systému),
+PID regulátor vloženého systému,
+na co si dávat pozor při NÁVRHNU, a jak postupovat při míchání digitálních a analogových součástí (ve vloženém systému),
+účel analogové sekce v systému (vloženém systému),
+účel digitální sekce v systému (vloženém systému),
+napájení vloženého systému,
+jak zvážit volbu procesoru pro vložený systém

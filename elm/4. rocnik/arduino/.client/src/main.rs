@@ -17,7 +17,7 @@ struct Data {
 }
 
 fn send_json_to_server(data: &Data) -> Result<(), Box<dyn Error>> {
-    let mut prenos = TcpStream::connect("10.12.80.2:80")?;
+    let mut prenos = TcpStream::connect("192.168.0.250:80")?;
     let json = serde_json::to_string(data)? + "\n";
     prenos.write_all(json.as_bytes())?;
     Ok(())

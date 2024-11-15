@@ -68,7 +68,7 @@
 9. Jake povinnosti vyplyvaji z pracovniho pomeru pro zamestnance?
 10. Jakym zpusobem muze byt rozvazan pracovni pomer?
 11. Co je dohoda o rozvazani pracovniho pomeru?
-12. O je vypoved? Kdo ji muze dat?
+12. Co je vypoved? Kdo ji muze dat?
 13. Z jakych duvodu muze dat vypoved zamestnanci
 14. Kdy nesmi dat zamesnavatel zamestnanci vypoved
 15. Jaky je rozsah prace, na ktery se uzavira dohoda o provedeni prace nebo dohoda o pracovni cinnosti?

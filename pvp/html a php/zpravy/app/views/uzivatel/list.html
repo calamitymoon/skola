@@ -2,25 +2,64 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Přezdívka</th>
+            <th>Avatar</th>
             <th>Jméno</th>
             <th>Příjmení</th>
             <th>Email</th>
+            <th>Zamčen</th>
             <th>Akce</th>
     </thead>
     <tbody>
         <repeat group="{{@users}}" value="{{@user}}">
             <tr>
                 <td>{{@user.id}}</td>
-                <td>{{@user.nick}}</td>
+                <td><img src="{{@user.avatar}}" alt="avatar" width="35" height="35"></td>
                 <td>{{@user.jmeno}}</td>
                 <td>{{@user.prijmeni}}</td>
                 <td>{{@user.email}}</td>
+                <td class="lock" data-id="{{@user.id}}">{{@user.locked==0?'<i class="bi bi-unlock"></i>':'<i class="bi bi-lock text-danger"></i>'}} </td>
                 <td>
-                    <a href="/zpravy/user/upravit/{{@user.id}}">Upravit</a>
-                    <a href="/zpravy/user/smazat/{{@user.id}}">Smazat</a>
+                    <a href="/user/upravit/{{@user.id}}">Upravit</a>
+                    <a href="/user/smazat/{{@user.id}}">Smazat</a>
                 </td>
             </tr>
         </repeat>
     </tbody>
 </table>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.lock').forEach(item => {
+            item.addEventListener('click', event => {
+                let uid = item.getAttribute('data-id');
+                let icon = item.querySelector('i');
+                fetch('/user/zamknout/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            id: uid
+                        }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.locked == 0) {
+                            icon.classList.remove('bi-lock');
+                            icon.classList.add('bi-unlock');
+                            icon.classList.remove('text-danger');
+                            icon.classList.add('text-success');
+                        } else {
+                            icon.classList.remove('bi-lock');
+                            icon.classList.add('bi-unlock');
+                            icon.classList.remove('text-danger');
+                            icon.classList.add('text-success');
+                        }
+                    })
+                    .catch((error) => {
+                        console.error('Chybicka:', error);
+                    });
+            });
+        })
+    });
+</script>

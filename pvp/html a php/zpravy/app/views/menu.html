@@ -6,7 +6,7 @@
         </button> -->
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <check if="{{ isset(@SESSION.jmeno) && @SESSION.jmeno != '' }}">
+            <check if="{{ isset(@SESSION.nick) && @SESSION.nick == 'admin' }}">
                 <true>
                     <ul class="navbar-nav me-left mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
@@ -17,6 +17,7 @@
                                 <li><a class="dropdown-item" href="/zpravy/install/uzivatele">Resetovat uživatele</a></li>
                                 <li><a class="dropdown-item" href="/zpravy/install/zpravy">Resetovat zprávy</a></li>
                                 <li><a class="dropdown-item" href="/zpravy/install/soubory">Resetovat soubory</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/install/prihlaseni">Resetovat přihlášení</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -71,15 +72,15 @@
                             <!-- <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 {{ @SESSION.nick }}
                             </a> -->
-                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="#" class="nav-link dropdown-toggle text-white d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
                                 <check if="{{ !isset(@SESSION.avatar)}}">
                                     <true>
                                         <div class="avatar">
-                                            {{ strtoupper(substr(@SESSION.nick, 0, 1)) }}
+                                            <img src="/zpravy/assets/avatars/zakladni-avatar.png" alt="avatar" class="rounded-circle" width="32" height="32">
                                         </div>
                                     </true>
                                     <false>
-                                        <img src="{{ @SESSION.avatar }}" alt="avatar" class="avatar"> {{@SESSION.nick}}</img>
+                                        <img src="{{@SESSION.avatar}}" alt="avatar" class="rounded-circle" width="32" height="32">
                                     </false>
                                 </check>
                             </a>

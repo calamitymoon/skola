@@ -3,10 +3,35 @@
         <div class="card-header d-flex justify-content-between">
             <check if="{{@zprava.id_from}}">
                 <true>
-                    <span>
-                        <strong>{{@zprava.id_from.nick}}</strong> 
-                        <sub>{{@zprava.id_from.jmeno}} {{@zprava.id_from.prijmeni}}</sub>
-                    </span>
+                    <check if="{{@SESSION.uid == '1'}}">
+                        <true>
+                            <span>
+                                <check if="{{ @SESSION.avatar != ''}}">
+                                    <true>
+                                        <img src="{{ @zprava.id_from.avatar }}" alt="avatar" class="img-thumbnail avatar">
+                                    </true>
+                                    <false>
+                                        <img src="/zpravy/assets/avatars/zakladni-avatar.png" alt="avatar" class="img-thumbnail avatar">
+                                    </false>
+                                </check>
+                                <strong>{{@zprava.id_from.nick}}</strong> 
+                                <sub>{{@zprava.id_from.jmeno}} {{@zprava.id_from.prijmeni}}</sub>
+                            </span>
+                        </true>
+                        <false>
+                            <span>
+                                <check if="{{ @SESSION.avatar != ''}}">
+                                    <true>
+                                        <img src="{{ @zprava.id_from.avatar }}" alt="avatar" class="img-thumbnail avatar">
+                                    </true>
+                                    <false>
+                                        <img src="/zpravy/assets/avatars/zakladni-avatar.png" alt="avatar" class="img-thumbnail avatar">
+                                    </false>
+                                </check>
+                                <strong>{{@zprava.id_from.nick}}</strong>
+                            </span>
+                        </false>
+                    </check>
                 </true>
                 <false>
                     <span><strong>[!] <u>Neznamy odesilatel</u> [!]</strong></span>

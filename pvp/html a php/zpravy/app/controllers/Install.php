@@ -2,6 +2,11 @@
 
 namespace controllers;
 
+use models\Uzivatel;
+use models\Zpravy;
+use models\Soubor;
+use models\Login;
+
 class Install
 {
     public function setup_uzivatel() {
@@ -19,6 +24,12 @@ class Install
     public function setup_soubory() {
         \models\Soubor::setdown(); // drop table pokud existuje
         \models\Soubor::setup(); // vytvoření tabulky
+        \Base::instance()->reroute('/'); // přesměrování na hlavní stránku
+    }
+
+    public function setup_login() {
+        \models\Login::setdown(); // drop table pokud existuje
+        \models\Login::setup(); // vytvoření tabulky
         \Base::instance()->reroute('/'); // přesměrování na hlavní stránku
     }
 

@@ -34,13 +34,22 @@ class Uzivatel extends \DB\Cortex
             'unique' => true,
             'nullable' => false,
         ],
-        'heslo' => [
-            'type' => 'VARCHAR256',
+        'heslo'=>[
+            'type'=> 'VARCHAR256',
             'required' => true,
-            'nullable' => false,
+            'nullable' => false
         ],
         'zpravy' => [
             'has-many' => ['models\Zpravy', 'id_from'],
+        ],
+        'locked' => [
+            'type' => 'BOOLEAN',
+            'default' => false
         ]
     ];
+
+    public function set_heslo($value)
+    {
+        return password_hash($value, PASSWORD_DEFAULT);
+    }
 }

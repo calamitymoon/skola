@@ -9,8 +9,8 @@
                 <false>
                     <img src="/zpravy/assets/avatars/zakladni-avatar.png" alt="avatar" class="rounded-circle mb-3" width="128" height="128">
                 </false>
+            </check>
         </center>
-        </check>
         <div class="form-group upload-container" style="display: flex; justify-content: center; align-items: center; margin-top: 35px; margin-bottom: 25px;">
             <div class="upload-wrapper" style="display: flex; flex-direction: column; align-items: center;">
                 <label for="avatar">Vybrat obrázek</label>
@@ -22,9 +22,9 @@
         </center>
         <check if="{{ @SESSION.avatar != ''}}">
             <true>
-                <div class="form-group upload-container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 5px;">
+                <!-- <div class="form-group upload-container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 5px;">
                     <a href="/zpravy/user/avatar/remove">Smazat aktuálního avatara</a>
-                </div>
+                </div> -->
             </true>
             <false>
             </false>

@@ -2,7 +2,7 @@
 
 namespace controllers;
 
-class Zpravy extends AbstractController
+class Zpravy
 {
     public function getAdd(\Base $base)
     {

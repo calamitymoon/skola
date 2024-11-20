@@ -1,14 +1,19 @@
 <form method="post">
     <label for="od">Od:</label>
     <select name="id_from" id="od" class="form-control" required disabled tabindex="-1">
-        <option value="{{@SESSION.uid}}" selected disabled>{{@SESSION.jmeno}}</option>
+        <option value="{{@SESSION.uid}}" selected disabled>{{@SESSION.nick}}</option>
     </select>
     <br>
     <label for="komu">Pro:</label>
     <select name="id_to" id="komu" class="form-control" required>
-        <repeat group="{{@uzivatele}}" value="{{@uzivatel}}">
+    <repeat group="{{@uzivatele}}" value="{{@uzivatel}}">
+        <check if="{{@uzivatel.nick == @SESSION.nick}}">
+            <option value="{{@uzivatel.id}}">{{@uzivatel.nick}} (ty)</option>
+        </check>
+        <check if="{{@uzivatel.nick != @SESSION.nick}}">
             <option value="{{@uzivatel.id}}">{{@uzivatel.nick}}</option>
-        </repeat>
+        </check>
+    </repeat>
     </select>
     <br>
     <label for="text">Zpráva:</label>

@@ -106,23 +106,25 @@ class Uzivatel extends AbstractController
 
     public function postZamknout(\Base $base)
     {
-        $data = json_decode($base->get('BODY'), true);
-        $userID = $data->id;
+        $data = json_decode($base->get('BODY'),true);
+        $idUzivatele = $data["id"];
+        header('Content-Type: application/json');
+        $uzivatel = new \models\Uzivatel();
+        $uzivatel->load(["id=?", $idUzivatele]);
 
-        if (isset($data['id'])) {
-            $uzivatel = new \models\Uzivatel();
-            $uz = $uzivatel->findone(['id = ?', $data['id']]);
-
-            if ($uz) {
-                $uz->locked = !$uz->locked;
-                $uz->save();
-                $base->reroute('/user/list');
-            } else {
-                $base->reroute('/');
-            }
-        } else {
-            $base->reroute('/');
+        if($uzivatel->dry()){
+            echo json_encode(["error" => "Uzivatel nenalezen."]);
+            return;
         }
+        if($uzivatel->locked){
+            $uzivatel->locked = 0;
+        }else{
+            $uzivatel->locked = 1;
+        }
+        $uzivatel->save();
+        echo json_encode(["success" => "Stav zmenen."]);
+        // $base->reroute('/user/list');
+    }
         // $uzivatel = new \models\Uzivatel();
         // $uz = $uzivatel->findone(['id = ?', $base->get('PARAMS.id')]);
 
@@ -137,5 +139,4 @@ class Uzivatel extends AbstractController
         // } else {
         //     $base->reroute('/');
         // }
-    }
 }

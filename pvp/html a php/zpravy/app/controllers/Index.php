@@ -66,6 +66,12 @@ class Index
         $base->set('SESSION.prijmeni', $uz->prijmeni);
         $base->set('SESSION.email', $uz->email);
         $base->set('SESSION.avatar', '/zpravy/assets/avatars/'.$uz->nick.'.png');
+        
+        $uzivatel = new \models\Uzivatel();
+        $uz = $uzivatel->findone(['id = ?', $uz->id]);
+        $uz->avatar = '/zpravy/assets/avatars/'.$uz->nick.'.png';
+        $uzivatel->save();
+        
         $base->reroute('/');
     }
 

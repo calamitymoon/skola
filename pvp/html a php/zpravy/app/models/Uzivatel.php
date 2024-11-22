@@ -45,11 +45,20 @@ class Uzivatel extends \DB\Cortex
         'locked' => [
             'type' => 'BOOLEAN',
             'default' => false
-        ]
+        ],
+        'login' => [
+            'has_many' => ['models\Login', 'uzivatel']
+        ],
     ];
 
     public function set_heslo($value)
     {
         return password_hash($value, PASSWORD_DEFAULT);
+    }
+
+    public function get_lastlogin()
+    {
+        $login = new \models\Login();
+        return $login->findone(['uzivatel = ?', $this->id], ['order' => 'id DESC'])->last_login;
     }
 }

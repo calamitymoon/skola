@@ -2,7 +2,7 @@
 
 namespace controllers;
 
-class Index
+class Index extends AbstractController
 {
     public function index(\Base $base)
     {
@@ -66,6 +66,7 @@ class Index
         $base->set('SESSION.prijmeni', $uz->prijmeni);
         $base->set('SESSION.email', $uz->email);
         $base->set('SESSION.avatar', '/zpravy/assets/avatars/'.$uz->nick.'.png');
+        $base->set('SESSION.role', $uz->role->nazev);
         
         $uzivatel = new \models\Uzivatel();
         $uz = $uzivatel->findone(['id = ?', $uz->id]);

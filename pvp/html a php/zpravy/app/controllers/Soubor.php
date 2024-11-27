@@ -2,7 +2,7 @@
 
 namespace controllers;
 
-class Soubor
+class Soubor extends AbstractController
 {
     public function saveFile(\Base $base)
     {

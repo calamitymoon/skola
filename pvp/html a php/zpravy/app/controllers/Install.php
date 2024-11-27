@@ -7,8 +7,19 @@ use models\Zpravy;
 use models\Soubor;
 use models\Login;
 
-class Install
+class Install extends AbstractController
 {
+    private function nastavRole($pole)
+    {
+        foreach ($pole as $r) {
+            $role = new \models\Role();
+            $role->nazev = $r['nazev'];
+            $role->popis = $r['popis'];
+            $role->save();
+            unset($role);
+        }
+    }
+
     public function setup_uzivatel() {
         \models\Uzivatel::setdown(); // drop table pokud existuje
         \models\Uzivatel::setup(); // vytvoření tabulky
@@ -30,6 +41,17 @@ class Install
     public function setup_login() {
         \models\Login::setdown(); // drop table pokud existuje
         \models\Login::setup(); // vytvoření tabulky
+        \Base::instance()->reroute('/'); // přesměrování na hlavní stránku
+    }
+
+    public function setup_role() {
+        \models\Role::setdown(); // drop table pokud existuje
+        \models\Role::setup(); // vytvoření tabulky
+        $this->nastavRole([ // vytvoření admin role
+            ['nazev'=>'admin','popis'=>'Administrátor'],
+            ['nazev'=>'user','popis'=>'Uživatel'],
+            ['nazev'=>'guest','popis'=>'Návštevník']
+        ]);
         \Base::instance()->reroute('/'); // přesměrování na hlavní stránku
     }
 

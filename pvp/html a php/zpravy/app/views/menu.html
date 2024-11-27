@@ -6,14 +6,18 @@
         </button> -->
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <check if="{{ isset(@SESSION.nick) && @SESSION.nick == 'admin' }}">
+            <check if="{{ isset(@SESSION.role) && @SESSION.role == 'admin' }}">
                 <true>
                     <ul class="navbar-nav me-left mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Databáze
+                            <a class="nav-link dropdown-toggle text-danger" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Administrátor
                     </a>
                             <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/zpravy/admin/panel">Správa uživatelů</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
                                 <li><a class="dropdown-item" href="/zpravy/install/uzivatele">Resetovat uživatele</a></li>
                                 <li><a class="dropdown-item" href="/zpravy/install/zpravy">Resetovat zprávy</a></li>
                                 <li><a class="dropdown-item" href="/zpravy/install/soubory">Resetovat soubory</a></li>
@@ -22,6 +26,7 @@
                             </ul>
                         </li>
                     </ul>
+
                 </true>
                 <false>
                     <!-- User is not logged in -->

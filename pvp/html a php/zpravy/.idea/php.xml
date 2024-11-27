@@ -17,10 +17,17 @@
       <path value="$PROJECT_DIR$/vendor/ikkez/f3-schema-builder" />
       <path value="$PROJECT_DIR$/vendor/ikkez/f3-cortex" />
       <path value="$PROJECT_DIR$/vendor/bcosca/fatfree" />
+      <path value="$PROJECT_DIR$/vendor/xfra35/f3-access" />
+      <path value="$PROJECT_DIR$/vendor/ikkez/f3-flash" />
     </include_path>
   </component>
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" />
+    </phpunit_settings>
   </component>
   <component name="PsalmOptionsConfiguration">
     <option name="transferred" value="true" />

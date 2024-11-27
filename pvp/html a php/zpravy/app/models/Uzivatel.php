@@ -49,6 +49,10 @@ class Uzivatel extends \DB\Cortex
         'login' => [
             'has_many' => ['models\Login', 'uzivatel']
         ],
+        'role' => [
+            'belongs-to-one' => 'models\Role',
+            'default' => '3'
+        ]
     ];
 
     public function set_heslo($value)

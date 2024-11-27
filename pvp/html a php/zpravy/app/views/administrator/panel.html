@@ -1,0 +1,29 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Název</th>
+            <th>Popis</th>
+            <th>Počet uživatelů</th>
+            <th>Uživatelé</th>
+        </tr>
+    </thead>
+    <tbody>
+        <repeat group="{{@role}}" value="{{@rolee}}">
+            <tr>
+                <td>{{@rolee.id}}</td>
+                <td>{{@rolee.nazev}}</td>
+                <td>{{@rolee.uzivatele ? count(@rolee.uzivatele) : 0}}</td>
+                <td>{{@rolee.popis}}</td>
+                <td>
+                    <details>
+                        <summary>Zobrazit</summary>
+                        <repeat group="{{@rolee.uzivatele}}" value="{{@ru}}">
+                            <span class="badge bg-primary fs-6 d-inline-block mb-1">{{@ru.jmeno}} {{@ru.prijmeni}}</span><br>
+                        </repeat>
+                    </details>
+                </td>
+            </tr>
+        </repeat>
+    </tbody>
+</table>

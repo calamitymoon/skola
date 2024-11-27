@@ -20,12 +20,12 @@
                     <p class="card-text"><strong>Jméno:</strong> {{@SESSION.jmeno}}</p>
                     <p class="card-text"><strong>Příjmení:</strong> {{@SESSION.prijmeni}}</p>
                     <p class="card-text"><strong>E-mail:</strong> {{@SESSION.email}}</p>
-                    <check if="{{ isset(@SESSION.nick) && @SESSION.nick == 'admin'}}">
+                    <check if="{{ isset(@SESSION.role)}}">
                         <true>
-                            <p class="card-text"><strong>Role:</strong> Admin</p>
+                            <p class="card-text"><strong>Role:</strong> {{@SESSION.role}}</p>
                         </true>
                         <false>
-                            <p class="card-text"><strong>Role:</strong> Uživatel</p>
+                            <p class="card-text"><strong>Role:</strong> neni nastavena role</p>
                         </false>
                     </check>
                 </div>

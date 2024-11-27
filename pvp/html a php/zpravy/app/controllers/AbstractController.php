@@ -9,5 +9,19 @@ class AbstractController
         if (!$base->get('SESSION.uid')) {
             $base->reroute('/user/login');
         }
+        $this->prava($base->get('SESSION.role'));
+    }
+
+    private function prava($uzivatel)
+    {
+        $access = \Access::instance();
+        $access->policy('allow');
+        $access->deny('/message/list');
+        $access->allow('/message/list', 'admin');
+        // echo "pristup povolen s roli: $uzivatel";
+        $access->authorize($uzivatel, function($route,$subject){
+            \Flash::instance()->addMessage('Nemáte dostatečná oprávnění.', 'danger');
+            \Base::instance()->reroute('/');
+        });
     }
 }

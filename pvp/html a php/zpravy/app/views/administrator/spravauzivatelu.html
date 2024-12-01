@@ -1,0 +1,42 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Název</th>
+            <th>Popis</th>
+            <th>Počet uživatelů</th>
+            <th>Uživatelé</th>
+            <th>Přiřadit roli uživateli</th>
+        </tr>
+    </thead>
+    <tbody>
+        <repeat group="{{@role}}" value="{{@rolee}}">
+            <tr>
+                <td>{{@rolee.id}}</td>
+                <td>{{@rolee.nazev}}</td>
+                <td>{{@rolee.popis}}</td>
+                <td>{{@rolee.uzivatele ? count(@rolee.uzivatele) : 0}}</td>
+                <td>
+                    <details>
+                        <summary>Zobrazit</summary>
+                        <repeat group="{{@rolee.uzivatele}}" value="{{@ru}}">
+                            <span class="badge bg-primary fs-6 d-inline-block mb-1">{{@ru.jmeno}} {{@ru.prijmeni}}</span><br>
+                        </repeat>
+                    </details>
+                </td>
+                <td>
+                    <form method="POST" action="/add-user-to-role" class="d-flex align-items-center">
+                        <!-- <label for="user-select-{{@rolee.id}}" class="form-label me-2">Přiřadit roli uživateli:</label> -->
+                        <select id="user-select-{{@rolee.id}}" name="user_id" class="form-select me-2">
+                            <option value="" disabled selected>Vyberte uživatele</option>
+                            <repeat group="{{@users}}" value="{{@user}}">
+                                <option value="{{@user.id}}">{{@user.jmeno}} {{@user.prijmeni}}</option>
+                            </repeat>
+                        </select>
+                        <button type="submit" name="role_id" value="{{@rolee.id}}" class="btn btn-primary">Přidat</button>
+                    </form>
+                </td>
+            </tr>
+        </repeat>
+    </tbody>
+</table>

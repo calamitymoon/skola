@@ -7,7 +7,7 @@ class AbstractController
     public function beforeRoute(\Base $base)
     {
         if (!$base->get('SESSION.uid')) {
-            $base->reroute('/user/login');
+            // $base->reroute('/user/login');
         }
         $this->prava($base->get('SESSION.role'));
     }

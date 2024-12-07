@@ -1,0 +1,67 @@
+<div class="container mt-5">
+    <form method="post">
+        <div class="form-group mb-3">
+            <label for="jmenoprijmeni">Jméno a příjmení:</label>
+            <input type="text" class="form-control" id="jmenoprijmeni" name="jmenoprijmeni" value="{{ @SESSION.jmeno }} {{ @SESSION.prijmeni }}" readonly>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="datumnarozeni">Datum narození:</label>
+            <input type="text" class="form-control" id="datumnarozeni" name="datumnarozeni" value="{{ @SESSION.datumnarozeni }}" readonly>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="adresa">Adresa:</label>
+            <input type="text" class="form-control" id="adresa" name="adresa" value="{{ @SESSION.adresa }}" readonly>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="skolnirok">Školní rok:</label>
+            <input type="text" class="form-control" id="skolnirok" name="skolnirok" value="" readonly>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="trida">Třída:</label>
+            <input type="text" class="form-control" id="trida" name="trida" value="{{ @SESSION.trida }}" readonly>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="formavzdelani">Forma vzdělání:</label>
+            <select class="form-control" id="formavzdelani" name="formavzdelani">
+            <option value="" disabled selected>--- Vyber ---</option>
+            <option value="denni">denní</option>
+            <option value="kombinovane">kombinované</option>
+            </select>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="odbornaskola">Odborná škola:</label>
+            <select class="form-control" id="odbornaskola" name="odbornaskola">
+            <option value="" disabled selected>--- Vyber ---</option>
+            <option value="střední">střední</option>
+            <option value="vyšší">vyšší</option>
+            </select>
+        </div>
+
+        <div class="form-group d-flex justify-content-between align-items-center">
+            <p>V Děčíně: <span id="datum"></span></p>
+            <p class="text-end">Razítko a podpis: <img src="/potvrzeni-o-studiu-pisemka/assets/podpis.png" alt="podpis" width="86" height="86"></p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Odeslat</button>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const dnesek = new Date();
+            const datum = dnesek.toLocaleDateString('cs-CZ');
+            document.getElementById('datum').textContent = datum;
+        });
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const dnesek = new Date();
+            const rok = dnesek.getFullYear();
+            const mesic = dnesek.getMonth();
+            const skolniRok = mesic >= 8 ? `${rok}/${rok + 1}` : `${rok - 1}/${rok}`;
+            document.getElementById('skolnirok').value = skolniRok;
+        });
+    </script>
+</div>

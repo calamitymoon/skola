@@ -1,0 +1,52 @@
+<check if="{{ @URI == '/potvrzeni-o-studiu-pisemka/predloha' }}">
+    <true>
+    </true>
+    <false>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="/potvrzeni-o-studiu-pisemka/">Spravovací panel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <check if="{{ isset(@SESSION.jmeno) }}">
+                            <true>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Potvrzení
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="/potvrzeni-o-studiu-pisemka/predloha">Zobrazit nevyplněnou předlohu</a></li>
+                                        <li><a class="dropdown-item" href="/potvrzeni-o-studiu-pisemka/vygenerovat">Vygenerovat k tisku</a></li>
+                                        <li><a class="dropdown-item" href="/potvrzeni-o-studiu-pisemka/odeslat">Odeslat do databáze</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Databáze
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="/potvrzeni-o-studiu-pisemka/install/uzivatele">Resetovat databázi 'uzivatele'</a></li>
+                                        <li><a class="dropdown-item" href="/potvrzeni-o-studiu-pisemka/install/potvrzeni">Resetovat databázi 'potvrzeni'</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="/potvrzeni-o-studiu-pisemka/uzivatele">Odhlásit se</a>
+                                </li>
+                            </true>
+                            <false>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="/potvrzeni-o-studiu-pisemka/user/add">Registrovat se</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="/potvrzeni-o-studiu-pisemka/user/login">Přihlásit se</a>
+                                </li>
+                            </false>
+                        </check>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </false>
+</check>

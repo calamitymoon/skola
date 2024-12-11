@@ -6,6 +6,8 @@ use models\Uzivatel;
 use models\Zpravy;
 use models\Soubor;
 use models\Login;
+use models\Anketa;
+use models\AnketaVysledky;
 
 class Install extends AbstractController
 {
@@ -52,6 +54,18 @@ class Install extends AbstractController
             ['nazev'=>'user','popis'=>'Uživatel'],
             ['nazev'=>'guest','popis'=>'Návštevník']
         ]);
+        \Base::instance()->reroute('/'); // přesměrování na hlavní stránku
+    }
+
+    public function setup_ankety() {
+        \models\Ankety::setdown(); // drop table pokud existuje
+        \models\Ankety::setup(); // vytvoření tabulky
+        \Base::instance()->reroute('/'); // přesměrování na hlavní stránku
+    }
+
+    public function setup_anketyvysledky() {
+        \models\AnketaVysledky::setdown(); // drop table pokud existuje
+        \models\AnketaVysledky::setup(); // vytvoření tabulky
         \Base::instance()->reroute('/'); // přesměrování na hlavní stránku
     }
 

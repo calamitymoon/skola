@@ -11,19 +11,20 @@
                     <ul class="navbar-nav me-left mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-danger" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Administrátor
-                    </a>
+                                Administrátor
+                            </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/zpravy/admin/manage/users">Správa uživatelů</a></li>
                                 <li><a class="dropdown-item" href="/zpravy/admin/manage/roles">Správa rolí</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
+                                <li><a class="dropdown-item" href="/zpravy/admin/manage/surveys">Správa anket</a></li>
+                                <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="/zpravy/install/uzivatele">Resetovat uživatele</a></li>
                                 <li><a class="dropdown-item" href="/zpravy/install/zpravy">Resetovat zprávy</a></li>
                                 <li><a class="dropdown-item" href="/zpravy/install/soubory">Resetovat soubory</a></li>
                                 <li><a class="dropdown-item" href="/zpravy/install/prihlaseni">Resetovat přihlášení</a></li>
                                 <li><a class="dropdown-item" href="/zpravy/install/role">Resetovat role</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/install/ankety">Resetovat ankety</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/install/ankety/vysledky">Resetovat výsledky anket</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -39,6 +40,12 @@
                 <check if="{{ isset(@SESSION.jmeno) && @SESSION.jmeno != '' }}">
                     <true>
                         <!-- User is logged in -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/zpravy/user/surveys/results">Výsledky anket</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/zpravy/user/surveys">Ankety</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Soubory

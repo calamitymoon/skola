@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <repeat group="{{ @ankety }}" value="{{ @anketa }}">
+    <form method="post">
+        <div class="card mb-3">
+            <div class="card-header">
+                <sub>id: <u>{{ @anketa.id_ankety }}</u></sub><h3>{{ @anketa.otazka }} </h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <repeat group="{{ @anketa.moznosti | json_decode }}" value="{{ @moznost }}">
+                        <li class="list-group-item">
+                            <input type="radio" name="moznost" value="{{ @moznost }}"> {{ @moznost }}
+                        </li>
+                    </repeat>
+                </ul>
+                <input type="hidden" name="anketa_id" value="{{ @anketa.id_ankety }}">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Odeslat</button>
+    </form>
+    </repeat>
+</div>

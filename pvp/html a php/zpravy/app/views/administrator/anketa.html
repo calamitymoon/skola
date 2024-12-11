@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <div id="ankety-container" class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="anketaOtazka">Název ankety</label>
+                            <input type="text" class="form-control" id="anketaOtazka" name="anketaOtazka" placeholder="Zadejte název ankety">
+                        </div>
+                        <div id="moznosti-container">
+                            <div class="form-group">
+                                <label for="idankety">ID ankety</label>
+                                <input type="text" class="form-control" id="idankety" name="idankety">
+                                <label for="moznost1">Možnost 1</label>
+                                <input type="text" class="form-control" id="moznost1" name="moznost[]">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary mt-3" id="addOption">Přidat možnost</button>
+                        <button type="submit" class="btn btn-primary mt-3">Vytvořit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('addOption').addEventListener('click', function() {
+    var container = document.getElementById('moznosti-container');
+    var index = container.children.length + 1;
+    var div = document.createElement('div');
+    div.className = 'form-group';
+    div.innerHTML = '<label for="moznost' + index + '">Možnost ' + index + '</label>' +
+                    '<input type="text" class="form-control" id="moznost' + index + '" name="moznost[]">';
+    container.appendChild(div);
+});
+</script>

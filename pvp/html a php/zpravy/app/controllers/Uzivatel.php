@@ -4,6 +4,51 @@ namespace controllers;
 
 class Uzivatel extends AbstractController
 {
+    public function getVysledkyAnkety(\Base $base)
+    {
+        $vysledky = new \models\AnketaVysledky();
+
+        
+
+        $base->set('anketyProcenta', $anketyProcenta);
+        $base->set('title', 'Výsledky ankety');
+        $base->set('content', '/uzivatel/vysledky.html');
+        echo \Template::instance()->render('index.html');
+    }
+
+    public function getAnketa(\Base $base)
+    {
+        $ankety = new \models\Ankety();
+        $base->set('ankety', $ankety->find());
+        $base->set('title', 'Anketa');
+        $base->set('content', '/uzivatel/anketa.html');
+        echo \Template::instance()->render('index.html');
+    }
+
+    public function postAnketa(\Base $base)
+    {
+        $vysledky = new \models\AnketaVysledky();
+        $anketa_id = $base->get('POST.anketa_id');
+        $moznost = $base->get('POST.moznost');
+        $odesilatel = $base->get('SESSION.uid');
+
+        $existujiciVysledek = $vysledky->findone(['anketa_id = ? AND moznost = ?', $anketa_id, $moznost]);
+
+        if ($existujiciVysledek) {
+            $existujiciVysledek->pocet += 1;
+            $vysledky = $existujiciVysledek;
+        } else {
+            $vysledky->anketa_id = $anketa_id;
+            $vysledky->moznost = $moznost;
+            $vysledky->pocet = 1;
+        }
+        $vysledky->odesilatel = $odesilatel;
+        
+        $vysledky->save();
+
+        $base->reroute('/user/surveys');
+    }
+    
     public function getList(\Base $base)
     {
         $base->set('title', 'Seznam uzivatelu');

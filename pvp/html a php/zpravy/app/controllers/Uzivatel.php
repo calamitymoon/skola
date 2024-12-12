@@ -6,11 +6,24 @@ class Uzivatel extends AbstractController
 {
     public function getVysledkyAnkety(\Base $base)
     {
-        $vysledky = new \models\AnketaVysledky();
+        // $anketyModel = new \models\Ankety();
+        $vysledkyModel = new \models\AnketaVysledky();
 
+        $vysledky = [];
+        $hlasy = 0;
+
+        $vysledek = $vysledkyModel->find();
+        foreach ($vysledek as $radek) {
+            $hlasy += $radek->pocet;
+            $vysledky[] = $radek->cast();
+        }
+
+        foreach ($vysledky as &$radek) {
+            $radek['procenta'] = ($radek['pocet'] / $hlasy) * 100;
+        }
         
-
-        $base->set('anketyProcenta', $anketyProcenta);
+        // $base->set('ankety', $anketyModel->find());
+        $base->set('moznosti', $vysledky);
         $base->set('title', 'Výsledky ankety');
         $base->set('content', '/uzivatel/vysledky.html');
         echo \Template::instance()->render('index.html');

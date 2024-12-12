@@ -1,0 +1,35 @@
+- dodelat to, ze kazdej vysledek bude mit vlastni stranku
+<!-- <div class="container">
+    <h1 class="my-4">Výsledky Anketa</h1>
+    <div class="list-group">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Možnost</th>
+                            <th>Hlasů</th>
+                            <th>Procenta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <repeat group="{{ @moznosti }}" value="{{ @m }}">
+                            <check if="{{ @m == @moznosti[0] }}">
+                                <tr>
+                                    <span class="badge bg-primary">
+                                        <i class="bi bi-bar-chart"></i> {{ @moznosti[0].anketa_id }}
+                                    </span>
+                                </tr>
+                            </check>
+                            <tr>
+                                <td>{{ @m.moznost | htmlspecialchars }}</td>
+                                <td>{{ @m.pocet }}</td>
+                                <td>{{ round(@m.procenta, 1) }}%</td>
+                            </tr>
+                        </repeat>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> -->

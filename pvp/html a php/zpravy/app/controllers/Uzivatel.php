@@ -6,23 +6,24 @@ class Uzivatel extends AbstractController
 {
     public function getVysledkyAnkety(\Base $base)
     {
-        // $anketyModel = new \models\Ankety();
         $vysledkyModel = new \models\AnketaVysledky();
 
         $vysledky = [];
-        $hlasy = 0;
+        $hlasyPerAnketa = [];
 
         $vysledek = $vysledkyModel->find();
         foreach ($vysledek as $radek) {
-            $hlasy += $radek->pocet;
+            if (!isset($hlasyPerAnketa[$radek->anketa_id])) {
+                $hlasyPerAnketa[$radek->anketa_id] = 0;
+            }
+            $hlasyPerAnketa[$radek->anketa_id] += $radek->pocet;
             $vysledky[] = $radek->cast();
         }
 
         foreach ($vysledky as &$radek) {
-            $radek['procenta'] = ($radek['pocet'] / $hlasy) * 100;
+            $radek['procenta'] = ($radek['pocet'] / $hlasyPerAnketa[$radek['anketa_id']]) * 100;
         }
         
-        // $base->set('ankety', $anketyModel->find());
         $base->set('moznosti', $vysledky);
         $base->set('title', 'Výsledky ankety');
         $base->set('content', '/uzivatel/vysledky.html');
@@ -43,6 +44,7 @@ class Uzivatel extends AbstractController
         $vysledky = new \models\AnketaVysledky();
         $anketa_id = $base->get('POST.anketa_id');
         $moznost = $base->get('POST.moznost');
+        $otazka = $base->get('POST.otazka');
         $odesilatel = $base->get('SESSION.uid');
 
         $existujiciVysledek = $vysledky->findone(['anketa_id = ? AND moznost = ?', $anketa_id, $moznost]);

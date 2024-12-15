@@ -1,35 +1,34 @@
-- dodelat to, ze kazdej vysledek bude mit vlastni stranku
-<!-- <div class="container">
+<div class="container">
     <h1 class="my-4">Výsledky Anketa</h1>
     <div class="list-group">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Možnost</th>
-                            <th>Hlasů</th>
-                            <th>Procenta</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <repeat group="{{ @moznosti }}" value="{{ @m }}">
-                            <check if="{{ @m == @moznosti[0] }}">
+                <repeat group="{{ @moznosti }}" value="{{ @m }}" key="{{ @index }}">
+                    <check if="{{ @index == 0 || @m.anketa_id != @moznosti[@index - 1].anketa_id }}">
+                        <table class="table">
+                            <thead>
                                 <tr>
-                                    <span class="badge bg-primary">
-                                        <i class="bi bi-bar-chart"></i> {{ @moznosti[0].anketa_id }}
-                                    </span>
+                                    <th colspan="3" class="anketa-id bg-primary text-white text-center">{{ @m.otazka }} <sub>id: {{ @m.anketa_id }}</sub></th>
                                 </tr>
-                            </check>
-                            <tr>
-                                <td>{{ @m.moznost | htmlspecialchars }}</td>
-                                <td>{{ @m.pocet }}</td>
-                                <td>{{ round(@m.procenta, 1) }}%</td>
-                            </tr>
-                        </repeat>
-                    </tbody>
-                </table>
+                                <tr>
+                                    <th>Možnost</th>
+                                    <th>Hlasů</th>
+                                    <th>Procenta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    </check>
+                    <tr>
+                        <td>{{ @m.moznost | htmlspecialchars }}</td>
+                        <td>{{ @m.pocet }}</td>
+                        <td>{{ round(@m.procenta, 1) }}%</td>
+                    </tr>
+                    <check if="{{ @index == (count(@moznosti) - 1) || @m.anketa_id != @moznosti[@index + 1].anketa_id }}">
+                            </tbody>
+                        </table>
+                    </check>
+                </repeat>
             </div>
         </div>
     </div>
-</div> -->
+</div>

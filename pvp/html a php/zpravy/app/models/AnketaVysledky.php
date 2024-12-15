@@ -19,6 +19,9 @@ class AnketaVysledky extends \DB\Cortex
         ],
         'odesilatel' => [
             'type' => 'VARCHAR128',
-        ]
+        ],
+        'otazka' => [
+            'type' => 'VARCHAR128',
+        ],
     ];
 }

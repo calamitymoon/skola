@@ -44,7 +44,7 @@ class Uzivatel extends AbstractController
         $vysledky = new \models\AnketaVysledky();
         $anketa_id = $base->get('POST.anketa_id');
         $moznost = $base->get('POST.moznost');
-        $otazka = $base->get('POST.otazka');
+        $otazka = $base->get('POST.otazka_ankety');
         $odesilatel = $base->get('SESSION.uid');
 
         $existujiciVysledek = $vysledky->findone(['anketa_id = ? AND moznost = ?', $anketa_id, $moznost]);
@@ -58,6 +58,7 @@ class Uzivatel extends AbstractController
             $vysledky->pocet = 1;
         }
         $vysledky->odesilatel = $odesilatel;
+        $vysledky->otazka = $otazka;
         
         $vysledky->save();
 

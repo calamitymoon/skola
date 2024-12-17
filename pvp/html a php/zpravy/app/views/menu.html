@@ -11,60 +11,58 @@
                     <ul class="navbar-nav me-left mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-danger" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Administrátor
+                                <i class="fas fa-user-cog"></i> Administrátor
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/zpravy/admin/manage/users">Správa uživatelů</a></li>
-                                <li><a class="dropdown-item" href="/zpravy/admin/manage/roles">Správa rolí</a></li>
-                                <li><a class="dropdown-item" href="/zpravy/admin/manage/surveys">Správa anket</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/admin/manage/users"><i class="fas fa-users-cog"></i> Správa uživatelů</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/admin/manage/roles"><i class="fas fa-user-tag"></i> Správa rolí</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/admin/manage/surveys"><i class="fas fa-poll-h"></i> Správa anket</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="/zpravy/install/uzivatele">Resetovat uživatele</a></li>
-                                <li><a class="dropdown-item" href="/zpravy/install/zpravy">Resetovat zprávy</a></li>
-                                <li><a class="dropdown-item" href="/zpravy/install/soubory">Resetovat soubory</a></li>
-                                <li><a class="dropdown-item" href="/zpravy/install/prihlaseni">Resetovat přihlášení</a></li>
-                                <li><a class="dropdown-item" href="/zpravy/install/role">Resetovat role</a></li>
-                                <li><a class="dropdown-item" href="/zpravy/install/ankety">Resetovat ankety</a></li>
-                                <li><a class="dropdown-item" href="/zpravy/install/ankety/vysledky">Resetovat výsledky anket</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/install/uzivatele"><i class="fas fa-user-times"></i> Resetovat uživatele</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/install/zpravy"><i class="fas fa-envelope-open-text"></i> Resetovat zprávy</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/install/soubory"><i class="fas fa-file-upload"></i> Resetovat soubory</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/install/prihlaseni"><i class="fas fa-sign-in-alt"></i> Resetovat přihlášení</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/install/role"><i class="fas fa-user-tag"></i> Resetovat role</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/install/ankety"><i class="fas fa-poll"></i> Resetovat ankety</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/install/ankety/vysledky"><i class="fas fa-chart-bar"></i> Resetovat výsledky anket</a></li>
                             </ul>
                         </li>
                     </ul>
-
                 </true>
                 <false>
                     <!-- User is not logged in -->
                 </false>
             </check>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
                 <!--        POKUD JE UZIVATEL PRIHLASEN / NEPRIHLASEN -->
                 <check if="{{ isset(@SESSION.jmeno) && @SESSION.jmeno != '' }}">
                     <true>
                         <!-- User is logged in -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Ankety
+                                <i class="fas fa-poll"></i> Ankety
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/zpravy/user/surveys">Hlasování</a></li>
-                                <li><a class="dropdown-item" href="/zpravy/user/surveys/results">Výsledky</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/user/surveys"><i class="fas fa-vote-yea"></i> Hlasování</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/user/surveys/results"><i class="fas fa-chart-pie"></i> Výsledky</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Soubory
+                                <i class="fas fa-file-alt"></i> Soubory
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/zpravy/file/upload/">Nahrát</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/file/upload/"><i class="fas fa-upload"></i> Nahrát</a></li>
                                 <!-- <li><a class="dropdown-item" href="/zpravy/files/">Zobrazit</a></li> -->
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Zprávy
+                                <i class="fas fa-envelope"></i> Zprávy
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/zpravy/message/add">Poslat</a></li>
-                                <li><a class="dropdown-item" href="/zpravy/message/list">Zobrazit</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/message/add"><i class="fas fa-paper-plane"></i> Poslat</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/message/list"><i class="fas fa-inbox"></i> Zobrazit</a></li>
                             </ul>
                         </li>
                     </true>
@@ -72,23 +70,19 @@
                         <!-- User is not logged in -->
                     </false>
                 </check>
-
                 <!--        POKUD JE UZIVATEL PRIHLASEN / NEPRIHLASEN -->
                 <check if="{{ isset(@SESSION.jmeno) && @SESSION.jmeno != '' }}">
                     <true>
                         <!-- User is logged in -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Uživatelé
+                                <i class="fas fa-users"></i> Uživatelé
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/zpravy/user/list">Zobrazit</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/user/list"><i class="fas fa-user-friends"></i> Zobrazit</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <!-- <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                {{ @SESSION.nick }}
-                            </a> -->
                             <a href="#" class="nav-link dropdown-toggle text-white d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
                                 <check if="{{ !isset(@SESSION.avatar)}}">
                                     <true>
@@ -102,9 +96,9 @@
                                 </check>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/zpravy/user/profile">Profil</a></li>
-                                <li><a class="dropdown-item" href="/zpravy/user/avatar">Avatar</a></li>
-                                <li><a class="dropdown-item" href="/zpravy/user/logout">Odhlásit</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/user/profile"><i class="fas fa-user"></i> Profil</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/user/avatar"><i class="fas fa-user-circle"></i> Avatar</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/user/logout"><i class="fas fa-sign-out-alt"></i> Odhlásit</a></li>
                             </ul>
                         </li>
                     </true>
@@ -112,11 +106,11 @@
                         <!-- User is not logged in -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Přihlášení
+                                <i class="fas fa-sign-in-alt"></i> Přihlášení
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/zpravy/user/login">Přihlásit</a></li>
-                                <li><a class="dropdown-item" href="/zpravy/user/add">Registrovat</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/user/login"><i class="fas fa-sign-in-alt"></i> Přihlásit</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/user/add"><i class="fas fa-user-plus"></i> Registrovat</a></li>
                             </ul>
                         </li>
                     </false>

@@ -11,10 +11,11 @@
         "homepage": "https://amfex.xyz/"
     }],
     "require": {
-        "bcosca/fatfree": ">=3.8.2",
-        "ikkez/f3-cortex": ">=1.7.7",
-        "ikkez/f3-flash": ">=1.0.2",
+        "bcosca/fatfree": "3.8.2",
+        "ikkez/f3-cortex": "1.7.7",
+        "ikkez/f3-flash": "1.0.2",
         "ext-gd": "*",
-        "xfra35/f3-access": ">=1.2.2"
+        "xfra35/f3-access": "1.2.2",
+        "dompdf/dompdf": "3.0.1"
     }
 }

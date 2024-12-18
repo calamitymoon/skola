@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                font-family: 'DejaVu Sans', sans-serif;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            table, th, td {
+                border: 1px solid black;
+            }
+
+            th, td {
+                padding: 15px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+
+            .lock {
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Poslední přihlášení</th>
+                    <th>ID</th>
+                    <th>Jméno</th>
+                    <th>Příjmení</th>
+                    <th>Email</th>
+            </thead>
+            <tbody>
+                <repeat group="{{@users}}" value="{{@user}}">
+                    <tr>
+                        <td>{{ @datum, strtotime(@user.lastlogin) | format }} {{ @cas, strtotime(@user.lastlogin) | format }}
+                        </td>
+                        <td>{{@user.id}}</td>
+                        <td>{{@user.jmeno}}</td>
+                        <td>{{@user.prijmeni}}</td>
+                        <td>{{@user.email}}</td>
+                    </tr>
+                </repeat>
+            </tbody>
+        </table>
+    </body>
+</html>

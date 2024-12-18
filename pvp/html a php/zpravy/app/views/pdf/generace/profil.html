@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h2 class="mb-4">Vyber uživatele kterého profil chceš vytisknout</h2>
+            <div class="form-group">
+                <label for="userSelect" class="sr-only">Uživatelé</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-white border-0"><i class="fas fa-user custom-icon"></i></span>
+                    </div>
+                    <select class="form-control" id="userSelect">
+                        <repeat group="{{ @uzivatele }}" value="{{ @uzivatel }}">
+                            <option value="{{ @uzivatel.id }}">{{ @uzivatel.jmeno }}</option>
+                        </repeat>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center mt-3">
+    <div class="col-md-8 text-center">
+        <button type="button" class="btn btn-primary" onclick="zobrazitProfil()">Zobrazit profil</button>
+    </div>
+</div>
+
+<style>
+    .custom-icon {
+        font-size: 1.5em;
+        color: #6c757d;
+    }
+</style>
+
+<script>
+    function zobrazitProfil() {
+        var idcko = document.getElementById('userSelect').value;
+        window.open('/zpravy/user/pdf/profily/generovat/' + idcko, '_blank');
+    }
+</script>

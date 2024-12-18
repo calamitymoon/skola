@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+        font-family: 'DejaVu Sans', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 20px 0;
+    }
+
+    table {
+        width: 100%;
+        border: 1px solid #dee2e6;
+        margin: 20px 0;
+    }
+
+    th, td {
+        border: 1px solid #dee2e6;
+        padding: 12px;
+        text-align: left;
+    }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header text-center bg-primary text-white">
+                        <h2>Údaje uživatele {{@vybranyUzivatel.nick}}</h2>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Přezdívka</th>
+                                    <td>{{@vybranyUzivatel.nick}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Jméno</th>
+                                    <td>{{@vybranyUzivatel.jmeno}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Příjmení</th>
+                                    <td>{{@vybranyUzivatel.prijmeni}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">E-mail</th>
+                                    <td>{{@vybranyUzivatel.email}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

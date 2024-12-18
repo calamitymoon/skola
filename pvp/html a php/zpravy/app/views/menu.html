@@ -6,7 +6,7 @@
         </button> -->
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <check if="{{ isset(@SESSION.role) && @SESSION.role == 'admin' }}">
+            <check if="{{ isset(@SESSION) && @SESSION.nick == 'admin' }}">
                 <true>
                     <ul class="navbar-nav me-left mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
@@ -38,6 +38,16 @@
                 <check if="{{ isset(@SESSION.jmeno) && @SESSION.jmeno != '' }}">
                     <true>
                         <!-- User is logged in -->
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-poll"></i> PDF
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/zpravy/user/pdf"><i class="fas fa-table"></i> Tabulka uživatelů</a></li>
+                                <li><a class="dropdown-item" href="/zpravy/user/pdf/profily"><i class="fas fa-user"></i> Profil uživatele</a></li>
+                                <!-- <li><a class="dropdown-item" href="/zpravy/user/pdf/profily/generovat"><i class="fas fa-chart-pie"></i> Profil uživatele</a></li> -->
+                            </ul>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-poll"></i> Ankety

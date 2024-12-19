@@ -12,16 +12,20 @@ class Uzivatel extends AbstractController
         $hlasyPerAnketa = [];
 
         $vysledek = $vysledkyModel->find();
-        foreach ($vysledek as $radek) {
-            if (!isset($hlasyPerAnketa[$radek->anketa_id])) {
-                $hlasyPerAnketa[$radek->anketa_id] = 0;
+        if ($vysledek){
+            foreach ($vysledek as $radek) {
+                if (!isset($hlasyPerAnketa[$radek->anketa_id])) {
+                    $hlasyPerAnketa[$radek->anketa_id] = 0;
+                }
+                $hlasyPerAnketa[$radek->anketa_id] += $radek->pocet;
+                $vysledky[] = $radek->cast();
             }
-            $hlasyPerAnketa[$radek->anketa_id] += $radek->pocet;
-            $vysledky[] = $radek->cast();
-        }
 
-        foreach ($vysledky as &$radek) {
-            $radek['procenta'] = ($radek['pocet'] / $hlasyPerAnketa[$radek['anketa_id']]) * 100;
+            foreach ($vysledky as &$radek) {
+                $radek['procenta'] = ($radek['pocet'] / $hlasyPerAnketa[$radek['anketa_id']]) * 100;
+            }
+        } else {
+            // jeste nikdo nehlasoval v anketach
         }
         
         $base->set('moznosti', $vysledky);

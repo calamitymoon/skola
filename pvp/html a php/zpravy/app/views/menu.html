@@ -6,7 +6,7 @@
         </button> -->
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <check if="{{ isset(@SESSION) && @SESSION.nick == 'admin' }}">
+            <check if="{{ isset(@SESSION.nick) && @SESSION.nick == 'admin' }}">
                 <true>
                     <ul class="navbar-nav me-left mb-2 mb-lg-0">
                         <li class="nav-item dropdown">

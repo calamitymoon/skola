@@ -51,6 +51,15 @@ class Uzivatel extends AbstractController
         $otazka = $base->get('POST.otazka_ankety');
         $odesilatel = $base->get('SESSION.uid');
 
+        // Check if the user has already voted in this survey
+        if ($base->exists('SESSION.hlasoval') && in_array($anketa_id, $base->get('SESSION.hlasoval'))) {
+            echo "<script>
+                alert('V této anketě jsi již hlasoval.');
+                window.location.href = '/zpravy/user/surveys';
+            </script>";
+            return;
+        }
+
         $existujiciVysledek = $vysledky->findone(['anketa_id = ? AND moznost = ?', $anketa_id, $moznost]);
 
         if ($existujiciVysledek) {
@@ -65,6 +74,10 @@ class Uzivatel extends AbstractController
         $vysledky->otazka = $otazka;
         
         $vysledky->save();
+
+        $jiz_hlasovane_ankety = $base->exists('SESSION.hlasoval') ? $base->get('SESSION.hlasoval') : [];
+        $jiz_hlasovane_ankety[] = $anketa_id;
+        $base->set('SESSION.hlasoval', $jiz_hlasovane_ankety);
 
         $base->reroute('/user/surveys');
     }

@@ -1,0 +1,16 @@
+{
+  "name": "zpravy/api",
+  "description": "REST API pro Zpravy",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "9hb",
+      "role": "developer"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree": ">=3.9.0",
+    "ikkez/f3-cortex": ">=v1.7.7"
+  }
+}

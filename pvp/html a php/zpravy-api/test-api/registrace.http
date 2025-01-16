@@ -1,0 +1,10 @@
+POST https://localhost/zpravy-api/api/v1/register
+Content-Type: application/json
+
+{
+  "nick": "nicknick",
+  "name": "namename",
+  "surname": "surnamesurname",
+  "email": "email@email.cz",
+  "password": "passwordpassword"
+}

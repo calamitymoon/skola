@@ -1,0 +1,10 @@
+POST https://localhost/api/v1/messages
+Content-Type: application/json
+
+{
+  "subject": "Hello world!",
+  "content": "Pokusny obsah",
+  "recepient": 7,
+  "sender": 7
+
+}

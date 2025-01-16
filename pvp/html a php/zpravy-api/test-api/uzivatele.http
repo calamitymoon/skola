@@ -1,0 +1,2 @@
+GET https://localhost/zpravy-api/api/v1/users
+Content-Type: application/json

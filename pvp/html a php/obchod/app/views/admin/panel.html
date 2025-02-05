@@ -10,7 +10,50 @@
         <div class="card col-md-9 mt-3">
             <div class="card-body">
                 <h5 class="card-title">Nastavení obchodů</h5>
-                <p class="card-text">{{ @obchod }}</p>
+                <!-- <p class="card-text">{{ @obchod }}</p> -->
+
+
+
+                <form method="POST" action="váš-handler">
+                    <div class="obchody-container">
+                        <repeat group="{{@obchodL}}" value="{{@ob}}">
+                            <div class="obchod-row" style="margin: 10px 0; display: flex; gap: 20px; align-items: center;">
+                                <!-- Název obchodu -->
+                                <div style="width: 200px;">{{@ob.nazev}}</div>
+                                
+                                <!-- Select pro typ -->
+                                <div>
+                                    <select name="typ_{{@ob._id}}" style="width: 150px;">
+                                        <option disabled value="">Vyberte typ</option>
+                                        <repeat group="{{@typyL}}" value="{{@typ}}">
+                                            <option value="{{@typ._id}}" {{ @typ._id == @ob.typ ? 'selected' : '' }}>
+                                                {{@typ.typy}}
+                                            </option>
+                                        </repeat>
+                                    </select>
+                                </div>
+                                
+                                <!-- Multiselect pro pobočky -->
+                                <div>
+                                    <select name="pobocky_{{@ob._id}}[]" multiple style="width: 200px; height: 100px;">
+                                        <repeat group="{{@pobockaL}}" value="{{@pob}}">
+                                            <option disabled value="{{@pob.id}}" {{ in_array(@pob.id, @ob.pobocky ?: []) ? 'selected' : '' }}>
+                                                {{@pob.nazev}}
+                                            </option>
+                                        </repeat>
+                                    </select>
+                                </div>
+                            </div>
+                        </repeat>
+                        
+                        <div style="margin-top: 20px;">
+                            <button type="submit">Uložit změny</button>
+                        </div>
+                    </div>
+                </form>
+
+
+
             </div>
         </div>
         <div class="card mt-3">

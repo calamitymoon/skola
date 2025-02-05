@@ -18,6 +18,11 @@ class Obchod extends \DB\Cortex
             'required' => true,
             'nullable' => false
         ],
+        'nazev' => [
+            'type' => 'VARCHAR128',
+            'required' => true,
+            'nullable' => false
+        ],
         // 'pobocky' => [
         //     'type' => 'VARCHAR256',
         //     'required' => true,

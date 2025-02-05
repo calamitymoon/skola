@@ -10,16 +10,36 @@
         <div class="card col-md-9 mt-3">
             <div class="card-body">
                 <h5 class="card-title">Nastavení obchodů</h5>
-                <p class="card-text">{{ @typy }}</p>
+                <p class="card-text">{{ @obchod }}</p>
             </div>
         </div>
         <div class="card mt-3">
             <div class="card-body">
             <h4 class="card-title">Debug</h4>
-            <p class="card-text">Typy: {{ @typy }}</p>
-            <p class="card-text">Pobočky: {{ @pobocka }}</p>
-            <p class="card-text">Kategorie: {{ @kategorie }}</p>
-            <p class="card-text">Obchody: {{ @obchod }}</p>
+            <p class="card-text">Typy:</p>
+            <ul>
+                <li>IDčka: {{ @typy_ids }}</li>
+                <li>Typy: {{ @typy_nazvy }}</li>
+            </ul>
+            <sub><p class="card-text">{{ @typy }}</p></sub><br>
+            <p class="card-text">Pobočky:</p>
+            <ul>
+                <li>Názvy poboček: {{ @pobocka_nazvy }}</li>
+                <li>Adresy poboček: {{ @pobocka_adresy }}</li>
+            </ul>
+            <sub><p class="card-text">{{ @pobocka }}</p></sub><br>
+            <p class="card-text">Kategorie:</p>
+            <ul>
+                <li>IDčka: {{ @kategorie_ids }}</li>
+                <li>Kategorie: {{ @kategorie_nazvy }}</li>
+            </ul>
+            <p class="card-text" style="font-size: 12px;">{{ @kategorie }}</p>
+            <p class="card-text">Obchody:</p>
+            <ul>
+                <li>Typy obchodů: {{ @obchod_typy }}</li>
+                <li>Kategorie obchodů: {{ @obchod_kategorie }}</li>
+            </ul>
+            <sub><p class="card-text">{{ @obchod }}</p></sub><br>
             </div>
         </div>
     </div>

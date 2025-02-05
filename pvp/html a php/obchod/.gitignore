@@ -1,0 +1,7 @@
+.idea
+.vscode
+composer.phar
+composer.lock
+vendor
+tmp
+app/configs/db.ini

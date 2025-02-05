@@ -1,0 +1,18 @@
+{
+  "name": "skola/prvni-s-f3",
+  "description": "Seznámení s FatFreeFramework.",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "michal.moc",
+      "email": "michal.moc@prumkadc.cz"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree": "3.8.2",
+    "ikkez/f3-cortex": ">=v1.7.7",
+    "ikkez/f3-flash": ">=1.0.2",
+    "ext-gd": "*"
+  }
+}

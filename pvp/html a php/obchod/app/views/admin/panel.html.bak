@@ -1,0 +1,23 @@
+<div class="container">
+    <h1 class="mt-5">Admin Panel</h1>
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/obchod/admin/dashboard" class="list-group-item list-group-item-action active"></a>
+                <a href="/obchod/admin/users" class="list-group-item list-group-item-action">Users</a>
+                <a href="/obchod/admin/settings" class="list-group-item list-group-item-action">Settings</a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header">
+                    Overview
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Welcome to the Admin Panel</h5>
+                    <p class="card-text">Use the sidebar to navigate through different sections.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

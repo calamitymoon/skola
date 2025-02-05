@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="mt-5">Administrátorský panel</h1>
+        <div class="card col-md-9">
+            <div class="card-body">
+                <h5 class="card-title">Možnosti</h5>
+                <a href="/obchod/admin/vytvorit-obchod" class="btn btn-primary">Vytvořit obchod</a>
+                <a href="/obchod/admin/vytvorit-pobocku" class="btn btn-primary">Vytvořit pobočku</a>
+            </div>
+        </div>
+        <div class="card col-md-9 mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Nastavení obchodů</h5>
+                <p class="card-text">{{ @typy }}</p>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-body">
+            <h4 class="card-title">Debug</h4>
+            <p class="card-text">Typy: {{ @typy }}</p>
+            <p class="card-text">Pobočky: {{ @pobocka }}</p>
+            <p class="card-text">Kategorie: {{ @kategorie }}</p>
+            <p class="card-text">Obchody: {{ @obchod }}</p>
+            </div>
+        </div>
+    </div>
+</div>

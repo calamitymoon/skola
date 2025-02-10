@@ -10,9 +10,9 @@
     }
   ],
   "require": {
-    "bcosca/fatfree": "3.8.2",
-    "ikkez/f3-cortex": ">=v1.7.7",
-    "ikkez/f3-flash": ">=1.0.2",
+    "bcosca/fatfree": "3.9.0",
+    "ikkez/f3-cortex": "1.7.7",
+    "ikkez/f3-flash": "1.0.2",
     "ext-gd": "*"
   }
 }

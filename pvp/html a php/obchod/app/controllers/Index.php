@@ -85,18 +85,20 @@ class Index
         $nazvy = [];
         $adresy = [];
 
-        foreach ($pobockyList as $pob) {
-            $nazvy[] = $pob->nazev;
-            $adresy[] = $pob->adresa;
-        }
+        if ($pobockyList !== false) {
+            foreach ($pobockyList as $pob) {
+                $nazvy[] = $pob->nazev;
+                $adresy[] = $pob->adresa;
+            }
 
-        $pobockaResults = [];
-        foreach ($pobockyList as $pob) {
-            $pobockaResults[] = $pob->cast();
+            $pobockaResults = [];
+            foreach ($pobockyList as $pob) {
+                $pobockaResults[] = $pob->cast();
+            }
+            $base->set('pobocka', json_encode($pobockaResults));
+            $base->set('pobocka_nazvy', json_encode($nazvy));
+            $base->set('pobocka_adresy', json_encode($adresy));
         }
-        $base->set('pobocka', json_encode($pobockaResults));
-        $base->set('pobocka_nazvy', json_encode($nazvy));
-        $base->set('pobocka_adresy', json_encode($adresy));
 
 
         // $obchod = new \models\Obchod();
@@ -112,14 +114,21 @@ class Index
         $typy = [];
         $kategorie = [];
 
-        foreach ($obchodyList as $ob) {
-            $typy[] = $ob->typ;
-            $kategorie[] = $ob->kategorie;
+        if ($obchodyList !== false) {
+            if ($obchodyList !== false) {
+                foreach ($obchodyList as $ob) {
+                $typy[] = $ob->typ;
+                $kategorie[] = $ob->kategorie;
+            }}
         }
 
         $obchodResults = [];
-        foreach ($obchodyList as $ob) {
-            $obchodResults[] = $ob->cast();
+
+        if (is_array($obchodyList) || is_object($obchodyList)) {
+            foreach ($obchodyList as $ob) {
+                $obchodResults[] = $ob->cast();
+            }
+            $base->set('obchod', json_encode($obchodResults));
         }
         $base->set('obchod', json_encode($obchodResults));
         $base->set('obchod_typy', json_encode($typy));
@@ -160,15 +169,19 @@ class Index
 
         $obchodyList = $obchod->find();
         $obchodL = [];
-        foreach ($obchodyList as $obchod) {
-            $obchodL[] = $obchod->cast();
+        if (is_array($obchodyList) || is_object($obchodyList)) {
+            foreach ($obchodyList as $obchod) {
+                $obchodL[] = $obchod->cast();
+            }
         }
         $base->set('obchodL', $obchodL);
 
         $pobockyList = $pobocka->find();
         $pobockaL = [];
-        foreach ($pobockyList as $pobocka) {
-            $pobockaL[] = $pobocka->cast();
+        if ($pobockyList !== false) {
+            foreach ($pobockyList as $pobocka) {
+                $pobockaL[] = $pobocka->cast();
+            }
         }
         $base->set('pobockaL', $pobockaL);
 
@@ -182,26 +195,29 @@ class Index
         echo \Template::instance()->render('index.html');
     }
 
-    public function postAdminPanel (\Base $base)
+    public function postAdminPanel(\Base $base)
     {
-        foreach ($f3->POST as $key => $value) {
+        $data = $base->get('POST');
+        
+        foreach ($data as $key => $value) {
             if (strpos($key, 'typ_') === 0) {
                 $obchodId = substr($key, 4);
                 $obchod = new \models\Obchod();
-                $obchod->load(['id=?', $obchodId]);
-                $obchod->typ = $value;
+                $obchod->load(['_id=?', $obchodId]);
+                $obchod->copyfrom(['typ' => $value]);
                 $obchod->save();
             }
             
             if (strpos($key, 'pobocky_') === 0) {
                 $obchodId = substr($key, 8, -2);
                 $obchod = new \models\Obchod();
-                $obchod->load(['id=?', $obchodId]);
-                $obchod->pobocky = $value;
+                $obchod->load(['_id=?', $obchodId]);
+                $obchod->copyfrom(['pobocky' => $value]);
                 $obchod->save();
             }
         }
-
-        $f3->reroute('/admin');
+        
+        \Flash::instance()->addMessage('Změny byly úspěšně uloženy', 'success');
+        $base->reroute('/admin');
     }
 }

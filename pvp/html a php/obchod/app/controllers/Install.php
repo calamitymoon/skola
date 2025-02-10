@@ -31,6 +31,7 @@ class Install
 
         $kategorie = new \models\Kategorie();
         $this->kategorie([
+            ['vsechny' => 'Služby'],
             ['vsechny' => 'Elektronika'],
             ['vsechny' => 'Oblečení'],
             ['vsechny' => 'Potraviny'],
@@ -77,6 +78,7 @@ class Install
         \models\Kategorie::setup(); // vytvoření tabulky
         $kategorie = new \models\Kategorie();
         $this->kategorie([
+            ['vsechny' => 'Služby'],
             ['vsechny' => 'Elektronika'],
             ['vsechny' => 'Oblečení'],
             ['vsechny' => 'Potraviny'],

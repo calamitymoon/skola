@@ -198,7 +198,7 @@ class Index
     public function postAdminPanel(\Base $base)
     {
         $data = $base->get('POST');
-        
+
         foreach ($data as $key => $value) {
             if (strpos($key, 'typ_') === 0) {
                 $obchodId = substr($key, 4);
@@ -207,16 +207,33 @@ class Index
                 $obchod->copyfrom(['typ' => $value]);
                 $obchod->save();
             }
-            
+
             if (strpos($key, 'pobocky_') === 0) {
-                $obchodId = substr($key, 8, -2);
+                $obchodId = substr($key, 8);
+                $db = \Base::instance()->get('DB'); 
                 $obchod = new \models\Obchod();
-                $obchod->load(['_id=?', $obchodId]);
-                $obchod->copyfrom(['pobocky' => $value]);
-                $obchod->save();
+                if (!$obchod->load(['_id=?', $obchodId])) {
+                    error_log("$obchodId neexistuje :( ");
+                    continue;
+                }
+
+                $db->exec('UPDATE pobocka SET obchod_id = NULL WHERE obchod_id = ?', [$obchodId]);
+
+                if (!empty($value) && is_array($value)) {
+                    foreach ($value as $pobockaId) {
+                        $pobocka = new \models\Pobocka();
+                        $pobocka->load(['_id = ?', $pobockaId]);
+                        if (!$pobocka->dry()) {
+                            if ($pobocka->obchod_id != $obchodId) {
+                                $pobocka->obchod_id = $obchodId;
+                                $pobocka->save();    
+                            }
+                        }
+                    }
+                }
             }
         }
-        
+
         \Flash::instance()->addMessage('Změny byly úspěšně uloženy', 'success');
         $base->reroute('/admin');
     }

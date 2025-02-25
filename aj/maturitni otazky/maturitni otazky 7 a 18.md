@@ -1,0 +1,79 @@
+### 7) Programs used in work development work flow
+#### IDEs
+- integrated development environment
+- IDEs are applications which are being used to write code, compile or interpret code, debug and test code
+- for example:
+	- **VS Code**
+		- its lightweight and easy to use application
+		- it has a lots extensions and addons which you can use to customize your editor
+	- **Cursor**
+		- its a fork of VS Code, but it uses AI
+		- AI helps you write code and debug it
+		- also can help you understand big, complicated code by making comments where its gonna explain what the code does
+	- **PhpStorm**
+		- its powerful IDE specifically designed for PHP development
+		- provides advanced code completion, refactoring tools, and debugging tailored for PHP
+		- it also have excellent support for various PHP frameworks
+	- **RustRover**
+		- thats special editor made just for coding in Rust
+		- helps you find problems, fix them, and test your Rust code
+		- also helps you manage Rust's tricky rules about how code uses memory
+#### Debugging
+- next thing I already mention is debugging
+- debugging is a process of finding and fixing errors or bugs in source code
+- its being used when software, application or website doesnt work as expected, thats when debugger comes in
+- for example:
+	- **Chrome Developer Tools**
+		- its available in chrome browser and other chromium based browsers
+		- it lets you look at the HTML, CSS and JavaScript code of the website
+	- **Xcode Debugger**
+		- its debugged for making apps for iPhone and Macs
+		- helps you fix code written in Swift and Objective-C
+		- it also helps you find memory problems and make your apps run faster
+	- **Xdebug**
+		- tool that helps you debug PHP code
+		- lets you stop your code, step through it and look the code is really doing like setting variables, changing values and much more
+### 18) What programming languages do you know?
+- I would like to start with that I know a lot of programming languages, but at school we only learn Assembly, C++ and PHP
+- but they are many many more than just these and theyre divided into categories like **Web Development**, **System Programming**, **Mobile App Development**, **Game Development**, **Data science & AI** and **Databases**
+- now I will say couple of languages for each category
+
+- **Web** **Development**
+	- JavaScript
+	- TypeScript
+	- PHP
+	- Ruby
+	- Dart
+	- HTML and CSS (not programming language, but markup language)
+- **System** **Programming**
+	- C
+	- Objective-C
+	- C++
+	- Rust
+	- Go
+	- Assembly
+- **Mobile** **App** **Development**
+	- Swift (for iOS)
+	- Kotlin (for Android)
+	- Java (for Android)
+	- Dart (which is Flutter framework)
+- **Game** **Development**
+	- C++ and C# (both used for Unity engine)
+	- Lua (for Roblox)
+	- Pawn (for game modding)
+- **Data** **science** **& AI**
+	- Python
+	- R
+	- Julia
+	- MATLAB
+- **Databases**
+	- those are divided into multiple categories, but the most important are **Relation Databases** and **NoSQL Databases**
+	- **Relation Databases**
+		- MySQL
+		- PostgreSQL
+		- SQLite
+		- MariaDB
+	- **NoSQL Databases**
+		- MongoDB
+		- Redis
+		- Cassandra

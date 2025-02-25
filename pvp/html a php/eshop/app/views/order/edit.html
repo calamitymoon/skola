@@ -1,0 +1,17 @@
+<h1>Editace objednávky</h1>
+<form method="POST" action="/eshop/order/edit/{{ @order.id }}">
+    <div class="mb-3">
+        <label for="customer_id" class="form-label">Zákazník</label>
+        <select class="form-select" id="customer_id" name="customer_id">
+            <option value="">Vyberte zákazníka</option>
+            <repeat group="{{ @customers }}" value="{{ @customer }}">
+                <option value="{{ @customer.id }}" {{ @customer.id == @order.customer_id ? 'selected' : '' }}>{{ @customer.name }}</option>
+            </repeat>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="total_price" class="form-label">Celková cena</label>
+        <input type="number" class="form-control" id="total_price" name="total_price" value="{{ @order.total_price }}">
+    </div>
+    <button type="submit" class="btn btn-primary">Uložit</button>
+</form>

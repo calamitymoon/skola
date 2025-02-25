@@ -1,0 +1,13 @@
+<check if="{{ isset(@SESSION.message) }}">
+    <true>
+        <div class="alert alert-{{ @SESSION.message.type }}" role="alert">
+            {{ @SESSION.message.text }}
+        </div>
+        <script>
+            setTimeout(function() {
+                document.querySelector('.alert').style.display = 'none';
+            }, 3000);
+        </script>
+        <?php unset($_SESSION['message']); ?>
+    </true>
+</check>

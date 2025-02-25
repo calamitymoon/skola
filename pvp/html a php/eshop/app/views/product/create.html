@@ -1,0 +1,16 @@
+<h1>Vytvoření produktu</h1>
+<form method="POST" action="/eshop/admin/produkty">
+    <div class="mb-3">
+        <label for="name" class="form-label">Jméno</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Cena</label>
+        <input type="number" class="form-control" id="price" name="price" required>
+    </div>
+    <div class="mb-3">
+        <label for="stock" class="form-label">Sklad</label>
+        <input type="number" class="form-control" id="stock" name="stock" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Vytvořit</button>
+</form>

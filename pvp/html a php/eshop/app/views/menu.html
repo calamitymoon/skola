@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="/eshop/admin">E-shop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <check if="{{ isset(@SESSION.role) && @SESSION.role == 'admin' }}">
+                <true>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/eshop/admin/zakaznici">Zákazníci</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/eshop/admin/produkty">Produkty</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/eshop/admin/objednavky">Objednávky</a>
+                        </li>
+                    </ul>
+                </true>
+                <false>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/eshop/">Produkty</a>
+                        </li>
+                    </ul>
+                </false>
+            </check>
+            <ul class="navbar-nav ms-auto">
+                <check if="{{ !isset(@SESSION.user_id) }}">
+                    <true>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/eshop/login">Přihlášení</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/eshop/register">Registrace</a>
+                        </li>
+                    </true>
+                    <false>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Uživatel: {{ @SESSION.username }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/eshop/logout">Odhlášení</a>
+                        </li>
+                    </false>
+                </check>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,27 @@
+<h1>Seznam produktů</h1>
+<a href="/eshop/admin/produkty/vytvorit" class="btn btn-primary mb-3">Vytvořit produkt</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Jméno</th>
+            <th>Cena</th>
+            <th>Skladem</th>
+            <th>Akce</th>
+        </tr>
+    </thead>
+    <tbody>
+        <repeat group="{{ @products }}" value="{{ @product }}">
+            <tr>
+                <td>{{ @product.id }}</td>
+                <td>{{ @product.name }}</td>
+                <td>{{ @product.price }} Kč</td>
+                <td>{{ @product.stock }} ks</td>
+                <td>
+                    <a href="/eshop/admin/produkty/edit/{{ @product.id }}" class="btn btn-sm btn-primary">Editovat</a>
+                    <a href="/eshop/admin/produkty/smazat/{{ @product.id }}" class="btn btn-sm btn-danger">Smazat</a>
+                </td>
+            </tr>
+        </repeat>
+    </tbody>
+</table>

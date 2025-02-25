@@ -1,0 +1,25 @@
+<h1>Seznam zákazníků</h1>
+<a href="/eshop/admin/zakaznici/vytvorit" class="btn btn-primary mb-3">Vytvořit zákazníka</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Jméno</th>
+            <th>Email</th>
+            <th>Akce</th>
+        </tr>
+    </thead>
+    <tbody>
+        <repeat group="{{ @customers }}" value="{{ @customer }}">
+            <tr>
+                <td>{{ @customer.id }}</td>
+                <td>{{ @customer.name }}</td>
+                <td>{{ @customer.email }}</td>
+                <td>
+                    <a href="/eshop/admin/zakaznici/edit/{{ @customer.id }}" class="btn btn-sm btn-primary">Editovat</a>
+                    <a href="/eshop/admin/zakaznici/smazat/{{ @customer.id }}" class="btn btn-sm btn-danger">Smazat</a>
+                </td>
+            </tr>
+        </repeat>
+    </tbody>
+</table>

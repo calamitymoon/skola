@@ -1,0 +1,32 @@
+<h1>Seznam objednávek</h1>
+<a href="/eshop/admin/objednavky/vytvorit" class="btn btn-primary mb-3">Vytvořit objednávku</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Zákazník</th>
+            <th>Celková cena</th>
+            <th>Datum</th>
+            <th>Akce</th>
+        </tr>
+    </thead>
+    <tbody>
+        <repeat group="{{ @orders }}" value="{{ @order }}">
+            <tr>
+                <td>{{ @order.id }}</td>
+                <td>
+                    <check if="{{ isset(@order.customer) }}">
+                        <true>{{ @order.customer.name }}</true>
+                        <false>Neznámý zákazník</false>
+                    </check>
+                </td>
+                <td>{{ @order.total_price }} Kč</td>
+                <td>{{ @order.created_at }}</td>
+                <td>
+                    <a href="/eshop/admin/objednavky/edit/{{ @order.id }}" class="btn btn-sm btn-primary">Editovat</a>
+                    <a href="/eshop/admin/objednavky/smazat/{{ @order.id }}" class="btn btn-sm btn-danger">Smazat</a>
+                </td>
+            </tr>
+        </repeat>
+    </tbody>
+</table>

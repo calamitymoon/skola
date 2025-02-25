@@ -1,0 +1,17 @@
+<h1>Vítejte v našem e-shopu!</h1>
+<p>Prohlédněte si naše nejnovější produkty:</p>
+
+<div class="row">
+    <repeat group="{{ @products }}" value="{{ @product }}">
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ @product.name }}</h5>
+                    <p class="card-text">Cena: {{ @product.price }} Kč</p>
+                    <p class="card-text">Skladem: {{ @product.stock }} ks</p>
+                    <a href="#" class="btn btn-primary">Detail</a>
+                </div>
+            </div>
+        </div>
+    </repeat>
+</div>

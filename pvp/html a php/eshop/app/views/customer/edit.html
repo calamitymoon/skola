@@ -1,0 +1,12 @@
+<h1>Editace zákazníka</h1>
+<form method="POST" action="/eshop/customer/edit/{{ @customer.id }}">
+    <div class="mb-3">
+        <label for="name" class="form-label">Jméno</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{ @customer.name }}">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" value="{{ @customer.email }}">
+    </div>
+    <button type="submit" class="btn btn-primary">Uložit</button>
+</form>

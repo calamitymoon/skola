@@ -1,0 +1,11 @@
+<check if="{{ @SESSION.jmeno != '' }}">
+    <true>
+        <h1 style="text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" ;>Ahoj, {{@SESSION.jmeno}}</h1>
+    </true>
+    <false>
+        <?php
+        header("Location: /admin");
+        exit();
+        ?>
+    </false>
+</check>

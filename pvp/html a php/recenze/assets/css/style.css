@@ -1,0 +1,78 @@
+/*
+/
+    ZÁKLAD
+/
+*/
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn.btn-primary {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*	
+/
+    TABULKA
+/
+*/
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 16px;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #327aff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+a {
+    color: #4c70af;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/*
+/
+    FORMULÁŘ
+/
+*/
+
+form {
+    width: 70%;
+    margin: 20px auto;
+}
+
+.login-form {
+    width: 35%;
+    margin: 20px auto;
+}

@@ -1,0 +1,44 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h2>Produkty a jejich recenze</h2>
+            <div class="list-group">
+                <repeat group="{{ @produkty }}" value="{{ @produkt }}">
+                    <div class="list-group-item">
+                        <h4 class="mb-1">{{ @produkt.nazev }}</h4>
+                        <p class="mb-1">{{ @produkt.popis }}</p>
+                        <p class="mb-1">Cena: {{ @produkt.cena }} Kč</p>
+                        <h5 class="mt-3">Recenze:</h5>
+                        <repeat group="{{ @recenze }}" value="{{ @r }}">
+                            <check if="{{ @r.id_produkt == @produkt.id }}">
+                                <div class="list-group-item">
+                                    <h5 class="mb-1">{{ @r.nadpis }}</h5>
+                                    <h6 style="color: #F4BB44" class="mb-1">
+                                        <repeat group="{{ range(1, @r.hvezdicky) }}" value="@hvezdicka">
+                                            ★
+                                        </repeat>
+                                        <repeat group="{{ range(1, 5 - @r.hvezdicky) }}" value="@hvezdicka">
+                                            ☆
+                                        </repeat>
+                                    </h6>
+                                    <p class="mb-1">{{ @r.popis }}</p>
+                                    <p class="text-muted">
+                                        Napsal 
+                                        <repeat group="{{ @uzivatele }}" value="{{ @u }}">
+                                            <check if="{{ @u.id == @r.id_uzivatel }}">
+                                                {{ @u.jmeno }}
+                                            </check>
+                                        </repeat>
+                                        <check if="{{ @r.id_uzivatel == 0 }}">
+                                            návštěvník
+                                        </check>
+                                    </p>
+                                </div>
+                            </check>
+                        </repeat>
+                    </div>
+                </repeat>
+            </div>
+        </div>
+    </div>
+</div>

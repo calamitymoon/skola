@@ -1,0 +1,25 @@
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="col-md-6">
+        <h2 class="text-center">Vytvořit produkt</h2>
+        <form method="post">
+            <div class="form-group mt-3">
+                <label for="nazev">Název</label>
+                <input type="text" class="form-control" name="nazev" id="nazev" placeholder="Zadejte název produktu">
+            </div>
+            <div class="form-group mt-3">
+                <label for="popis">Popis</label>
+                <textarea class="form-control" name="popis" id="popis" rows="3" placeholder="Zadejte popis produktu"></textarea>
+            </div>
+            <div class="form-group mt-3">
+                <label for="cena">Cena</label>
+                <input type="range" class="form-control" id="cena" name="cena" min="1" max="100000" value="50000" oninput="document.getElementById('cenaOutput').textContent = this.value">
+                <div class="d-flex justify-content-center">
+                    <output name="cena" id="cenaOutput">50000</output>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary mt-3">Odeslat</button>
+            </div>
+        </form>
+    </div>
+</div>

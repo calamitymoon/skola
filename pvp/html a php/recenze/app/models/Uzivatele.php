@@ -21,4 +21,9 @@ class Uzivatele extends \DB\Cortex
             'nullable' => false
         ],
     ];
+    
+    public function set_heslo($value)
+    {
+        return password_hash($value, PASSWORD_DEFAULT);
+    }
 }

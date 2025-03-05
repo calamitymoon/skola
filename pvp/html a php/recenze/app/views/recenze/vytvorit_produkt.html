@@ -12,10 +12,7 @@
             </div>
             <div class="form-group mt-3">
                 <label for="cena">Cena</label>
-                <input type="range" class="form-control" id="cena" name="cena" min="1" max="100000" value="50000" oninput="document.getElementById('cenaOutput').textContent = this.value">
-                <div class="d-flex justify-content-center">
-                    <output name="cena" id="cenaOutput">50000</output>
-                </div>
+                <input type="number" class="form-control" id="cena" name="cena" min="1" max="100000" value="200" step="1">
             </div>
             <div class="d-flex justify-content-center">
                 <button type="submit" class="btn btn-primary mt-3">Odeslat</button>

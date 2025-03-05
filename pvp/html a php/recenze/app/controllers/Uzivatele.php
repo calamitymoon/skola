@@ -31,15 +31,15 @@ class Uzivatele
         $uzivatel = new \models\Uzivatele();
         $uz = $uzivatel->findone(['prezdivka=?', $base->get('POST.prezdivka')]);
         if ($uz && password_verify($base->get('POST.heslo'), $uz->heslo)) {
-        $base->set('SESSION.uid', $uz->id);
-        if ($uz->id == 1) {
-            $base->set('SESSION.admin', true);
-        }
-        $base->set('SESSION.prezdivka', $uz->prezdivka);
-        
+            $base->set('SESSION.uid', $uz->id);
+            $base->set('SESSION.prezdivka', $uz->prezdivka);
+            if ($uz->id == 1) {
+                $base->set('SESSION.admin', true);
+            }
+            $base->set('SESSION.prihlasen', true);
             $base->reroute('/');
         } else {
-            $base->reroute('/user/login');
+            $base->reroute('/prihlasit-uzivatele');
         }
     }
 

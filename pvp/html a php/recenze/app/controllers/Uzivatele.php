@@ -13,6 +13,39 @@ class Uzivatele
 
     public function postVytvoritUzivatele(\Base $base)
     {
+        $uzivatel = new \models\Uzivatele();
+        $uzivatel->copyfrom($base->get('POST'));
+        $uzivatel->save();
+        $base->reroute('/prihlasit-uzivatele');
+    }
+
+    public function getPrihlasitUzivatele(\Base $base)
+    {
+        $base->set('title', 'Přihlášení');
+        $base->set('content', '/recenze/prihlasit_uzivatele.html');
+        echo \Template::instance()->render('index.html');
+    }
+
+    public function postPrihlasitUzivatele(\Base $base)
+    {
+        $uzivatel = new \models\Uzivatele();
+        $uz = $uzivatel->findone(['prezdivka=?', $base->get('POST.prezdivka')]);
+        if ($uz && password_verify($base->get('POST.heslo'), $uz->heslo)) {
+        $base->set('SESSION.uid', $uz->id);
+        if ($uz->id == 1) {
+            $base->set('SESSION.admin', true);
+        }
+        $base->set('SESSION.prezdivka', $uz->prezdivka);
         
+            $base->reroute('/');
+        } else {
+            $base->reroute('/user/login');
+        }
+    }
+
+    public function getOdhlasitUzivatele(\Base $base)
+    {
+        $base->clear('SESSION');
+        $base->reroute('/');
     }
 }

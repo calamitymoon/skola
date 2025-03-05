@@ -14,10 +14,11 @@ class Uzivatele extends \DB\Cortex
             'unique' => true,
             'nullable' => false
         ],
-        'ip' => [
-            'type' => 'VARCHAR128',
-            'nullable' => false,
-            'default' => ''
+        'heslo' => [
+            'type' => 'VARCHAR256',
+            'required' => true,
+            'unique' => false,
+            'nullable' => false
         ],
     ];
 }

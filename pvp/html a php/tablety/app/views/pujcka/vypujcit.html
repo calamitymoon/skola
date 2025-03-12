@@ -1,0 +1,59 @@
+<check if="{{ isset(@SESSION.prihlasen) }}">
+    <true>
+        <div class="container mt-5">
+            <div class="form-container" style="max-width: 600px; margin: 0 auto;">
+                <form method="post">
+                    <div class="form-group">
+                        <label for="jmeno">Jméno:</label>
+                        <input type="text" class="form-control" id="jmeno" name="jmeno" value="{{@SESSION.jmeno}}" readonly>
+                        <input type="hidden" name="jmeno" value="{{@SESSION.id}}">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="tridy">Třídy:</label>
+                        <select multiple class="form-control" id="tridy" name="tridy[]" required>
+                            <option>1A</option>
+                            <option>2A</option>
+                            <option>3A</option>
+                            <option>4A</option>
+                            <option>1B</option>
+                            <option>2B</option>
+                            <option>3B</option>
+                            <option>4B</option>
+                            <option>1Z</option>
+                            <option>2Z</option>
+                            <option>3Z</option>
+                            <option>4Z</option>
+                            <option>1T</option>
+                            <option>2T</option>
+                            <option>3T</option>
+                            <option>4T</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="vypujceni">Školní hodina vypůjčení:</label>
+                        <input type="number" class="form-control" id="vypujceni" name="vypujceni" min="0" max="9" value="0" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="vraceni">Školní hodina vrácení:</label>
+                        <input type="number" class="form-control" id="vraceni" name="vraceni" min="0" max="9" value="1" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="poznamka">Poznámka:</label>
+                        <input type="text" class="form-control" id="poznamka" name="poznamka">
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Odeslat</button>
+                </form>
+            </div>
+        </div>
+    </true>
+    <false>
+        <div class="container mt-5">
+            <h1>Pro vypůjčení se musíte přihlásit</h1>
+        </div>
+    </false>
+</check>

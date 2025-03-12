@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .timetable-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        .timetable {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .time-header {
+            text-align: center;
+            font-weight: bold;
+            color: #0078d7;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 8px 4px;
+            min-width: 60px;
+        }
+        .time-subheader {
+            text-align: center;
+            font-size: 0.8em;
+            color: #666;
+            padding: 4px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .day-header {
+            text-align: center;
+            padding: 8px;
+            background-color: #f5f5f5;
+            width: 30px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        .cell {
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            height: 50px;
+            background-color: #f9f9f9;
+            transition: background-color 0.2s;
+            vertical-align: middle;
+            width: 10%;
+        }
+        .cell:hover {
+            background-color: #e0e0ff;
+        }
+        .selected {
+            background-color: #4a86e8 !important;
+            color: white;
+        }
+        .controls {
+            margin-top: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4a86e8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 5px;
+        }
+        button:hover {
+            background-color: #3a76d8;
+        }
+        .selection-info {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <h1 style="text-align: center;">Školní rozvrh</h1>
+    <br>
+    
+    <div class="timetable-container">
+        <table class="timetable" id="timetable">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="time-header">0</th>
+                    <th class="time-header">1</th>
+                    <th class="time-header">2</th>
+                    <th class="time-header">3</th>
+                    <th class="time-header">4</th>
+                    <th class="time-header">5</th>
+                    <th class="time-header">6</th>
+                    <th class="time-header">7</th>
+                    <th class="time-header">8</th>
+                    <th class="time-header">9</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th class="time-subheader">7:05 - 7:50</th>
+                    <th class="time-subheader">8:00 - 8:45</th>
+                    <th class="time-subheader">8:50 - 9:35</th>
+                    <th class="time-subheader">9:55 - 10:40</th>
+                    <th class="time-subheader">10:50 - 11:35</th>
+                    <th class="time-subheader">11:45 - 12:30</th>
+                    <th class="time-subheader">12:35 - 13:20</th>
+                    <th class="time-subheader">13:25 - 14:10</th>
+                    <th class="time-subheader">14:15 - 15:00</th>
+                    <th class="time-subheader">15:05 - 15:50</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-header">po</td>
+                    <td class="cell" data-day="0" data-period="0" data-start-time="7:05" data-end-time="7:50"></td>
+                    <td class="cell" data-day="0" data-period="1" data-start-time="8:00" data-end-time="8:45"></td>
+                    <td class="cell" data-day="0" data-period="2" data-start-time="8:50" data-end-time="9:35"></td>
+                    <td class="cell" data-day="0" data-period="3" data-start-time="9:55" data-end-time="10:40"></td>
+                    <td class="cell" data-day="0" data-period="4" data-start-time="10:50" data-end-time="11:35"></td>
+                    <td class="cell" data-day="0" data-period="5" data-start-time="11:45" data-end-time="12:30"></td>
+                    <td class="cell" data-day="0" data-period="6" data-start-time="12:35" data-end-time="13:20"></td>
+                    <td class="cell" data-day="0" data-period="7" data-start-time="13:25" data-end-time="14:10"></td>
+                    <td class="cell" data-day="0" data-period="8" data-start-time="14:15" data-end-time="15:00"></td>
+                    <td class="cell" data-day="0" data-period="9" data-start-time="15:05" data-end-time="15:50"></td>
+                </tr>
+                <tr>
+                    <td class="day-header">út</td>
+                    <td class="cell" data-day="1" data-period="0" data-start-time="7:05" data-end-time="7:50"></td>
+                    <td class="cell" data-day="1" data-period="1" data-start-time="8:00" data-end-time="8:45"></td>
+                    <td class="cell" data-day="1" data-period="2" data-start-time="8:50" data-end-time="9:35"></td>
+                    <td class="cell" data-day="1" data-period="3" data-start-time="9:55" data-end-time="10:40"></td>
+                    <td class="cell" data-day="1" data-period="4" data-start-time="10:50" data-end-time="11:35"></td>
+                    <td class="cell" data-day="1" data-period="5" data-start-time="11:45" data-end-time="12:30"></td>
+                    <td class="cell" data-day="1" data-period="6" data-start-time="12:35" data-end-time="13:20"></td>
+                    <td class="cell" data-day="1" data-period="7" data-start-time="13:25" data-end-time="14:10"></td>
+                    <td class="cell" data-day="1" data-period="8" data-start-time="14:15" data-end-time="15:00"></td>
+                    <td class="cell" data-day="1" data-period="9" data-start-time="15:05" data-end-time="15:50"></td>
+                </tr>
+                <tr>
+                    <td class="day-header">st</td>
+                    <td class="cell" data-day="2" data-period="0" data-start-time="7:05" data-end-time="7:50"></td>
+                    <td class="cell" data-day="2" data-period="1" data-start-time="8:00" data-end-time="8:45"></td>
+                    <td class="cell" data-day="2" data-period="2" data-start-time="8:50" data-end-time="9:35"></td>
+                    <td class="cell" data-day="2" data-period="3" data-start-time="9:55" data-end-time="10:40"></td>
+                    <td class="cell" data-day="2" data-period="4" data-start-time="10:50" data-end-time="11:35"></td>
+                    <td class="cell" data-day="2" data-period="5" data-start-time="11:45" data-end-time="12:30"></td>
+                    <td class="cell" data-day="2" data-period="6" data-start-time="12:35" data-end-time="13:20"></td>
+                    <td class="cell" data-day="2" data-period="7" data-start-time="13:25" data-end-time="14:10"></td>
+                    <td class="cell" data-day="2" data-period="8" data-start-time="14:15" data-end-time="15:00"></td>
+                    <td class="cell" data-day="2" data-period="9" data-start-time="15:05" data-end-time="15:50"></td>
+                </tr>
+                <tr>
+                    <td class="day-header">čt</td>
+                    <td class="cell" data-day="3" data-period="0" data-start-time="7:05" data-end-time="7:50"></td>
+                    <td class="cell" data-day="3" data-period="1" data-start-time="8:00" data-end-time="8:45"></td>
+                    <td class="cell" data-day="3" data-period="2" data-start-time="8:50" data-end-time="9:35"></td>
+                    <td class="cell" data-day="3" data-period="3" data-start-time="9:55" data-end-time="10:40"></td>
+                    <td class="cell" data-day="3" data-period="4" data-start-time="10:50" data-end-time="11:35"></td>
+                    <td class="cell" data-day="3" data-period="5" data-start-time="11:45" data-end-time="12:30"></td>
+                    <td class="cell" data-day="3" data-period="6" data-start-time="12:35" data-end-time="13:20"></td>
+                    <td class="cell" data-day="3" data-period="7" data-start-time="13:25" data-end-time="14:10"></td>
+                    <td class="cell" data-day="3" data-period="8" data-start-time="14:15" data-end-time="15:00"></td>
+                    <td class="cell" data-day="3" data-period="9" data-start-time="15:05" data-end-time="15:50"></td>
+                </tr>
+                <tr>
+                    <td class="day-header">pá</td>
+                    <td class="cell" data-day="4" data-period="0" data-start-time="7:05" data-end-time="7:50"></td>
+                    <td class="cell" data-day="4" data-period="1" data-start-time="8:00" data-end-time="8:45"></td>
+                    <td class="cell" data-day="4" data-period="2" data-start-time="8:50" data-end-time="9:35"></td>
+                    <td class="cell" data-day="4" data-period="3" data-start-time="9:55" data-end-time="10:40"></td>
+                    <td class="cell" data-day="4" data-period="4" data-start-time="10:50" data-end-time="11:35"></td>
+                    <td class="cell" data-day="4" data-period="5" data-start-time="11:45" data-end-time="12:30"></td>
+                    <td class="cell" data-day="4" data-period="6" data-start-time="12:35" data-end-time="13:20"></td>
+                    <td class="cell" data-day="4" data-period="7" data-start-time="13:25" data-end-time="14:10"></td>
+                    <td class="cell" data-day="4" data-period="8" data-start-time="14:15" data-end-time="15:00"></td>
+                    <td class="cell" data-day="4" data-period="9" data-start-time="15:05" data-end-time="15:50"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="selection-info" id="selectionInfo">
+        Žádná vybraná hodina
+    </div>
+    
+    <div class="controls">
+        <button id="submitButton">Odeslat výběr</button>
+        <button id="resetButton">Zrušit výběr</button>
+    </div>
+    
+    <form id="selectionForm" method="post" style="display: none;">
+        <input type="hidden" id="startTime" name="startTime" value="">
+        <input type="hidden" id="endTime" name="endTime" value="">
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const timetable = document.getElementById('timetable');
+        const selectionInfo = document.getElementById('selectionInfo');
+        const submitButton = document.getElementById('submitButton');
+        const resetButton = document.getElementById('resetButton');
+        const selectionForm = document.getElementById('selectionForm');
+        const startTimeInput = document.getElementById('startTime');
+        const endTimeInput = document.getElementById('endTime');
+        
+        // Proměnné pro sledování výběru
+        let firstSelected = null;
+        let lastSelected = null;
+        let selectedCells = [];
+        
+        // Funkce pro označení buněk mezi dvěma body
+        function selectCellsBetween(first, last) {
+            // Zrušení předchozího výběru
+            clearSelection();
+            
+            // Kontrola, zda jsou buňky ve stejném dni
+            if (first.dataset.day !== last.dataset.day) {
+                alert("Můžete vybírat pouze hodiny v rámci jednoho dne!");
+                return;
+            }
+            
+            const startPeriod = Math.min(parseInt(first.dataset.period), parseInt(last.dataset.period));
+            const endPeriod = Math.max(parseInt(first.dataset.period), parseInt(last.dataset.period));
+            const day = first.dataset.day;
+            
+            let firstCell = null;
+            let lastCell = null;
+            
+            // Výběr všech buněk mezi
+            const cells = document.querySelectorAll('.cell');
+            cells.forEach(cell => {
+                const cellDay = cell.dataset.day;
+                const cellPeriod = parseInt(cell.dataset.period);
+                
+                if (cellDay === day && cellPeriod >= startPeriod && cellPeriod <= endPeriod) {
+                    cell.classList.add('selected');
+                    selectedCells.push(cell);
+                    
+                    // Určení první a poslední buňky podle periody
+                    if (firstCell === null || parseInt(cell.dataset.period) < parseInt(firstCell.dataset.period)) {
+                        firstCell = cell;
+                    }
+                    if (lastCell === null || parseInt(cell.dataset.period) > parseInt(lastCell.dataset.period)) {
+                        lastCell = cell;
+                    }
+                }
+            });
+            
+            // Aktualizace informací o výběru
+            if (selectedCells.length > 0) {
+                selectionInfo.textContent = `Vybráno: ${firstCell.dataset.startTime} - ${lastCell.dataset.endTime}`;
+                
+                // Nastavení hodnot pro formulář
+                startTimeInput.value = firstCell.dataset.startTime;
+                endTimeInput.value = lastCell.dataset.endTime;
+            }
+        }
+        
+        // Funkce pro zrušení výběru
+        function clearSelection() {
+            selectedCells.forEach(cell => {
+                cell.classList.remove('selected');
+            });
+            selectedCells = [];
+            selectionInfo.textContent = "Žádná vybraná hodina";
+            startTimeInput.value = "";
+            endTimeInput.value = "";
+        }
+        
+        // Event listener pro kliknutí na buňku
+        timetable.addEventListener('click', function(e) {
+            const cell = e.target.closest('.cell');
+            if (!cell) return;
+            
+            if (!firstSelected) {
+                firstSelected = cell;
+                lastSelected = cell;
+                selectCellsBetween(firstSelected, lastSelected);
+            } else {
+                lastSelected = cell;
+                selectCellsBetween(firstSelected, lastSelected);
+            }
+        });
+        
+        // Event listener pro tlačítko odeslání
+        submitButton.addEventListener('click', function() {
+            if (selectedCells.length > 0) {
+                // Odesílání formuláře
+                selectionForm.submit();
+            } else {
+                alert("Nejprve vyberte časový úsek!");
+            }
+        });
+        
+        // Event listener pro tlačítko reset
+        resetButton.addEventListener('click', function() {
+            clearSelection();
+            firstSelected = null;
+            lastSelected = null;
+        });
+    });
+    </script>
+    <br>
+    <br>
+    <br>
+    <h6>zacatek {{@SESSION.zacatek}}</h6>
+    <h6>konec {{@SESSION.konec}}</h6>
+</body>
+</html>

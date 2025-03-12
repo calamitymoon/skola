@@ -1,48 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tablet Reservations</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container mt-5">
-        <h1 class="mb-4">Tablet Reservations</h1>
-        <table class="table table-striped">
-            <thead>
+<div class="container mt-5">
+    <h1 class="mb-4">Půjčovna tabletů</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID učitele</th>
+                <th>Třídy</th>
+                <th>Vypůjčeno na</th>
+                <th>Vrátit po</th>
+                <th>Poznámka</th>
+            </tr>
+        </thead>
+        <tbody>
+            <repeat group="{{ @pujcovna }}" value="{{ @pujcovna }}">
                 <tr>
-                    <th>ID uživatele</th>
-                    <th>Třídy</th>
-                    <th>Vypůjčeno na hodinu</th>
-                    <th>Vráceno po hodině</th>
-                    <th>Poznámka</th>
+                    <td>{{ @pujcovna.jmeno }}</td>
+                    <td>
+                        <check if="{{ @pujcovna.tridy != '' }}">
+                            <repeat group="{{ json_decode(@pujcovna.tridy, true) }}" value="{{ @trida }}">
+                                {{ @trida }}<check if="{{ @trida != end(json_decode(@pujcovna.tridy, true)) }}">, </check>
+                            </repeat>
+                        </check>
+                        <check if="{{ @pujcovna.tridy == '' }}">
+                            Žádné třídy
+                        </check>
+                    </td>
+                    <td>{{ @pujcovna.vypujceni }}. hodinu</td>
+                    <td>{{ @pujcovna.vraceni }}. hodině</td>
+                    <td>{{ @pujcovna.poznamka }}</td>
                 </tr>
-            </thead>
-            <tbody>
-                <repeat group="{{ @pujcovna }}" value="{{ @pujcovna }}">
-                    <tr>
-                        <td>{{ @pujcovna.jmeno }}</td>
-                        <td>
-                            <check if="{{ @pujcovna.tridy != '' }}">
-                                <repeat group="{{ json_decode(@pujcovna.tridy, true) }}" value="{{ @t }}">
-                                    {{ @t }}<check if="{{ @t != end(json_decode(@pujcovna.tridy, true)) }}">, </check>
-                                </repeat>
-                            </check>
-                            <check if="{{ @pujcovna.tridy == '' }}">
-                                Žádné třídy
-                            </check>
-                        </td>
-                        <td>{{ @pujcovna.vypujceni }}</td>
-                        <td>{{ @pujcovna.vraceni }}</td>
-                        <td>{{ @pujcovna.poznamka }}</td>
-                    </tr>
-                </repeat>
-            </tbody>
-        </table>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html></div></html>
+            </repeat>
+        </tbody>
+    </table>
+</div>

@@ -1,45 +1,271 @@
+<style>
+    .timetable-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+    .timetable {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    .time-header {
+        text-align: center;
+        font-weight: bold;
+        color: #0078d7;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 8px 4px;
+        min-width: 60px;
+    }
+    .time-subheader {
+        text-align: center;
+        font-size: 0.8em;
+        color: #666;
+        padding: 4px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .day-header {
+        text-align: center;
+        padding: 8px;
+        background-color: #f5f5f5;
+        width: 30px;
+        font-weight: bold;
+        vertical-align: middle;
+    }
+    .cell {
+        border: 1px solid #e0e0e0;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        height: 50px;
+        background-color: #f9f9f9;
+        transition: background-color 0.2s;
+        vertical-align: middle;
+        width: 10%;
+    }
+    .cell:hover {
+        background-color: #e0e0ff;
+    }
+    .selected {
+        background-color: #4a86e8 !important;
+        color: white;
+    }
+    .controls {
+        margin-top: 10px;
+        text-align: center;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4a86e8;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 0 5px;
+    }
+    button:hover {
+        background-color: #3a76d8;
+    }
+    .selection-info {
+        margin: 5px 0;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+        text-align: center;
+    }
+</style>
+
 <check if="{{ isset(@SESSION.prihlasen) }}">
     <true>
         <div class="container mt-5">
-            <div class="form-container" style="max-width: 600px; margin: 0 auto;">
+            <div class="form-container" style="max-width: 700px; margin: 0 auto;">
                 <form method="post">
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="jmeno">Jméno:</label>
                         <input type="text" class="form-control" id="jmeno" name="jmeno" value="{{@SESSION.jmeno}}" readonly>
                         <input type="hidden" name="jmeno" value="{{@SESSION.id}}">
                     </div>
+                    <br> -->
+                    
+                    <div class="timetable-container">
+                        <table class="timetable" id="timetable">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="time-header">0</th>
+                                    <th class="time-header">1</th>
+                                    <th class="time-header">2</th>
+                                    <th class="time-header">3</th>
+                                    <th class="time-header">4</th>
+                                    <th class="time-header">5</th>
+                                    <th class="time-header">6</th>
+                                    <th class="time-header">7</th>
+                                    <th class="time-header">8</th>
+                                    <th class="time-header">9</th>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <th class="time-subheader">7:05 - 7:50</th>
+                                    <th class="time-subheader">8:00 - 8:45</th>
+                                    <th class="time-subheader">8:50 - 9:35</th>
+                                    <th class="time-subheader">9:55 - 10:40</th>
+                                    <th class="time-subheader">10:50 - 11:35</th>
+                                    <th class="time-subheader">11:45 - 12:30</th>
+                                    <th class="time-subheader">12:35 - 13:20</th>
+                                    <th class="time-subheader">13:25 - 14:10</th>
+                                    <th class="time-subheader">14:15 - 15:00</th>
+                                    <th class="time-subheader">15:05 - 15:50</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="day-header">po</td>
+                                    <td class="cell" data-day="0" data-period="0" data-start-time="7:05" data-end-time="7:50"></td>
+                                    <td class="cell" data-day="0" data-period="1" data-start-time="8:00" data-end-time="8:45"></td>
+                                    <td class="cell" data-day="0" data-period="2" data-start-time="8:50" data-end-time="9:35"></td>
+                                    <td class="cell" data-day="0" data-period="3" data-start-time="9:55" data-end-time="10:40"></td>
+                                    <td class="cell" data-day="0" data-period="4" data-start-time="10:50" data-end-time="11:35"></td>
+                                    <td class="cell" data-day="0" data-period="5" data-start-time="11:45" data-end-time="12:30"></td>
+                                    <td class="cell" data-day="0" data-period="6" data-start-time="12:35" data-end-time="13:20"></td>
+                                    <td class="cell" data-day="0" data-period="7" data-start-time="13:25" data-end-time="14:10"></td>
+                                    <td class="cell" data-day="0" data-period="8" data-start-time="14:15" data-end-time="15:00"></td>
+                                    <td class="cell" data-day="0" data-period="9" data-start-time="15:05" data-end-time="15:50"></td>
+                                </tr>
+                                <tr>
+                                    <td class="day-header">út</td>
+                                    <td class="cell" data-day="1" data-period="0" data-start-time="7:05" data-end-time="7:50"></td>
+                                    <td class="cell" data-day="1" data-period="1" data-start-time="8:00" data-end-time="8:45"></td>
+                                    <td class="cell" data-day="1" data-period="2" data-start-time="8:50" data-end-time="9:35"></td>
+                                    <td class="cell" data-day="1" data-period="3" data-start-time="9:55" data-end-time="10:40"></td>
+                                    <td class="cell" data-day="1" data-period="4" data-start-time="10:50" data-end-time="11:35"></td>
+                                    <td class="cell" data-day="1" data-period="5" data-start-time="11:45" data-end-time="12:30"></td>
+                                    <td class="cell" data-day="1" data-period="6" data-start-time="12:35" data-end-time="13:20"></td>
+                                    <td class="cell" data-day="1" data-period="7" data-start-time="13:25" data-end-time="14:10"></td>
+                                    <td class="cell" data-day="1" data-period="8" data-start-time="14:15" data-end-time="15:00"></td>
+                                    <td class="cell" data-day="1" data-period="9" data-start-time="15:05" data-end-time="15:50"></td>
+                                </tr>
+                                <tr>
+                                    <td class="day-header">st</td>
+                                    <td class="cell" data-day="2" data-period="0" data-start-time="7:05" data-end-time="7:50"></td>
+                                    <td class="cell" data-day="2" data-period="1" data-start-time="8:00" data-end-time="8:45"></td>
+                                    <td class="cell" data-day="2" data-period="2" data-start-time="8:50" data-end-time="9:35"></td>
+                                    <td class="cell" data-day="2" data-period="3" data-start-time="9:55" data-end-time="10:40"></td>
+                                    <td class="cell" data-day="2" data-period="4" data-start-time="10:50" data-end-time="11:35"></td>
+                                    <td class="cell" data-day="2" data-period="5" data-start-time="11:45" data-end-time="12:30"></td>
+                                    <td class="cell" data-day="2" data-period="6" data-start-time="12:35" data-end-time="13:20"></td>
+                                    <td class="cell" data-day="2" data-period="7" data-start-time="13:25" data-end-time="14:10"></td>
+                                    <td class="cell" data-day="2" data-period="8" data-start-time="14:15" data-end-time="15:00"></td>
+                                    <td class="cell" data-day="2" data-period="9" data-start-time="15:05" data-end-time="15:50"></td>
+                                </tr>
+                                <tr>
+                                    <td class="day-header">čt</td>
+                                    <td class="cell" data-day="3" data-period="0" data-start-time="7:05" data-end-time="7:50"></td>
+                                    <td class="cell" data-day="3" data-period="1" data-start-time="8:00" data-end-time="8:45"></td>
+                                    <td class="cell" data-day="3" data-period="2" data-start-time="8:50" data-end-time="9:35"></td>
+                                    <td class="cell" data-day="3" data-period="3" data-start-time="9:55" data-end-time="10:40"></td>
+                                    <td class="cell" data-day="3" data-period="4" data-start-time="10:50" data-end-time="11:35"></td>
+                                    <td class="cell" data-day="3" data-period="5" data-start-time="11:45" data-end-time="12:30"></td>
+                                    <td class="cell" data-day="3" data-period="6" data-start-time="12:35" data-end-time="13:20"></td>
+                                    <td class="cell" data-day="3" data-period="7" data-start-time="13:25" data-end-time="14:10"></td>
+                                    <td class="cell" data-day="3" data-period="8" data-start-time="14:15" data-end-time="15:00"></td>
+                                    <td class="cell" data-day="3" data-period="9" data-start-time="15:05" data-end-time="15:50"></td>
+                                </tr>
+                                <tr>
+                                    <td class="day-header">pá</td>
+                                    <td class="cell" data-day="4" data-period="0" data-start-time="7:05" data-end-time="7:50"></td>
+                                    <td class="cell" data-day="4" data-period="1" data-start-time="8:00" data-end-time="8:45"></td>
+                                    <td class="cell" data-day="4" data-period="2" data-start-time="8:50" data-end-time="9:35"></td>
+                                    <td class="cell" data-day="4" data-period="3" data-start-time="9:55" data-end-time="10:40"></td>
+                                    <td class="cell" data-day="4" data-period="4" data-start-time="10:50" data-end-time="11:35"></td>
+                                    <td class="cell" data-day="4" data-period="5" data-start-time="11:45" data-end-time="12:30"></td>
+                                    <td class="cell" data-day="4" data-period="6" data-start-time="12:35" data-end-time="13:20"></td>
+                                    <td class="cell" data-day="4" data-period="7" data-start-time="13:25" data-end-time="14:10"></td>
+                                    <td class="cell" data-day="4" data-period="8" data-start-time="14:15" data-end-time="15:00"></td>
+                                    <td class="cell" data-day="4" data-period="9" data-start-time="15:05" data-end-time="15:50"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <br>
+                    
                     <div class="form-group">
                         <label for="tridy">Třídy:</label>
-                        <select multiple class="form-control" id="tridy" name="tridy[]" required>
-                            <option>1A</option>
-                            <option>2A</option>
-                            <option>3A</option>
-                            <option>4A</option>
-                            <option>1B</option>
-                            <option>2B</option>
-                            <option>3B</option>
-                            <option>4B</option>
-                            <option>1Z</option>
-                            <option>2Z</option>
-                            <option>3Z</option>
-                            <option>4Z</option>
-                            <option>1T</option>
-                            <option>2T</option>
-                            <option>3T</option>
-                            <option>4T</option>
-                        </select>
+                        <div id="tridy" class="form-control" style="height: auto;">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="1A"> 1A
+                                    </label>
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="2A"> 2A
+                                    </label>
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="3A"> 3A
+                                    </label>
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="4A"> 4A
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="1B"> 1B
+                                    </label>
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="2B"> 2B
+                                    </label>
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="3B"> 3B
+                                    </label>
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="4B"> 4B
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="1Z"> 1Z
+                                    </label>
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="2Z"> 2Z
+                                    </label>
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="3Z"> 3Z
+                                    </label>
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="4Z"> 4Z
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="1T"> 1T
+                                    </label>
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="2T"> 2T
+                                    </label>
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="3T"> 3T
+                                    </label>
+                                    <label class="form-check-label"></label>
+                                        <input type="checkbox" class="form-check-input" name="tridy[]" value="4T"> 4T
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <br>
-                    <div class="form-group">
-                        <label for="vypujceni">Školní hodina vypůjčení:</label>
-                        <input type="number" class="form-control" id="vypujceni" name="vypujceni" min="0" max="9" value="0" required>
+                    
+                    <div class="selection-info" id="selectionInfo">
+                        Žádná vybraná hodina
                     </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="vraceni">Školní hodina vrácení:</label>
-                        <input type="number" class="form-control" id="vraceni" name="vraceni" min="0" max="9" value="1" required>
+                    
+                    <div class="controls">
+                        <button type="button" id="confirmButton">Potvrdit výběr</button>
+                        <button type="button" id="resetButton">Zrušit výběr</button>
                     </div>
+                    
+                    <input type="hidden" id="startTime" name="startTime" value="">
+                    <input type="hidden" id="endTime" name="endTime" value="">
+                    <input type="hidden" id="day" name="day" value="">
+                    
                     <br>
                     <div class="form-group">
                         <label for="poznamka">Poznámka:</label>
@@ -57,3 +283,114 @@
         </div>
     </false>
 </check>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const timetable = document.getElementById('timetable');
+    const selectionInfo = document.getElementById('selectionInfo');
+    const confirmButton = document.getElementById('confirmButton');
+    const resetButton = document.getElementById('resetButton');
+    const selectionForm = document.getElementById('selectionForm');
+    const startTimeInput = document.getElementById('startTime');
+    const endTimeInput = document.getElementById('endTime');
+    
+    let firstSelected = null;
+    let lastSelected = null;
+    let selectedCells = [];
+    
+    function selectCellsBetween(first, last) {
+        clearSelection();
+        
+        if (first.dataset.day !== last.dataset.day) {
+            alert("Můžete vybírat pouze hodiny v rámci jednoho dne!");
+            return;
+        }
+        
+        const startPeriod = Math.min(parseInt(first.dataset.period), parseInt(last.dataset.period));
+        const endPeriod = Math.max(parseInt(first.dataset.period), parseInt(last.dataset.period));
+        const day = first.dataset.day;
+        
+        let firstCell = null;
+        let lastCell = null;
+        
+        const cells = document.querySelectorAll('.cell');
+        cells.forEach(cell => {
+            const cellDay = cell.dataset.day;
+            const cellPeriod = parseInt(cell.dataset.period);
+            
+            if (cellDay === day && cellPeriod >= startPeriod && cellPeriod <= endPeriod) {
+                cell.classList.add('selected');
+                selectedCells.push(cell);
+                
+                if (firstCell === null || parseInt(cell.dataset.period) < parseInt(firstCell.dataset.period)) {
+                    firstCell = cell;
+                }
+                if (lastCell === null || parseInt(cell.dataset.period) > parseInt(lastCell.dataset.period)) {
+                    lastCell = cell;
+                }
+            }
+        });
+        
+        if (selectedCells.length > 0) {
+            selectionInfo.textContent = `Vybráno: ${firstCell.dataset.startTime} - ${lastCell.dataset.endTime}`;
+            
+            startTimeInput.value = firstCell.dataset.startTime;
+            endTimeInput.value = lastCell.dataset.endTime;
+        }
+    }
+
+    confirmButton.addEventListener('click', function() {
+        if (selectedCells.length > 0) {
+            alert("Výběr byl potvrzen. Klikněte na 'Odeslat' pro dokončení.");
+        } else {
+            alert("Nejprve vyberte časový úsek!");
+        }
+    });
+
+    document.querySelector('form').addEventListener('submit', function(e) {
+        if (startTimeInput.value === "" || endTimeInput.value === "") {
+            e.preventDefault();
+            alert("Musíte vybrat časový úsek v rozvrhu!");
+        }
+    });
+    
+    function clearSelection() {
+        selectedCells.forEach(cell => {
+            cell.classList.remove('selected');
+        });
+        selectedCells = [];
+        selectionInfo.textContent = "Žádná vybraná hodina";
+        startTimeInput.value = "";
+        endTimeInput.value = "";
+    }
+    
+    timetable.addEventListener('click', function(e) {
+        const cell = e.target.closest('.cell');
+        if (!cell) return;
+        
+        if (!firstSelected) {
+            firstSelected = cell;
+            lastSelected = cell;
+            selectCellsBetween(firstSelected, lastSelected);
+        } else {
+            lastSelected = cell;
+            selectCellsBetween(firstSelected, lastSelected);
+        }
+    });
+    
+    submitButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        if (selectedCells.length > 0) {
+            document.getElementById('day').value = selectedCells[0].dataset.day;
+        } else {
+            alert("Nejprve vyberte časový úsek!");
+        }
+    });
+    
+    resetButton.addEventListener('click', function() {
+        clearSelection();
+        firstSelected = null;
+        lastSelected = null;
+    });
+});
+</script>

@@ -15,9 +15,15 @@ class Index
     {
         $jmeno = $base->get('POST.jmeno');
         $tridy = json_encode($base->get('POST.tridy'));
-        $vypujceni = $base->get('POST.vypujceni');
-        $vraceni = $base->get('POST.vraceni');
+        $vypujceni = $base->get('POST.startTime');
+        $vraceni = $base->get('POST.endTime');
         $poznamka = $base->get('POST.poznamka');
+
+        if (empty($jmeno) || empty($vypujceni) || empty($vraceni)) {
+            $base->set('error', 'Všechny povinné údaje musí být vyplněny!');
+            $base->reroute('/vypujcit');
+            return;
+        }
 
         $pujcovna = new \models\Pujcovna();
         $pujcovna->jmeno = $jmeno;
@@ -39,31 +45,5 @@ class Index
         $base->set('pujcovna', $pujcovna->find());
 
         echo \Template::instance()->render('index.html');
-    }
-
-    public function getTest(\Base $base)
-    {
-        $base->set('title', 'Test');
-        $base->set('content', '/pujcka/test.html');
-        echo \Template::instance()->render('index.html');
-    }
-
-    public function postTest(\Base $base)
-    {
-        $zacatek = $base->get('POST.startTime');
-        $konec = $base->get('POST.endTime');
-
-        $base->set('zacatek', $zacatek);
-        $base->set('konec', $konec);
-
-        $base->set('SESSION.zacatek', $zacatek);
-        $base->set('SESSION.konec', $konec);
-    }
-
-    public function getResetZacatekKonec(\Base $base)
-    {
-        $base->clear('SESSION.zacatek');
-        $base->clear('SESSION.konec');
-        $base->reroute('/test');
     }
 }

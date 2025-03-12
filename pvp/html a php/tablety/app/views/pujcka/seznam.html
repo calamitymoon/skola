@@ -1,12 +1,13 @@
-<div class="container mt-5">
-    <h1 class="mb-4">Půjčovna tabletů</h1>
+<div class="container mt-5 text-center">
+    <div class="d-flex justify-content-center text-center mb-3">
+        <h1>Seznam aktivních rezervací tabletů</h1>
+    </div>
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>ID učitele</th>
-                <th>Třídy</th>
-                <th>Vypůjčeno na</th>
-                <th>Vrátit po</th>
+                <th>Učitel</th>
+                <th>Pro třídy</th>
+                <th>Vypůjčeno</th>
                 <th>Poznámka</th>
             </tr>
         </thead>
@@ -24,9 +25,19 @@
                             Žádné třídy
                         </check>
                     </td>
-                    <td>{{ @pujcovna.vypujceni }}. hodinu</td>
-                    <td>{{ @pujcovna.vraceni }}. hodině</td>
-                    <td>{{ @pujcovna.poznamka }}</td>
+                    <td>
+                        <check if="{{ @pujcovna.denvypujceni == 'Pondělí' || @pujcovna.denvypujceni == 'Úterý' || @pujcovna.denvypujceni == 'Pátek' }}">
+                            v {{ @pujcovna.denvypujceni }}
+                        </check>
+                        <check if="{{ @pujcovna.denvypujceni == 'Středa' || @pujcovna.denvypujceni == 'Čtvrtek' }}">
+                            ve {{ @pujcovna.denvypujceni }}
+                        </check>
+                        od <u>{{ @pujcovna.vypujceni }}</u> do <u>{{ @pujcovna.vraceni }}</u>
+                    </td>
+                    <td>
+                        <check if="{{ @pujcovna.poznamka == '' }}">
+                            Žádná poznámka
+                        </check></td>
                 </tr>
             </repeat>
         </tbody>

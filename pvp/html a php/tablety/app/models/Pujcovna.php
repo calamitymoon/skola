@@ -18,6 +18,11 @@ class Pujcovna extends \DB\Cortex
             'required' => true,
             'nullable' => false
         ],
+        'denvypujceni' => [
+            'type' => 'VARCHAR128',
+            'required' => true,
+            'nullable' => false
+        ],
         'vypujceni' => [
             'type' => 'VARCHAR128',
             'required' => true,

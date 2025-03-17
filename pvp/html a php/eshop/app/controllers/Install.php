@@ -10,13 +10,13 @@ class Install
         \models\User::setup(); // Vytvoření tabulky
 
         // Vytvoření admin uživatele (příklad)
-        $user = new \models\User();
-        $user->username = 'admin';
-        $user->set_password('password'); // Změň na silnější heslo!
-        $user->role = 'admin';
-        $user->save();
+        // $user = new \models\User();
+        // $user->username = 'admin';
+        // $user->set_password('password'); // Změň na silnější heslo!
+        // $user->role = 'admin';
+        // $user->save();
 
-        $base->set('SESSION.message', ['type' => 'success', 'text' => 'Tabulka uživatelů byla vytvořena a admin uživatel byl přidán.']);
+        $base->set('SESSION.message', ['type' => 'success', 'text' => 'Tabulka uživatelů byla vytvořena.']);
     }
 
     public function instalace_obchod(\Base $base)

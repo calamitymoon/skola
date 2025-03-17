@@ -22,4 +22,9 @@ class User extends \DB\Cortex
             'default' => 'user'
         ]
     ];
+
+    public function set_heslo($value)
+    {
+        return password_hash($value, PASSWORD_DEFAULT);
+    }
 }

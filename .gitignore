@@ -35,3 +35,8 @@ pvp/flutter/.metadata
 /pvp/html a php/zpravy/.idea
 pvp/html a php/zpravy/.vscode/c_cpp_properties.json
 /elm/4. rocnik/poslouchac
+/pvp/html a php/kyslik-api/vendor
+/pvp/html a php/kyslik-api/.idea
+pvp/html a php/kyslik-api/app/configs/db.ini
+pvp/html a php/kyslik-api/composer.lock
+/pvp/html a php/kyslik-api/tmp

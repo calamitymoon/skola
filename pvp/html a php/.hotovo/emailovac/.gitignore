@@ -1,0 +1,5 @@
+/vendor
+*.lock
+/tmp
+app/configs/db.ini
+app/configs/mailer.ini

@@ -1,0 +1,18 @@
+{
+  "name": "amfex/emailovac",
+  "description": "Projekt na vyzkoušení resetování hesla pomocí emailu.",
+  "minimum-stability": "dev",
+  "license": "mit",
+  "authors": [
+    {
+      "name": "9hb",
+      "role": "developer"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree": ">=3.9.0",
+    "ikkez/f3-cortex": ">=1.7.8",
+    "ikkez/f3-flash": ">=1.0.2",
+    "ikkez/f3-mailer": ">=1.2.3"
+  }
+}

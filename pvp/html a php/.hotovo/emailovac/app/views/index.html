@@ -1,0 +1,18 @@
+<include href="head.html" />
+
+<include href="menu.html" />
+<br>
+<include href="flash.html" />
+<main class="container">
+    <check if="{{isset(@content)}}">
+        <true>
+            <include href="{{@content}}" />
+        </true>
+        <false>
+            <div class="alert alert-info" role="alert">
+                <h4 class="alert-heading text-center">neni content 😫</h4>
+            </div>
+        </false>
+    </check>
+</main>
+<include href="footer.html" />

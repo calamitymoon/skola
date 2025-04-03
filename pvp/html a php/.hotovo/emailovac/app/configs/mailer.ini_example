@@ -1,0 +1,18 @@
+[mailer]
+; smtp config
+smtp.host       = smtp.domena.cz
+smtp.port       = port
+smtp.user       = email@domena.cz
+smtp.pw         = heslo k emailu
+smtp.scheme     = ssl nebo tls
+
+from_mail       = email@domena.cz
+from_name       = Resetování hesla
+errors_to       = email@domena.cz
+reply_to        = email@domena.cz
+
+;on.failure      = \Controller\Mail::logError
+;on.ping         = \Controller\Mail::traceMail
+;on.jump         = \Controller\Mail::traceClick
+;jumplinks       = true
+storage_path    = logs/mail/

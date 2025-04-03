@@ -1,0 +1,30 @@
+<body class="bg-light">
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow">
+                    <div class="card-body p-4">
+                        <h2 class="text-center mb-4">prihlaseni</h2>
+                        <form method="post">
+                            <div class="mb-3">
+                                <label for="jmeno" class="form-label">jmeno</label>
+                                <input type="text" class="form-control" name="jmeno" id="jmeno" placeholder="vase jmeno" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="heslo" class="form-label">heslo</label>
+                                <input type="password" class="form-control" name="heslo" id="heslo" placeholder="vase heslo" required>
+                            </div>
+                            <br>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">prihlasit se</button>
+                            </div>
+                            <div class="text-center mt-3">
+                                <a href="{{@BASE}}/zapomenute-heslo" class="text-decoration-none">zapomnel jsi heslo?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

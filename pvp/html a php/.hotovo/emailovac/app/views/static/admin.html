@@ -1,0 +1,72 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">Přehled resetování hesel</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Uživatel</th>
+                            <th>Email</th>
+                            <th>Token</th>
+                            <th>Stav</th>
+                            <th>Odesláno</th>
+                            <th>Zobrazeno</th>
+                            <th>Resetováno</th>
+                            <th>Platnost do</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <repeat group="{{ @statusy }}" value="{{ @status }}">
+                            <tr>
+                                <td>{{ @status->id_uzivatele->jmeno }}</td>
+                                <td>{{ @status->email }}</td>
+                                <td><small class="text-muted">{{ substr(@status->hash, 0, 8) }}...</small></td>
+                                <td>
+                                    <check if="{{ @status->resetovano }}">
+                                        <true>
+                                            <span class="badge bg-success">Úspěšně resetováno</span>
+                                        </true>
+                                        <false>
+                                            <check if="{{ @status->expirovano || (strtotime(@status->platnost) < time()) }}">
+                                                <true>
+                                                    <span class="badge bg-danger">Vypršelo</span>
+                                                </true>
+                                                <false>
+                                                    <check if="{{ @status->zobrazeno }}">
+                                                        <true>
+                                                            <span class="badge bg-info">Email zobrazen</span>
+                                                        </true>
+                                                        <false>
+                                                            <span class="badge bg-warning text-dark">Pouze odesláno</span>
+                                                        </false>
+                                                    </check>
+                                                </false>
+                                            </check>
+                                        </false>
+                                    </check>
+                                </td>
+                                <td>{{ date('d.m.Y H:i', strtotime(@status->odeslano)) }}</td>
+                                <td>
+                                    <check if="{{ @status->zobrazeno }}">
+                                        <true>{{ date('d.m.Y H:i', strtotime(@status->zobrazeno)) }}</true>
+                                        <false>-</false>
+                                    </check>
+                                </td>
+                                <td>
+                                    <check if="{{ @status->resetovano }}">
+                                        <true>{{ date('d.m.Y H:i', strtotime(@status->resetovano)) }}</true>
+                                        <false>-</false>
+                                    </check>
+                                </td>
+                                <td>{{ date('d.m.Y H:i', strtotime(@status->platnost)) }}</td>
+                            </tr>
+                        </repeat>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

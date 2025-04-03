@@ -1,0 +1,4 @@
+[globals]
+db[dsn] = "mysql:host=localhost;dbname=xxxxxxxxxx"
+db[username] = "uuuuuuuuuu"
+db[password] = "pppppppppp"

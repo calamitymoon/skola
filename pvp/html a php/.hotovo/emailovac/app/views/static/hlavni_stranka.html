@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <check if="{{isset(@SESSION.jmeno)}}">
+            <true>
+                <div class="col-12 text-center">
+                    <p class="lead text-muted">(uid {{@SESSION.uid}})</p>
+                    <h1 class="display-4">cau, {{@SESSION.jmeno}}</h1>
+                    <p class="lead">tvuj email je {{@SESSION.email}}</p>
+                </div>
+            </true>
+        </check>
+        <div class="col-12 text-center">
+            <h1>rozcestnik odkazu</h1>
+            <check if="{{isset(@SESSION.admin) && @SESSION.admin == 1}}">
+                <true>
+                    <a href="{{@BASE}}/admin" class="btn btn-danger">admin panel</a>
+                </true>
+            </check>
+            <check if="{{isset(@SESSION.jmeno)}}">
+                <true>
+                    <div class="col-12 text-center">
+                        <a href="{{@BASE}}/zapomenute-heslo" class="btn btn-warning">resetovat heslo</a>
+                    </div>
+                </true>
+                <false>
+                    <div class="col-12 text-center">
+                        <a href="{{@BASE}}/login" class="btn btn-primary">prihlasit se</a>
+                        <a href="{{@BASE}}/register" class="btn btn-success">registrovat se</a>
+                    </div>
+                </false>
+            </check>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,190 @@
+<header class="modern-header">
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="{{@BASE}}/">
+                    <svg viewBox="0 0 24 24" class="logo-icon">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    <span>Emailovač</span>
+                </a>
+            </div>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            
+            <div class="nav-links">
+                <ul>
+                    <check if="{{isset(@SESSION.jmeno)}}">
+                        <true>
+                            <li><a href="{{@BASE}}/logout">Odhlásit se</a></li>
+                        </true>
+                        <false>
+                            <li><a href="{{@BASE}}/login" class="nav-btn">Přihlásit</a></li>
+                            <li><a href="{{@BASE}}/register" class="nav-btn">Registrovat</a></li>
+                        </false>
+                    </check>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<style>
+    .modern-header {
+        font-family: 'Inter', sans-serif;
+    }
+    
+    .glass-nav {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+        padding: 1rem;
+    }
+    
+    .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .logo a {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #4f46e5;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+        fill: none;
+        stroke: #4f46e5;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+    
+    .nav-links ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+        transition: all 0.3s;
+    }
+    
+    .nav-btn {
+        color: #64748b;
+        padding: 0.5rem 0;
+    }
+    
+    .nav-btn:hover {
+        color: #1e293b;
+    }
+    
+    .nav-btn::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #4f46e5;
+        transition: width 0.3s;
+    }
+    
+    .nav-btn:hover::after {
+        width: 100%;
+    }
+    
+    .admin-link {
+        background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+        padding: 0.5rem 1.2rem;
+        border-radius: 50px;
+        color: white;
+    }
+    
+    .admin-link:hover {
+        background: linear-gradient(45deg, #ff5252, #ff7676);
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.35);
+        transform: translateY(-2px);
+    }
+    
+    .nav-toggle {
+        display: none;
+    }
+    
+    .nav-toggle-label {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .nav-container {
+            flex-wrap: wrap;
+        }
+        
+        .nav-toggle-label {
+            display: block;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        .nav-toggle-label span,
+        .nav-toggle-label span::before,
+        .nav-toggle-label span::after {
+            display: block;
+            background: #4f46e5;
+            height: 2px;
+            width: 24px;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .nav-toggle-label span::before,
+        .nav-toggle-label span::after {
+            content: '';
+            position: absolute;
+        }
+        
+        .nav-toggle-label span::before {
+            bottom: 8px;
+        }
+        
+        .nav-toggle-label span::after {
+            top: 8px;
+        }
+        
+        .nav-links {
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease;
+        }
+        
+        .nav-toggle:checked ~ .nav-links {
+            height: auto;
+            padding: 1rem 0;
+        }
+        
+        .nav-links ul {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+</style>

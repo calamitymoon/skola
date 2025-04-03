@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">zapomenuty heslo</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-muted">zadej svuj email a ja ti poslu odkaz pro resetovani hesla.</p>
+                    <form method="post">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <!--
+                                pro debugging -> automaticky se insertuje email uzivatele 
+                                <input type="email" class="form-control" id="email" name="email" value="{{@SESSION.email}}" required>
+                            -->
+                        </div>
+                        <br>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">obnovit heslo</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="{{@BASE}}/login" class="btn btn-link">zpet na prihlaseni</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>

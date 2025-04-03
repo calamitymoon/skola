@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">resetovani hesla</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-muted">zadej sve nove heslo.</p>
+                    <form method="post">
+                        <input type="hidden" name="token" value="{{@token}}">
+                        
+                        <div class="mb-3">
+                            <label for="heslo" class="form-label">nove heslo</label>
+                            <input type="password" class="form-control" id="heslo" name="heslo" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="heslo_confirm" class="form-label">nove heslo znovu</label>
+                            <input type="password" class="form-control" id="heslo_confirm" name="heslo_confirm" required>
+                        </div>
+                        
+                        <br>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">nastavit nove heslo</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

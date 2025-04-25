@@ -1,0 +1,13 @@
+Požadované součástky pro KK soutěže v programování 2024/2025 - kategorie mcu
+
+-   MCU dle vlastního výběru (Arduino, ...)
+-	5x barevné LED (modrá, zelená, žlutá, 2x červená) - https://dratek.cz/arduino/1032-led-dioda-zelena-5mm.html
+-	2x přepínač - https://dratek.cz/arduino/7834-dip-prepinac-2-sekce-2.54mm.html
+-	1x potenciometr/trimr - https://dratek.cz/arduino/7603-presny-potenciometr-10k-ohm.html
+-	1x pasivní piezoelektrický měnič - https://dratek.cz/arduino/121937-piezoelektricky-menic-5v.html
+-   1x optická závora - https://www.laskakit.cz/fotoelektricky-snimac-otacek-5mm/
+-   1x servo mikro - https://dratek.cz/arduino/897-eses-servo-motor-9g.html
+-   1x ultrazvukový měřič vzdálenosti - https://www.laskakit.cz/arduino-ultrazvukovy-meric-vzdalenosti-hc-sr04/
+-	další potřebné součástky pro připojení
+
+
